@@ -1,0 +1,63 @@
+<configs>
+
+	<!--set xpath="/blocks/block[@name='treeMasterGrowing']/property[@name='PlantGrowing.GrowthRate']/@value">2</set--> <!-- For testing -->
+
+<remove xpath="/blocks/block[@name='treePlantedOak41m']" />
+<remove xpath="/blocks/block[@name='treePlantedMountainPine41m']" />
+<remove xpath="/blocks/block[@name='treePlantedWinterPine28m']" />
+	
+<append xpath="/blocks" >
+	
+<block name="treePlantedOak41m">
+	<property name="Extends" value="treeOakLrg01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>
+	<property name="CustomIcon" value="treeOakLrg01"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?OakLrg01Prefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.3,0"/>
+	<property name="MultiBlockDim" value="1,20,1"/> <!-- MultiBlockDim needs to stay under 32 on the Y -->
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<property name="Path" value="solid"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/>
+	<drop event="Destroy" name="treePlantedOak1m" count="2" tag="wildCropsHarvest"/>
+	<property name="SortOrder1" value="B902"/>
+	<property name="SortOrder2" value="0008"/>
+</block>
+
+<block name="treePlantedMountainPine41m">
+	<property name="Extends" value="treeMountainPine41m"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="PlantGrowing.FertileLevel" value="5"/>
+	<property name="CustomIcon" value="treeMountainPine41m"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?MountainPineLrg01Prefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,20,1"/> <!-- MultiBlockDim needs to stay under 32 on the Y -->
+	<property name="Path" value="solid"/>
+	<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/>
+	<drop event="Destroy" name="treePlantedMountainPine1m" count="2" tag="wildCropsHarvest"/>
+	<property name="SortOrder1" value="B903"/>
+	<property name="SortOrder2" value="0012"/>
+</block>
+
+<block name="treePlantedWinterPine28m">
+	<property name="Extends" value="treeWinterPine28m"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="treeWinterPine28m"/>
+	<property name="Material" value="MtreeWoodFull"/>
+	<property name="Model" value="#Entities/Trees?Blue_Spruce66Prefab.prefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,20,1"/> <!-- MultiBlockDim needs to stay under 32 on the Y -->
+	<property name="Path" value="solid"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/>
+	<drop event="Destroy" name="treePlantedWinterPine1m" count="2" tag="wildCropsHarvest"/>
+	<property name="SortOrder1" value="B904"/>
+	<property name="SortOrder2" value="0008"/>
+</block>
+
+</append>
+
+</configs>

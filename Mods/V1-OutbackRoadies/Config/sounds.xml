@@ -1,0 +1,219 @@
+<configs>
+
+	<!-- Thank you Ragsy for sharing -->
+	<set xpath="/Sounds/SoundDataNode[@name='vehicle_turbo']/AudioClip/@ClipName">Sounds/Misc/silencefiller</set>
+
+	<append xpath="/Sounds">
+		<SoundDataNode name="animalspideralert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspideralert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspidersense"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspidersense"/>
+			<Channel name="Mouth"/>
+			<Priority name="4"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspiderhurt"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderhurt1"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderhurt2"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderhurt3"/>		
+			<Channel name="Mouth"/>
+			<Priority name="1"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspiderattack"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderattack1"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderattack2"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderattack3"/>	
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspiderroam"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderroam"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspiderdeath"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderdeath"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalspiderrandom"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Animalspidersounds.unity3d?animalspiderrandom"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+
+	<!-- Oak Chicken Coops -->
+  
+	<SoundDataNode name="Chicken6Sounds">
+	<AudioSource name="Sounds/AudioSource_VO" />
+	<Noise ID="3" range="3" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+	<AudioClip ClipName="#@modfolder:Resources/ChickenCoops.unity3d?Chicken1" />
+	<LocalCrouchVolumeScale name="1.0" />
+	<CrouchNoiseScale name="0.5" />
+	<NoiseScale name="1" />
+	<MaxVoices name="10" />
+	<MaxRepeatRate name="1.111" />
+	</SoundDataNode>
+  
+	<!-- Oak Bee Hives -->
+
+	<SoundDataNode name="BeeHiveOpen">
+	<AudioSource name="Sounds/AudioSource_VO" />
+	<Noise ID="3" range="3" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+	<AudioClip ClipName="#@modfolder:Resources/BeeHivesV1.unity3d?zBeeSound2" />
+	<LocalCrouchVolumeScale name="1.0" />
+	<CrouchNoiseScale name="0.5" />
+	<NoiseScale name="1" />
+	<MaxVoices name="10" />
+	<MaxRepeatRate name="1.111" />
+	</SoundDataNode>
+  
+<!-- Aussie Bat -->
+	
+<SoundDataNode name="BatAttack"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/AussieBat.unity3d?BatAttack"/>
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>	
+
+<SoundDataNode name="BatsChittering"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/AussieBat.unity3d?BatsChittering"/>
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.9"/>
+	<HighestPitch name="1.0"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>
+	
+		<!-- SUV octave drop for Roadies Engine Sounds     -->
+
+<SoundDataNode name="roadies_suv_startup"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_startup1"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_startup2"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_start" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_shutoff"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_shutoff"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_off" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel1"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_accel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel2"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_accel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel3"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_accel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_turbo"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_turbo"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_accel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_decel1"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_decel1"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_decel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_decel2"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_decel2"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_decel" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_empty"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="Sounds/Vehicles/Motorbike/motorbike_empty_1"/>
+	<AudioClip ClipName="Sounds/Vehicles/Motorbike/motorbike_empty_2"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_no_gas" AltSound="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_idle_lp" Loop="true"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_idle_lp" AltSound="true" Loop="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="roadies_suv_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="Sounds/Vehicles/Suv/suv_max_speed_lp" Loop="true"/>
+	<AudioClip ClipName="Sounds/Twitch/Silly/Silly Vehicle Sounds/truck_silly_run_lp" AltSound="true" Loop="true" />
+	<LowestPitch name="0.65"/>
+	<HighestPitch name="0.65"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+  
+	</append>	
+</configs>

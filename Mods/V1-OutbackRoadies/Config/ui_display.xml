@@ -1,0 +1,69 @@
+<configs>
+
+	<append xpath="/ui_display_info/item_display">
+
+		<item_display_info display_type="foodCureInfectionAndFood" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+		</item_display_info>
+		
+		<item_display_info display_type="foodCureInfectionAndFoodWater" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+		</item_display_info>
+		
+		<item_display_info display_type="waterChromeSoda" display_group="groupConsumables">
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEfficientDigestion" title_key="statEfficientDigestion" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="foodCureInfectionAndFoodWaterRedTea" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dEfficientDigestion" title_key="statEfficientDigestion" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+		</item_display_info>
+
+		<item_display_info display_type="waterHoneyBeer" display_group="groupConsumables">
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamageBrawling" title_key="statEntityDamageBrawling" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>			
+		</item_display_info>		
+	</append>
+	
+	<append xpath="/ui_display_info/crafting_category_display">
+		
+		<crafting_category_list display_type="ammopress">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_ammopress_allammo" display_name="lblCategoryAmmoPress" />
+			<crafting_category name="RegularAmmo" icon="ui_game_symbol_ammopress_regularammo" display_name="lblCategoryAmmoPressRegularAmmo"/>
+			<crafting_category name="HPAmmo" icon="ui_game_symbol_ammopress_hpammo" display_name="lblCategoryAmmoPressHPAmmo"/>
+			<crafting_category name="APAmmo" icon="ui_game_symbol_ammopress_apammo" display_name="lblCategoryAmmoPressAPAmmo"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="playerWoodBurningRoadiesStove">
+			<!-- <crafting_category name="" icon="ui_game_symbol_campfire" display_name="lblAll" />
+			<crafting_category name="Drink/Cooking" icon="ui_game_symbol_water" display_name="lblCategoryChemicals" /> -->
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFMedical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+	
+	</append>
+	
+</configs>

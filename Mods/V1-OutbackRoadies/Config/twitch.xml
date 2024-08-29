@@ -1,0 +1,234 @@
+<configs>
+	<append xpath="/twitch">
+	
+	<!-- Single Animals -->
+	
+	<action name="twitch_cassowary">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_cassowary" />
+		<property name="command_key" value="TwitchAction_SpawnCassowaryCommand" />
+		<property name="title_key" value="TwitchAction_SpawnCassowary" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_cassowary" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnCassowaryDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<action name="twitch_tassydevil">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_tassydevil" />
+		<property name="command_key" value="TwitchAction_SpawnTassydevilCommand" />
+		<property name="title_key" value="TwitchAction_SpawnTassydevil" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_tassydevil" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnTassydevilDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<action name="twitch_platypus">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_platypus" />
+		<property name="command_key" value="TwitchAction_SpawnPlatypusCommand" />
+		<property name="title_key" value="TwitchAction_SpawnTassydevil" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_platypus" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnPlatypusDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<action name="twitch_koala">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_koala" />
+		<property name="command_key" value="TwitchAction_SpawnKoalaCommand" />
+		<property name="title_key" value="TwitchAction_SpawnKoala" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_koala" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnKoalaDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<action name="twitch_frillneck">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_frillneck" />
+		<property name="command_key" value="TwitchAction_SpawnFrillneckCommand" />
+		<property name="title_key" value="TwitchAction_SpawnFrillneck" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_frillneck" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnFrillneckDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<action name="twitch_kangaroo">
+		<property name="start_gamestage" value="10" />
+		<property name="command" value="#spawn_kangaroo" />
+		<property name="command_key" value="TwitchAction_SpawnKangarooCommand" />
+		<property name="title_key" value="TwitchAction_SpawnKangaroo" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_kangaroo" />
+		<property name="default_cost" value="100" />
+		<property name="description_key" value="TwitchAction_SpawnKangarooDesc" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="120" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="presets" value="casual,standard,hardcore" />
+	</action>
+	
+	<!-- Group Animals -->
+	
+	<action name="twitch_groupMagpies">
+		<property name="command" value="#group_magpies" />
+		<property name="command_key" value="TwitchAction_SpawnGroupMagpiesCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupMagpies" />
+		<property name="description_key" value="TwitchAction_SpawnGroupMagpiesDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="10" />
+		<property name="event_name" value="group_magpies" />
+		<property name="default_cost" value="300" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+	<action name="twitch_groupAussieAnimals">
+		<property name="command" value="#group_aussieanimals" />
+		<property name="command_key" value="TwitchAction_SpawnGroupAussieAnimalsCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupAussieAnimals" />
+		<property name="description_key" value="TwitchAction_SpawnGroupAussieAnimalsDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="50" />
+		<property name="event_name" value="group_aussieanimals" />
+		<property name="default_cost" value="300" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+	<action name="twitch_groupGroundSpiders">
+		<property name="command" value="#group_groundspiders" />
+		<property name="command_key" value="TwitchAction_SpawnGroupGroundSpidersCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupGroundSpiders" />
+		<property name="description_key" value="TwitchAction_SpawnGroupGroundSpidersDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="50" />
+		<property name="event_name" value="group_groundspiders" />
+		<property name="default_cost" value="300" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+	<action name="twitch_groupFlyingSpiders">
+		<property name="command" value="#group_flyingspiders" />
+		<property name="command_key" value="TwitchAction_SpawnGroupFlyingSpidersCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupFlyingSpiders" />
+		<property name="description_key" value="TwitchAction_SpawnGroupFlyingSpidersDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="50" />
+		<property name="event_name" value="group_flyingspiders" />
+		<property name="default_cost" value="300" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+	<action name="twitch_groupBossSpiders">
+		<property name="command" value="#group_bossspiders" />
+		<property name="command_key" value="TwitchAction_SpawnGroupBossSpidersCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupBossSpiders" />
+		<property name="description_key" value="TwitchAction_SpawnGroupBossSpidersDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="80" />
+		<property name="event_name" value="group_bossspiders" />
+		<property name="default_cost" value="350" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+<!-- Group Zombies -->
+	
+	<action name="twitch_groupBurntMini">
+		<property name="command" value="#group_burntmini" />
+		<property name="command_key" value="TwitchAction_SpawnGroupBurntMiniCommand" />
+		<property name="title_key" value="TwitchAction_SpawnGroupBurntMini" />
+		<property name="description_key" value="TwitchAction_SpawnGroupBurntMiniDesc" />
+		<property name="category" value="Spawns" />
+		<property name="start_gamestage" value="80" />
+		<property name="event_name" value="group_burntmini" />
+		<property name="default_cost" value="350" />
+		<property name="is_positive" value="false" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_add_amount" value="50" />
+		<property name="cooldown" value="60" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="vote_cooldown_add" value="30" />
+		<property name="min_respawn_count" value="3" />
+		<property name="max_respawn_count" value="3" />
+		<property name="presets" value="standard,hardcore" />
+	</action>
+	
+	</append>
+		
+</configs>

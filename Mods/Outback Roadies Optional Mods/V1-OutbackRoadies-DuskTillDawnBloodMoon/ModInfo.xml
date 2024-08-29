@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="V1_OutbackRoadies_DuskTillDawnBloodMoon" />
+	<DisplayName value="V1.0 Outback RoadiesDusk Till Dawn Blood Moon" />
+	<Description value="Increases Horde Night Blood Moon count potential to 256 entities at once that continue until 4am depending on stage." />
+	<Author value="arramus" />
+	<Version value="1.1.0.0" />
+	<Website value="" />
+</xml>

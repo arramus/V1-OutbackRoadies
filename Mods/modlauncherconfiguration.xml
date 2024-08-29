@@ -1,0 +1,26 @@
+<Servers>
+  <ServerGroup Name="Outback Roadies (V1.0)">
+    <Server Name="Outback Roadies (V1.0)" Logo="https://i.imgur.com/wg3RBYv.jpeg">
+      <Description>Outback Roadies is a post-poco mod with an Australian theme.
+	  
+Features Include:
+- Custom Entities and Vehicles from the EndZ creators May Red and Thee Legion 
+- Built-in Unique Hand Crafted 10K Australia World by FluffyPanda
+- Integration for the NPC Mod and includes Spider Add On Pack
+- Community Quality of Life Mods
+- Optional Mods folder with larger backpack and other customising features
+- Custom Aussie recipes for greater immersion
+- Additional Game Menu option value features such as 96 Entity Horde Night
+- and a few other bits...
+	  </Description>
+        <Version>1.0</Version>
+		<RSS/>
+        <Excludes></Excludes>
+        <ReleaseNotes></ReleaseNotes>
+        <Discord>https://discord.gg/3aWeEGrjJK</Discord>
+        <Donate></Donate>
+        <DownloadMode>Clone</DownloadMode>
+      <Downloads><Download>https://github.com/arramus/V1.0-OutbackRoadies</Download></Downloads>      
+    </Server>
+  </ServerGroup>
+</Servers>

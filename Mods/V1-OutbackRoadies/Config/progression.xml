@@ -1,0 +1,58 @@
+<configs>
+
+	<!-- Change Pack Mule Perk to unlock all slots -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">4,8,12,16,20</set>
+
+	<!-- Max player level -->
+	<set xpath="/progression/level/@max_level">400</set> <!-- Default max level is 300 and 400 more than covers extras -->
+	<!-- Rifle reload speed -->
+	<set xpath="/progression/perks/perk[@name='perkDeadEye']/effect_group/passive_effect[@name='ReloadSpeedMultiplier'][@value='0.1,0.3']/@value">0.12,0.4</set>	
+	<!-- Shotgun reload speed -->
+	<set xpath="/progression/perks/perk[@name='perkBoomstick']/effect_group/passive_effect[@name='ReloadSpeedMultiplier'][@value='.1,.30']/@value">.2,.60</set>
+	<!-- Revolver reload speed -->	
+	<set xpath="/progression/perks/perk[@name='perkGunslinger']/effect_group/passive_effect[@name='ReloadSpeedMultiplier'][@value='0,0.30']/@value">0,0.45</set>
+	<!-- Lockpick time and break chance -->
+	<set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LockPickTime'][@value='.17,.375']/@value">.25,.5</set>
+	<set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LockPickBreakChance'][@value='.1,.3']/@value">.25,.75</set>
+
+	<!-- Adding Rocket Fire variant for Rocket Launcher -->
+	<append xpath="//crafting_skill[@name='craftingExplosives']/display_entry[@icon='ammoRocketFrag']/unlock_entry/@item">,ammoRocketFire</append>
+	<append xpath="//crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@level='45,100']/@tags">,ammoRocketFire</append>
+	
+	<!-- Roadies Ammo Press -->
+	
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[contains(@icon, 'cementMixer')]/@icon">,ammopress</append>	
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[contains(@icon, 'cementMixer')]/@name_key">,workstationsT3-2AP</append>
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[contains(@icon, 'cementMixer')]/@unlock_level">,40</append>
+	
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[contains(@icon, 'cementMixer')]">
+			<unlock_entry item="ammopress" unlock_tier="2" />
+	</append>
+	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100" value="1" tags="ammopress"/>
+		</effect_group>
+	</append>
+	
+	<insertAfter xpath="/progression/perks/perk[@name='perkMasterChef']">
+	<perk name="perkHighOctaneExperience" parent="skillStrengthGeneral" name_key="perkHighOctaneExperienceName" desc_key="perkHighOctaneExperienceDesc" icon="ui_game_symbol_highoctaneexperience">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+
+			<effect_group>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".3,1.5 " level="1,5"/>
+
+				<effect_description level="1" desc_key="perkHighOctaneExperienceRank1Desc" long_desc_key="perkHighOctaneExperienceRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkHighOctaneExperienceRank2Desc" long_desc_key="perkHighOctaneExperienceRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkHighOctaneExperienceRank3Desc" long_desc_key="perkHighOctaneExperienceRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkHighOctaneExperienceRank4Desc" long_desc_key="perkHighOctaneExperienceRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkHighOctaneExperienceRank5Desc" long_desc_key="perkHighOctaneExperienceRank5LongDesc"/>
+			</effect_group>
+		</perk>
+	</insertAfter>
+	
+</configs>

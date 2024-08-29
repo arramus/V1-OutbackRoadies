@@ -1,0 +1,9 @@
+﻿<configs>
+
+	<set xpath="/doc/backgrounds">
+		<tex file="@modfolder:Textures/loadingimage01.png"/>
+		<tex file="@modfolder:Textures/loadingimage02.png"/>
+		<tex file="@modfolder:Textures/loadingimage03.png"/>
+	</set>
+
+</configs>

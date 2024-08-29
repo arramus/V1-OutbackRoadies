@@ -1,0 +1,6 @@
+<configs>
+
+	<!--0-Score Tweaks-->
+	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireEnable']/@value">true</set>
+
+</configs>

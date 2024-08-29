@@ -1,0 +1,145 @@
+<configs>
+
+<!-- Vehicles -->
+	<set xpath="/quests/quest[@id='quest_tier1complete']/reward[@id='groupQuestBicycle']/@id">groupQuestMinibike</set>
+
+ 	<append xpath="/quests">
+	
+<!-- *** STARTER MESSAGE -->
+	
+	<!-- White River Citizen 0 - Start Point -->
+	<quest id="quest_whiteRiverCitizen0">
+		<property name="group_name_key" value="quest_WhiteRiverCitizen0"/>
+		<property name="name_key" value="quest_WhiteRiverCitizen0_name"/>
+		<property name="subtitle_key" value="quest_WhiteRiverCitizen0_subtitle"/>
+		<property name="description_key" value="quest_WhiteRiverCitizen0_description"/>
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="add_to_tier_complete" value="false"/>
+		<property name="shareable" value="false"/>
+		
+		<action type="ShowMessageWindow">
+			<property name="message" value="quest_WhiteRiverCitizen0_description"/>
+			<property name="title" value="quest_WhiteRiverCitizen0_description_title"/>
+			<property name="delay" value="3"/>
+		</action>
+	</quest>
+	
+	<!-- CUSTOM QUESTS -->
+    <!-- Rabbits -->
+	<quest id="quest_rabbits">
+		<property name="offer_key" value="Rabbits are one of Australia's most destructive pest animals. They also spread the Zombo Virus. Accept this quest to help eliminate 25 rabbits. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="name_key" value="25 Rabbits"/>
+		<property name="subtitle_key" value="25 Rabbits"/>
+		<property name="description_key" value="Rabbits are one of Australia's most destructive pest animals. They also spread the Zombo Virus. Accept this quest to help eliminate 25 rabbits. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="icon" value="ui_game_symbol_rabbit"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="animalRabbit" value="25"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="1250"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Spiders -->
+	<quest id="quest_spiders">
+		<property name="offer_key" value="Accept this quest to eliminate 100 spiders. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="name_key" value="100 Spiders"/>
+		<property name="subtitle_key" value="100 Spiders"/>
+		<property name="description_key" value="Accept this quest to eliminate 100 spiders. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="icon" value="ui_game_symbol_spider"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="animalBloodMoonSpider01QueenFred,animalBloodMoonSpider02QueenFred,animalBloodMoonSpider03QueenFred,animalSpider01,animalSpider02,animalSpider03,animalSpider01Feral,animalSpider02Feral,animalSpider03Feral,animalSpider01Radiated,animalSpider02Radiated,animalSpider03Radiated,animalSpider01Mini,animalSpider02Mini,animalSpider03Mini,animalSpider01Queen,animalSpider02Queen,animalSpider03Queen,animalFlyingSpider01,animalFlyingSpider02,animalFlyingSpider03,animalBloodMoonSpider01,animalBloodMoonSpider02,animalBloodMoonSpider03,animalBloodMoonSpider01Feral,animalBloodMoonSpider02Feral,animalBloodMoonSpider03Feral,animalBloodMoonSpider01Radiated,animalBloodMoonSpider02Radiated,animalBloodMoonSpider03Radiated,animalBloodMoonSpider01Queen,animalBloodMoonSpider02Queen,animalBloodMoonSpider03Queen,animalBloodMoonFlyingSpider01Queen,animalBloodMoonFlyingSpider02Queen,animalBloodMoonFlyingSpider03Queen,animalBloodMoonSpider01Mini,animalBloodMoonSpider02Mini,animalBloodMoonSpider03Mini" value="100"/>
+		
+		<reward type="Exp" value="20000"/>
+		<reward type="Item" id="casinoCoin" value="5000"/>
+		<reward type="SkillPoints" value="2" chainreward="false"/>
+	</quest>
+	
+	<!-- Animals -->
+	<quest id="quest_aussieanimals">
+		<property name="offer_key" value="Accept this quest to eliminate 100 hostile aussie animals. This does not include spiders as they have their very own quest. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="name_key" value="100 Aussie Animals"/>
+		<property name="subtitle_key" value="100 Aussie Animals"/>
+		<property name="description_key" value="Accept this quest to eliminate 100 aussie animals. This does not include spiders as they have their very own quest. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="icon" value="ui_game_symbol_aussieanimal"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="animalBloodMoonKoala,animalBloodMoonKangaroo,animalBloodMoonBossKoala,animalBloodMoonBossKangaroo,animalCassowary,animalTassydevil,animalPlatypus,animalKoala,animalFrillneck,animalKangaroo,animalMagpie,animalEagle,animalBat" value="100"/>
+		
+		<reward type="Exp" value="20000"/>
+		<reward type="Item" id="casinoCoin" value="5000"/>
+		<reward type="SkillPoints" value="2" chainreward="false"/>
+	</quest>
+	
+	<!-- Mini Radiated Burnt -->
+	<quest id="quest_miniradiatedburnt">
+		<property name="offer_key" value="Accept this quest to eliminate 25 mini radiated burnt zombies. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="name_key" value="25 Mini Rad Burnt Zombies"/>
+		<property name="subtitle_key" value="25 Mini Rad Burnt Zombies"/>
+		<property name="description_key" value="Accept this quest to eliminate 25 mini radiated burnt zombies. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="icon" value="ui_game_symbol_miniradiatedburnt"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="zombieBurntRadiatedMini" value="25"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="1250"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+	
+	<!-- Head Hunters -->
+	<quest id="quest_headhunters">
+		<property name="offer_key" value="Accept this quest to eliminate 100 head hunters. They look a bit like War Boys and Nurses,and are out for your blood via your torn off head. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="name_key" value="100 Head Hunter Zombies"/>
+		<property name="subtitle_key" value="100 Head Hunter Zombies"/>
+		<property name="description_key" value="Accept this quest to eliminate 100 head hunters. They look a bit like War Boys and Nurses,and are out for your blood via your torn off head. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="icon" value="ui_game_symbol_headhunter"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="zombieOakNurse,zombieOakFireNurse,zombieOakRadNurse,zombieOakHeadHunter1,zombieOakHeadHunter2,zombieOakHeadHunter3,zombieOakHeadHunter4,zombieOakHeadHunter5,zombieOakBossNurse,zombieOakBossFireNurse,zombieOakBossRadNurse,zombieOakBossHeadHunter1,zombieOakBossHeadHunter2,zombieOakBossHeadHunter3,zombieOakBossHeadHunter4,zombieOakBossHeadHunter5" value="100"/>
+		
+		<reward type="Exp" value="20000"/>
+		<reward type="Item" id="casinoCoin" value="5000"/>
+		<reward type="SkillPoints" value="2" chainreward="false"/>
+	</quest>
+	
+    <!-- Chickens -->
+	<quest id="quest_chickens">
+		<property name="offer_key" value="Spiders eat chickens. More chickens bring more spiders... Accept this quest to help eliminate 25 chickens. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="name_key" value="25 Chickens"/>
+		<property name="subtitle_key" value="25 Chickens"/>
+		<property name="description_key" value="Spiders eat chickens. More chickens bring more spiders... Accept this quest to help eliminate 25 chickens. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="icon" value="ui_game_symbol_chicken"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="animalChicken" value="25"/>
+		
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="1250"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>
+
+	</append>
+	
+</configs>

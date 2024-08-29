@@ -1,0 +1,42 @@
+<configs>
+
+	<!--remove xpath="//window[@name='newsWindow']"/-->
+	<set xpath="/windows/window[@name='menuBackground']/texture/@texture">@modfolder:Textures/background.png</set>
+	
+  <!-- V1.0 XP Multiplier values: 25, 50, 75, 100, 125, 150, 175, 200, 300 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsGeneral']/grid/gameoption[@name='XPMultiplier']/@values">10, 25, 50, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsBasic']/grid/browsergameoptioncombined[@name='XPMultiplier']/@values">10, 25, 50, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+
+  <!-- V1.0 Day Night Length default values: 10, 20, 30, 40, 50, 60, 90, 120 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsGeneral']/grid/gameoption[@name='DayNightLength']/@values">10, 20, 30, 40, 50, 60, 75, 90, 120, 150, 180</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsBasic']/grid/browsergameoptioncombined[@name='DayNightLength']/@values">10, 20, 30, 40, 50, 60, 75, 90, 120, 150, 180</set>
+
+  <!-- V1.0 Blood Moon Enemy Count default values: 4, 6, 8, 10, 12, 16, 24, 32, 64 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsBasic']/grid/gameoption[@name='BloodMoonEnemyCount']/@values">2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 24, 32, 64, 96, 100, 125, 150</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsBasic']/grid/browsergameoptioncombined[@name='BloodMoonEnemyCount']/@values">2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 24, 32, 64, 96, 100, 125, 150</set>
+
+  <!-- V1.0 Block Damage AI default values: 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='BlockDamageAI']/@values">0, 5, 13, 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='BlockDamageAI']/@values">0, 5, 13, 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+
+  <!-- V1.0 Block Damage AI Blood Moon default values: 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='BlockDamageAIBM']/@values">0, 5, 13, 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='BlockDamageAIBM']/@values">0, 5, 13, 25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300, 400, 500</set>
+
+  <!-- V1.0 Loot Abundance default values: 25, 33, 50, 67, 75, 100, 150, 200 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='LootAbundance']/@values">13, 25, 33, 50, 67, 75, 100, 150, 200, 250, 300, 400, 500</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='LootAbundance']/@values">13, 25, 33, 50, 67, 75, 100, 150, 200, 250, 300, 400, 500</set>
+
+  <!-- V1.0 Loot Respawn Time Days default values: -1, 5, 7, 10, 15, 20, 30, 40, 50 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='LootRespawnDays']/@values">-1, 1, 2, 3, 4, 5, 6, 7, 10, 14, 15, 20, 30, 40, 50</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='LootRespawnDays']/@values">-1, 1, 2, 3, 4, 5, 6, 7, 10, 14, 15, 20, 30, 40, 50</set>
+
+  <!-- V1.0 Max Chunk Age default values: -1, 10, 20, 30, 40, 50, 75, 100 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='MaxChunkAge']/@values">-1, 1, 2, 3, 4, 5, 6, 7, 10, 20, 30, 40, 50, 75, 100</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='MaxChunkAge']/@values">-1, 1, 2, 3, 4, 5, 6, 7, 10, 20, 30, 40, 50, 75, 100</set>
+
+  <!-- V1.0 Max Party Share Kill Range default values: 0, 100, 500, 1000, 5000, 10000 -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']/grid/gameoption[@name='PartySharedKillRange']/@values">0, 10, 25, 50, 75, 100, 500, 1000, 5000, 10000</set>
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']/grid/browsergameoptioncombined[@name='PartySharedKillRange']/@values">0, 10, 25, 50, 75, 100, 500, 1000, 5000, 10000</set>
+	
+</configs>

@@ -1,0 +1,120 @@
+<configs>
+
+	<set xpath="/gameevents/action_sequence[@name='challenge_group_reward_basics']/action/property[@name='skill_points']/@value">8</set>
+	
+	<append xpath="/gameevents/action_sequence[@name='game_first_spawn']">	
+		<action class="AddQuest">
+			<property name="phase" value="1" />
+			<property name="quest" value="quest_whiteRiverCitizen0" />
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_names" value="npcAnimalFox"/>
+			<property name="single_choice" value="true"/>
+			<property name="spawn_count" value="1"/>
+			<property name="phase" value="2"/>
+			<property name="min_distance" value="5"/>
+			<property name="max_distance" value="5"/>
+		</action>		
+	</append>
+
+	<append xpath="/gameevents">
+	
+	<!-- Single Animals -->
+
+	<action_sequence name="spawn_cassowary" template="spawn_single">
+		<variable name="zombiename" value="animalCassowary" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<action_sequence name="spawn_tassydevil" template="spawn_single">
+		<variable name="zombiename" value="animalTassydevil" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<action_sequence name="spawn_platypus" template="spawn_single">
+		<variable name="zombiename" value="animalPlatypus" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<action_sequence name="spawn_koala" template="spawn_single">
+		<variable name="zombiename" value="animalKoala" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<action_sequence name="spawn_frillneck" template="spawn_single">
+		<variable name="zombiename" value="animalFrillneck" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<action_sequence name="spawn_kangaroo" template="spawn_single">
+		<variable name="zombiename" value="animalKangaroo" />
+		<variable name="alertsound" value="boaralert" />
+	</action_sequence>
+	
+	<!-- Group Animal Spawns -->
+	
+	<action_sequence name="group_magpies" template="spawn_group">
+		<variable name="zombiename" value="animalMagpie" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Animals/Chicken/chickenpain" />
+		<variable name="gamestage_extra1" value="50" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="100" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+	
+	<action_sequence name="group_aussieanimals" template="spawn_group">
+		<variable name="zombiename" value="animalCassowary,animalTassydevil,animalPlatypus,animalKoala,animalFrillneck,animalKangaroo" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Animals/Bear/bearattack" />
+		<variable name="gamestage_extra1" value="75" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="150" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+	
+	<action_sequence name="group_groundspiders" template="spawn_group">
+		<variable name="zombiename" value="animalSpider01Mini,animalSpider01,animalSpider01Feral,animalSpider01Radiated,animalSpider01Queen,animalSpider02Mini,animalSpider02,animalSpider02Feral,animalSpider02Radiated,animalSpider02Queen,animalSpider03Mini,animalSpider03,animalSpider03Feral,animalSpider03Radiated,animalSpider03Queen" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Animals/Bear/bearattack" />
+		<variable name="gamestage_extra1" value="75" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="150" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+	
+	<action_sequence name="group_flyingspiders" template="spawn_group">
+		<variable name="zombiename" value="animalFlyingSpider01,animalFlyingSpider01,animalFlyingSpider01" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Animals/Bear/bearattack" />
+		<variable name="gamestage_extra1" value="75" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="150" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+	
+	<action_sequence name="group_bossspiders" template="spawn_group">
+		<variable name="zombiename" value="animalBloodMoonSpider01QueenFred,animalBloodMoonSpider02QueenFred,animalBloodMoonSpider03QueenFred" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Animals/Bear/bearattack" />
+		<variable name="gamestage_extra1" value="100" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="150" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+	
+	<!-- Group Zombie Spawns -->
+	
+	<action_sequence name="group_burntmini" template="spawn_group">
+		<variable name="zombiename" value="zombieBurntRadiatedMini" />
+		<variable name="spawncount" value="5" />
+		<variable name="alertsound" value="Enemies/Burnt_Zombie/zombieburntattack" />
+		<variable name="gamestage_extra1" value="100" />
+		<variable name="spawncount_extra1" value="2" />
+		<variable name="gamestage_extra2" value="150" />
+		<variable name="spawncount_extra2" value="3" />
+	</action_sequence>
+
+	</append>
+</configs>

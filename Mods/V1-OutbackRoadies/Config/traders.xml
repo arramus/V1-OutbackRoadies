@@ -1,0 +1,72 @@
+<configs>
+
+	<!-- TRADERS -->
+
+	<setattribute xpath="//trader_info[@id='1']" name="open_time">4:04</setattribute>	<!-- Joel -->
+	<setattribute xpath="//trader_info[@id='2']" name="open_time">4:04</setattribute>	<!-- Jen -->
+	<setattribute xpath="//trader_info[@id='6']" name="open_time">4:04</setattribute>	<!-- Bob -->
+	<setattribute xpath="//trader_info[@id='7']" name="open_time">4:04</setattribute>	<!-- Hugh -->
+	<setattribute xpath="//trader_info[@id='8']" name="open_time">4:04</setattribute>	<!-- Rekt -->
+	
+	<!-- *** Ammo -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']">
+		<item name="ammoRocketFire" count="1,4"/>		
+	</append>
+
+	<!-- *** Raw_Ingredients -->
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='foodSupplies']">
+		<item name="GrownChicken" count="1"/>
+		<item name="foodBillyTea" count="2,5"/>
+		<item name="foodBarramundi" count="1,2"/>		
+	</append>
+	
+		<!-- *** Canned_Food -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='cannedfood']">
+			<item name="foodFairyBread" count="1,2"/>
+			<item name="foodLamington" count="1,2"/>
+	</append>
+	
+		<!-- *** Prepared_Drinks -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupDrinks']">
+			<item name="drinkJarBillyTea" count="1,2"/>
+			<item name="drinkWombatChocoPoco" count="1,2"/>
+	</append>
+	
+	<!-- *** Melee_Weapons -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeAll']">
+		<item name="meleeWpnClubT1CanCanBat" quality="3,6"/>
+		<item name="meleeWpnKnucklesT3SteelOakravenBristonKnuckles" quality="3,6"/>
+		<item name="meleeWpnClubT3OldCricketBat" quality="3,6"/>
+		<item name="meleeWpnClubT3NewCricketBat" quality="3,6"/>	
+	</append>
+	
+	<!-- *** T1_Melee_Mods -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeMods']">
+		<item name="modMeleeSpartanSledgeStamina"/>		
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
+	<!-- *** T1_Ranged_Mods-->
+		<item name="modWeaponMaintenance"/>
+	<!-- *** T2_Ranged_Mods -->
+		<item name="modGunBowArrowGrip"/>
+		<item name="modArcheryReloadSpeed"/>
+		<item name="modGunMagnumMagazineExtender"/>		
+	</append>
+	
+	<!-- Group Armor Mods -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupArmorMods']">
+		<item name="modArmorRunningShoesHP"/>	
+	</append>
+	
+	<!-- schematicsModsCommon -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
+		<item name="modWeaponMaintenanceSchematic"/>
+		<item name="modMeleeSpartanSledgeStaminaSchematic"/>
+		<item name="modGunBowArrowGripSchematic"/>		
+		<item name="modArcheryReloadSpeedSchematic"/>
+		<item name="modArmorRunningShoesHPSchematic"/>	
+	</append>
+
+</configs>

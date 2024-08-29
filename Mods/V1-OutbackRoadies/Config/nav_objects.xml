@@ -1,0 +1,147 @@
+<configs>
+
+<!--APPOC CAR-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apoccar" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apoccar"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apoccar"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC CAR-->
+
+<!--APPOC BUGGY-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocbuggy" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbuggy"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbuggy"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC BUGGY-->
+
+<!--APPOC BATTLE CAR-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocbattlecar" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlecar"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlecar"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC BATTLE CAR-->
+
+<!--APPOC BATTLE BUS-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocbattlebus" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlebus"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlebus"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC BATTLE BUS-->
+
+<!--APPOC TRUCK-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apoctruck" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apoctruck"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apoctruck"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC TRUCK-->
+
+<!--APPOC NUX-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocnux" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocnux"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocnux"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC NUX-->
+
+<!--APPOC RACECAR-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocracecar" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocracecar"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocracecar"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC RACECAR-->
+
+<!--APPOC BATTLEBUGGY-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocbattlebuggy" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlebuggy"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlebuggy"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC BATTLEBUGGY-->
+
+<!--APPOC BATTLECRANE-->
+<append xpath="/nav_object_classes">
+<nav_object_class name="apocbattlecrane" extends="bicycle">
+	<property name="requirement_type" value="IsVehicleOwner" />
+
+	<compass_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlecrane"/>
+	</compass_settings>
+
+	<onscreen_settings>
+		<property name="sprite_name" value="ui_game_symbol_apocbattlecrane"/>
+	</onscreen_settings>
+</nav_object_class>
+</append>
+<!--END OF APPOC BATTLECRANE-->
+
+</configs>
