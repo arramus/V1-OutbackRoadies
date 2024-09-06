@@ -31,6 +31,27 @@ namespace Features.RemoteCrafting
             }
         }
 
+        
+        [HarmonyPatch(typeof(XUiM_PlayerInventory))]
+        [HarmonyPatch("GetItemCount")]
+        [HarmonyPatch(new[] { typeof(ItemValue) })]
+
+        public class GetItemCount
+        {
+            public static void Postfix(ref int __result,ItemValue _itemValue, EntityPlayerLocal ___localPlayer)
+            {
+                if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
+                    return ;
+
+                var count = 0;
+                var items = RemoteCraftingUtils.SearchNearbyContainers(___localPlayer, _itemValue);
+                foreach (var item in items)
+                    count += item.count;
+                
+                
+                __result += count;
+            }
+        }
         /// <summary>
         /// Extends what is considered to be in the player's backpack / tool belt to include local containers.
         /// </summary>
@@ -110,16 +131,16 @@ namespace Features.RemoteCrafting
                                 {
                                     // add items from lootcontainers
                                     value1 = __instance.xui.PlayerInventory.GetItemCount(___ingredient.itemValue);
-                                    var array = RemoteCraftingUtils.SearchNearbyContainers(__instance.xui.playerUI.entityPlayer,
-                                        ___ingredient.itemValue).ToArray();
-                                    foreach (var t in array)
-                                    {
-                                        if (t != null && t.itemValue.type != 0 &&
-                                            ___ingredient.itemValue.type == t.itemValue.type)
-                                        {
-                                            value1 += t.count;
-                                        }
-                                    }
+                                    // var array = RemoteCraftingUtils.SearchNearbyContainers(__instance.xui.playerUI.entityPlayer,
+                                    //     ___ingredient.itemValue).ToArray();
+                                    // foreach (var t in array)
+                                    // {
+                                    //     if (t != null && t.itemValue.type != 0 &&
+                                    //         ___ingredient.itemValue.type == t.itemValue.type)
+                                    //     {
+                                    //         value1 += t.count;
+                                    //     }
+                                    // }
 
                                     value = ___havecountFormatter.Format(value1) + "/" + text;
                                 }
@@ -239,7 +260,10 @@ namespace Features.RemoteCrafting
                 // Check if this feature is enabled.
                 if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
                     return true;
-         
+                
+                // Sometimes RemovedItems is null, so let's just declare it
+                if (_removedItems == null)
+                    _removedItems = new List<ItemStack>();
                 RemoteCraftingUtils.ConsumeItem(_itemStacks, ___localPlayer, _multiplier,  _removedItems, ___backpack, ___toolbelt);
                 return false;
             }
