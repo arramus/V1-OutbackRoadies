@@ -166,7 +166,7 @@ resourceHookDesc,items,item,,,"Fish Trap Bait Hooks are used to craft Fish Trap 
 terrWaterPOI,blocks,Block,,,Fish Trap Water,,,,,,,,,,,,,
 terrWaterFishTrapDesc,blocks,Block,,,"Use Fish Trap Water blocks to rapidly fill your Fish Trap farm pool.",,,,,,,,,,,,,
 cntFishTrapWaterCollector,blocks,block,,,Fish Trap Water Collector,,,,,,,,,,,,,
-cntFishTrapWaterCollectorDesc,blocks,Block,,,"Collects Fish Trap Water at an accelerated rate to fill your Fish Trap farm pool.\n\nRepair with Scrap Polymers, and destroy to receive a Water Filter.",,,,,,,,,,,,,
+cntFishTrapWaterCollectorDesc,blocks,Block,,,"Collects Fish Trap Water at an accelerated rate to fill your Fish Trap farm pool.\n\nRepair with Scrap Polymers.",,,,,,,,,,,,,
 resourceWaterFilterDesc,items,item,,,"A component used in the crafting of a Dew Collector or Fish Trap Water Collector.",,,,,,,,,,,,,
 xuiDewCollector,UI,XUI,,,Water Collector,,,,,,,,,,,,,
 
