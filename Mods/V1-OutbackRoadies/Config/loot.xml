@@ -115,6 +115,11 @@
 		<item name="modMeleeSpartanSledgeStamina"/>
 	</append>
 	
+	<!-- *** T2_Melee_Mods -->
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">
+		<item name="modMeleeMacheteArmorPiercing"/>
+	</append>
+	
 	<!-- *** T1_Ranged_Mods -->
 	<append xpath="/lootcontainers/lootgroup[@name='modGunT1']">
 		<item name="modWeaponMaintenance"/>

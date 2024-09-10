@@ -165,6 +165,18 @@
 		</effect_group>
 	</item_modifier>
 	
+<!-- Machete Armor Piercing Mod -->
+	
+	<item_modifier name="modMeleeMacheteArmorPiercing" installable_tags="machete" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modMeleeMacheteArmorPiercingSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier2"/>
+		
+		<effect_group name="armorpiercing" tiered="false">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-1"/>
+		</effect_group>	
+	</item_modifier>
+	
 <!-- Magnum Magazine Extender Mod -->
 	
 	<item_modifier name="modGunMagnumMagazineExtender" installable_tags="magnummagazine" modifier_tags="magazine" blocked_tags="noMods" type="attachment">

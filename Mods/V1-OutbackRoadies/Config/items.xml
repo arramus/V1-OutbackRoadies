@@ -2288,6 +2288,18 @@
 			</effect_group>
 		</item>
 		
+<!-- Machete Armor Piercing Mod Schematic -->		
+		<item name="modMeleeMacheteArmorPiercingSchematic">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modMeleeMacheteArmorPiercing"/>
+			<property name="Unlocks" value="modMeleeMacheteArmorPiercing"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeMacheteArmorPiercing" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		
 <!-- Magnum Magazine Extender Mod Schematic -->		
 		<item name="modGunMagnumMagazineExtenderSchematic">
 			<property name="Extends" value="schematicNoQualityMaster"/>

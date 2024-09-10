@@ -41,9 +41,11 @@
 		<item name="meleeWpnClubT3NewCricketBat" quality="3,6"/>	
 	</append>
 	
-	<!-- *** T1_Melee_Mods -->
+		<!-- *** T1_MELEE_MODS -->
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeMods']">
-		<item name="modMeleeSpartanSledgeStamina"/>		
+		<item name="modMeleeSpartanSledgeStamina"/>
+		<!-- *** T2_MELEE_MODS -->
+		<item name="modMeleeMacheteArmorPiercing"/>
 	</append>
 	
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
@@ -64,6 +66,7 @@
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
 		<item name="modWeaponMaintenanceSchematic"/>
 		<item name="modMeleeSpartanSledgeStaminaSchematic"/>
+		<item name="modMeleeMacheteArmorPiercingSchematic"/>
 		<item name="modGunBowArrowGripSchematic"/>		
 		<item name="modArcheryReloadSpeedSchematic"/>
 		<item name="modArmorRunningShoesHPSchematic"/>	
