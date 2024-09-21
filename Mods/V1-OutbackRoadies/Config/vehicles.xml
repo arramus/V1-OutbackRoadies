@@ -492,9 +492,9 @@
 			<property name="slot_type" value="handlebars"/>
 			<property name="transform" value="Origin/steering_joint"/>
 			<property name="steerMaxAngle" value="60"/>
-			<property name="IKHandLPosition" value="-.154, .1256, .0265"/>
+			<property name="IKHandLPosition" value="-0.1, -0.75, 0.02"/>
 			<property name="IKHandLRotation" value="37.55, -13.433, 49.88"/>
-			<property name="IKHandRPosition" value=".154, .1256, .0265"/>
+			<property name="IKHandRPosition" value="0.01, -0.3, 0.01"/> <!-- 1st range of motion 2nd left to right --> 
 			<property name="IKHandRRotation" value="37.55, 13.433, -49.88"/>
 		</property>
 
@@ -1535,10 +1535,10 @@
 			<property name="slot_type" value="handlebars"/>
 			<property name="transform" value="Origin/steering_joint"/>
 			<property name="steerMaxAngle" value="60"/>
-			<property name="IKHandLPosition" value="-.154, .1256, .0265"/>
-			<property name="IKHandLRotation" value="37.55, -13.433, 49.88"/>
-			<property name="IKHandRPosition" value=".154, .1256, .0265"/>
-			<property name="IKHandRRotation" value="37.55, 13.433, -49.88"/>
+			<property name="IKHandLPosition" value="-.154, .05, .0265"/>
+			<property name="IKHandLRotation" value="37.55, -13.433, 60.88"/>
+			<property name="IKHandRPosition" value=".154, .05, 0"/>
+			<property name="IKHandRRotation" value="37.55, 13.433, 60.88"/>
 		</property>
 		
 		<property class="seat0">
