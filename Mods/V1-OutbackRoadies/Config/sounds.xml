@@ -214,6 +214,54 @@
 	<LowestPitch name="0.65"/>
 	<HighestPitch name="0.65"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Oak Siren Head -->
+	
+	<SoundDataNode name="sirenalert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenSense"/>
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+<SoundDataNode name="sirenpaindeath"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenpain"/>
+	<Channel name="Mouth"/>
+	<Priority name="0"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
+
+<SoundDataNode name="sirenHurt"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenHurt"/>	
+	<Channel name="Mouth"/>
+	<Priority name="1"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> </SoundDataNode>
+
+<SoundDataNode name="sirenroam"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenRandom2"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenRandom"/>
+	<Channel name="Mouth"/>
+	<Priority name="5"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+<SoundDataNode name="sirenSense"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+	<AudioClip ClipName="#@modfolder:Resources/SirenHead.unity3d?sirenSense"/>
+	<Channel name="Mouth"/>
+	<Priority name="4"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
   
 	</append>	
 </configs>

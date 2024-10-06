@@ -3290,6 +3290,32 @@
 				<property name="QuestGiven" value="quest_chickens"/>
 			</property>
 		</item>
+		
+	<!-- Oak Siren Heads -->	
+		<item name="quest_oaksirenheads">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
+			<property name="DescriptionKey" value="quest_oaksirenheadsDesc"/>
+			<property name="CustomIcon" value="quest_oaksirenheads"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_oaksirenheads"/>
+			</property>
+		</item>
+		
+	<!-- NPC HELPERS -->
+		
+		<item name="noteqc_1-SummonFriendZ">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="noteqc_1-SummonFriendZDesc"/>
+			<property name="CustomIcon" value="FriendZ"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="Group" value="Books,SchematicsOnly,TCReading"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_1-SummonFriendZ"/>
+			</property>
+		</item>
 
 	<!-- ADMIN TOOLS -->
 	

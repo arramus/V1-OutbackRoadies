@@ -35,6 +35,7 @@
 		<property name="icon" value="ui_game_symbol_rabbit"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="easy"/>
 		<property name="shareable" value="false"/>
 		
@@ -54,6 +55,7 @@
 		<property name="icon" value="ui_game_symbol_spider"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
@@ -73,6 +75,7 @@
 		<property name="icon" value="ui_game_symbol_aussieanimal"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
@@ -92,6 +95,7 @@
 		<property name="icon" value="ui_game_symbol_miniradiatedburnt"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
@@ -111,6 +115,7 @@
 		<property name="icon" value="ui_game_symbol_headhunter"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
@@ -130,6 +135,7 @@
 		<property name="icon" value="ui_game_symbol_chicken"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty" value="easy"/>
 		<property name="shareable" value="false"/>
 		
@@ -139,6 +145,43 @@
 		<reward type="Item" id="casinoCoin" value="1250"/>
 		<reward type="SkillPoints" value="1" chainreward="false"/>
 	</quest>
+	
+	<!-- Oak Siren Heads -->
+	<quest id="quest_oaksirenheads">
+		<property name="offer_key" value="Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="name_key" value="50 Oakraven Siren Heads"/>
+		<property name="subtitle_key" value="50 Oakraven Siren Heads"/>
+		<property name="description_key" value="Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="icon" value="ui_game_symbol_oaksirenhead"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="zombieOakSirenHead" value="50"/>
+		
+		<reward type="Exp" value="20000"/>
+		<reward type="Item" id="casinoCoin" value="5000"/>
+		<reward type="SkillPoints" value="2" chainreward="false"/>
+	</quest>
+	
+	<!-- NPC HELPERS -->	
+		<quest id="challenge_1-SummonFriendZ">
+			<property name="offer_key" value="Accept this quest to take responsibility of a random FriendZ. Move to an open area to allow a FriendZ to be summoned. Feed 100 meat to hire. There are 8 in total - Desert Eagle Tom, M60 Dave, AK47 Momma, T.A. Rifle Business Man, SMG Marlene, Magnum Biker, Sniper Burnt, and Auto Moe."/>
+			<property name="name_key" value="Summon - FriendZ"/>
+			<property name="subtitle_key" value="Summon - FriendZ"/>
+			<property name="description_key" value="Move to an open area to allow a random FriendZ to be summoned."/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="easy"/>
+			<property name="add_to_tier_complete" value="false"/>
+				
+		<reward type="Exp" value="1500"/>
+		<action type="SpawnEnemy" id="npcTomClarkDPistol,npcDemolitionDaveM60,npcMommaAK47,npcBusinessManTRifle,npcMarleneSMG,npcBikerMagnumDPistol,npcBurntManSRifle,npcMoeAShotgun" value="1"/>
+		<reward type="Item" id="foodRawMeat" value="100"/>		
+		</quest>
 
 	</append>
 	

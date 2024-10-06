@@ -336,7 +336,7 @@ zombieOakBossHeadHunter2,entityclasses,Entity,,,Boss Head Hunter Lazza,,,,,,,,,,
 zombieOakBossHeadHunter3,entityclasses,Entity,,,Boss Head Hunter Dazza,,,,,,,,,,,,,
 zombieOakBossHeadHunter4,entityclasses,Entity,,,Boss Head Hunter Tezza,,,,,,,,,,,,,
 zombieOakBossHeadHunter5,entityclasses,Entity,,,Boss Head Hunter Jezza,,,,,,,,,,,,,
-
+zombieOakSirenHead,entityclasses,Entity,,,Oakraven Siren Head,,,,,,,,,,,,,
 
 vehiclePocoCar,vehicles,vehicle,,,Poco Car
 vehiclePocoCarPlaceable,vehicles,item,,,Poco Car
@@ -371,6 +371,19 @@ quest_headhunters,items,Quest - Challenge,,,"Eliminate Head Hunters",,,,,,,,,,,,
 quest_headhuntersDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 100 head hunters. They look a bit like War Boys and Nurses, and are out for your blood via your torn off head. Earn XP, Dukes, and 2 Skill Points upon completion.\n\nAdditional Quest Notes can be found in safes and quest loot. Scraps to 50 paper.",,,,,,,,,,,,,
 quest_chickens,items,Quest - Challenge,,,"Eliminate Chickens",,,,,,,,,,,,,
 quest_chickensDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 25 chickens. Earn XP, Dukes, and 1 Skill Point upon completion.\n\nAdditional Quest Notes can be found in safes and quest loot. Scraps to 50 paper.",,,,,,,,,,,,,
+quest_oaksirenheads,items,Quest - Challenge,,,"Eliminate Oakraven Siren Heads",,,,,,,,,,,,,
+quest_oaksirenheadsDesc,items,Quest - Challenge,,,"Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles.\n\nAdditional Quest Notes can be found in safes and quest loot. Scraps to 50 paper.",,,,,,,,,,,,,
+
+npcTomClarkDPistol,entityclasses,Entity,,,Desert Eagle Tom,,,,,,,,,,,,,
+npcDemolitionDaveM60,entityclasses,Entity,,,M60 Dave,,,,,,,,,,,,,
+npcMommaAK47,entityclasses,Entity,,,AK47 Momma,,,,,,,,,,,,,
+npcBusinessManTRifle,entityclasses,Entity,,,T.A. Rifle Business Man,,,,,,,,,,,,,
+npcMarleneSMG,entityclasses,Entity,,,SMG Marlene,,,,,,,,,,,,,
+npcBikerMagnumDPistol,entityclasses,Entity,,,Magnum Biker,,,,,,,,,,,,,
+npcBurntSRifle,entityclasses,Entity,,,Burnt Wight,,,,,,,,,,,,,
+npcMoeAShotgun,entityclasses,Entity,,,Auto Moe,,,,,,,,,,,,,
+noteqc_1-SummonFriendZ,items,item,,,Summon - FriendZ,,,,,,,,,,,,,
+noteqc_1-SummonFriendZDesc,items,item,,,"This quest allows a player to summon a random FriendZ and also receive 100 meat to hire the new companion. There are 8 in total - Desert Eagle Tom, M60 Dave, AK47 Momma, T.A. Rifle Business Man, SMG Marlene, Magnum Biker, Sniper Burnt, and Auto Moe.",,,,,,,,,,,,,
 
 TwitchAction_SpawnCassowary,twitch,Actions,,,Cassowary,,,,,,,,,,,
 TwitchAction_SpawnCassowaryCommand,twitch,Actions,,,#spawn_cassowary,,,,,,,,,,,,

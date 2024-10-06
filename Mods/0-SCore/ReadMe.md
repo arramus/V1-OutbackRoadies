@@ -1,6 +1,7 @@
 ﻿#0-SCore
 
-The 0-SCore is the key component to enable extra functionality for 7 Days To Die. Using a mixture of Harmony, SDX Patch Scripts, and Scripts, new features are enabled for modders and players to use.
+The 0-SCore is the key component to enable extra functionality for 7 Days To Die. Using a mixture of Harmony, SDX Patch Scripts, and Scripts, 
+new features are enabled for modders and players to use.
 
 | Folder | Description |
 | ----------- | ----------- |
@@ -9,12 +10,8 @@ The 0-SCore is the key component to enable extra functionality for 7 Days To Die
 | Scripts | Many Scripts which include new classes. References to these scripts would be  ```<className>, SCore```  |
 |Features | Features will contain all the code necessary for a particular feature, grouping the code so it can be easily found and extracted. |
 
-Note: An auto-mirror is available on gitlab that allows you to download individual mods: https://gitlab.com/sphereii/SphereII-Mods
-
 ### Direct Downloads
-Direct Download to the 0-SCore.zip available on gitlab mirror:
-
-[ 0 - SCore ( Latest ) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/master/SphereII-Mods-master.zip?path=0-SCore
+Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.com/SphereII/SphereII.Mods/releases/latest
 
 ### TODO
 	- Fix random sounds from NPC, like stamina exhaustion
@@ -23,6 +20,280 @@ Direct Download to the 0-SCore.zip available on gitlab mirror:
 ### Change Logs
 
 [ Change Log ]
+Version: 1.1.4.1542
+	[ Entity Targetting ]
+		- Updated the code for the ItemItemAction to first check if it's hitting an EntityAlive
+		- Then checks if the entity alive is dead. If so, let the damage through.
+		- If it's an EntityAlive, and it's alive, do the faction checks.
+
+Version: 1.1.4.1015
+	[ SCore Options ]
+		- Hide SCore Options window when in prefab editor
+
+	[ ConfigBlock ]
+		- Pathing cube reverted to 1,1,1 multidim.
+
+	[ Challenges ]
+		- Fixed a typo in the comment section of StealthKill showing an example.
+
+	[ EntityAliveSDX ]
+		- Changed the requirements for when to check if an EntityAliveSDX is near a campfire.
+		- Moved UpdateBlockStatusEffect from EntityAliveSDX to EntityUtilities
+
+	[ Entity Alive Patch ]
+		- Added a patch to EntityAlive's OnUpdateLive()
+		- If an entity has this cvar "UpdateBlockStatusEffect" with a value of non-0, then it will process the BlockStatus Effect
+		- This means it'll pick up buffs and effects from blocks like BlockAoE.
+
+	[ One Block Crouch ]
+		- Exposed the crouch height modifier to xml, with the default being still 0.49 in code, and through xml.
+		- Any numbers below 0.10 will be set to 0.10.
+		- No max threshold is protected.
+		- This is adjusted in the AdvancedPlayerFeatures's section of the Config Block called PhysicsCrouchHeightModifier
+		    <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedPlayerFeatures']/property[@name='PhysicsCrouchHeightModifier']/@value">0.45</set>
+
+	[ Merged in Raycast change from khzmusik ]
+		From Commit Notes: 
+		- Disable ray hit events when entities can't be damaged
+		- This is a Harmony patch on `ItemActionDynamic.hitTarget` to disable the firing of "on[SelfPrimary|Secondary]Action[Ray|Graze]Hit" events 
+			if the holding entity can't damage the target entity.
+
+		- This is the cause of the stun baton "shock" issue with friendly NPCs. The stun baton itself wasn't hitting or doing damage, but the 
+			baton was still charging, and when fully charged, it still shocked the friendly NPC.
+
+		- I also refactored the logic to determine when an entity should use faction targeting. It was already repeated in two 
+			places in the code, and I would need to repeat it a third time in my patch.
+		- I did test to make sure that there were no regressions. I tested with a friendly NPC (Baker), and enemy NPC (Harley), and animal (bear), 
+			and zombies (mainly Boe). I made sure that I could still shock everyone except the Baker, and that when they attacked each other, they did damage.
+
+Version: 1.0.94.1336
+	[ Challenges ]
+		- Created an Interface for challenges to help future development work
+
+	[ Entity Alive Ground Detection ]
+		- Added a patch to stop a vanilla custom trader that was stuck in a fall post.
+			- Fix is to add vanillatrader tag to the trader
+
+	[ Maintenance ]
+		- Cleaned up some code that was never used, that was failing on 1.1.
+
+Version: 1.0.93.1757
+	[ Challenges ]
+		- Fixed an issue with Decapitation challenge
+		- Fixed an issue with the BlockUpgrade challenge
+
+Version: 1.0.93.1534
+	[ Challenges ]
+		- Added another patch to protect against potential errors when loading saves
+	
+	- KillWithItem:
+		- Changed main localization entry to challengeKillWithItemDesc
+
+	[ Caves ]
+		- Initial add for new cave system based on a texture2D.
+		- GenerationType is "Texture2D" to activate and test. 
+		- Sample Cave03.png is provided.
+		- Red Spots are POIs
+		- No support yet to control depth.
+
+Version: 1.0.89.1020
+	[ Challenges ]
+		- Added BlockUpgradeSCore, SCore
+			- Adds the ability to specify a block_tag/block_tags attribute.
+			- Adds the ability to filter based on biome.
+			
+		 	<objective type="BlockUpgradeSCore,SCore" block="frameShapes:VariantHelper" count="10" 
+				held="meleeToolRepairT0StoneAxe" needed_resource="resourceWood" needed_resource_count="8" />
+			<objective type="BlockUpgradeSCore,SCore" block_tags="wood" count="10" 
+				held="meleeToolRepairT0StoneAxe" needed_resource="resourceWood" needed_resource_count="8" />
+			<objective type="BlockUpgradeSCore,SCore" block_tags="wood" count="10" biome="burnt_forest" />
+
+Version: 1.0.88.1030
+	[ Challenges ]
+		- Added target_name_key parsing to KillWithItem.
+		- Added Localization key for KillWith Item
+			challengeKillZombiesWithItemDesc
+
+		- Added Item_tags to be validated, on the Harvest Objective.
+			- If item="" and item_tags="" are both defined, they both need to pass 
+			
+	[ NPCs ]
+		- merged 2 fixes from  khzmusik 
+			- Fixed a see cache issue
+			- Fixed a faction tracking issue
+
+Version: 1.0.86.1506
+	[ Challenges ]
+		- Another patch to fix challenges being corrupted
+
+Version: 1.0.86.1304
+	[ Challenges ]
+		- Fixed an issue where the Challenges were getting corrupted by conflicting enum values
+		- This probably needs a new Save to work.
+		- Added a new ObjectiveSCoreBase to allow us to make more challenges without duplicating a bunch of repeated tags.
+
+		- Added a new Challenge that fires whenever an NPC is being hired.
+			<objective type="HireNPC, SCore" count="20" />
+    	    <objective type="HireNPC, SCore" count="5" target_name="npcNurseKnife"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="female"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="male"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="male" biome="burnt_forest"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="female" item="resourceCropGoldenrodPlant"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="male" item_tags="brass"/>
+        	<objective type="HireNPC, SCore" count="5" entity_tags="male" item_material="Mwood"/>
+
+		- Added a new challenge to give more control over harvest
+     		<objective type="Harvest, SCore" count="20" item="resourceWood" held_tags="axe" biome="burnt_forest" />
+			<objective type="Harvest, SCore" count="20" item="resourceWood" held_tags="axe" block_tag="challenge_pallet" />
+
+Version: 1.0.83.950
+	[ Events ]
+		- Fixed a null reference with the OnClientKill when the game would trigger the event after the game killed.
+
+	[ Challenges ]
+		- Added an optional cvar attribute for StealthKillStreak.
+		- This cvar will hold the longest recorded kill streak.
+			<objective type="StealthStreak, SCore" count="2" cvar="longestStreakCVar" />
+
+	[ SCore Utilities ]
+		- Created a window group for the SCore Utilities button
+		- Added it to the xui.xml, rather than the existing in game-menu
+		- Removed the background and cleaned up the SCore Utilities creen.
+
+Version: 1.0.82.935
+
+	[ Fire Mod ]
+		- Added Events:
+			- OnExtinguish - Triggered when a fire is extinguished
+			- OnFireUpdate - Triggered when a CheckBlocks on the fire mod finishes
+			- OnStartFire - Triggered when a new block is put on fire.
+
+	[ Challenges ]
+		- Fixed a null reference with the KillWith
+		- Fixed up LocalizationKey entry for some Challenge Objectives
+
+		- Decapitation
+			- New challenge to keep track of decapitations. Supports xml attributes from KillWithItem
+	            <objective type="Decapitation, SCore" count="10" item_tag="gun"  />
+            	<objective type="Decapitation, SCore" count="10" item_tag="knife,machete"  />
+
+		- Craft With Ingredient
+			- New challenge objective to allow a player to craft with a certain ingredient, rather than a recipe itself.
+				<objective type="CraftWithIngredient, SCore" count="2" ingredient="resourceLegendaryParts"/>
+
+		- Burn Down a Building
+			- New challenge to reward a player for burning down a house using the fire mod.
+	            <objective type="BlockDestroyedByFire, SCore" count="20" />
+
+		- Start a Fire
+			- New challenge to reward a player for starting a fire.
+	            <objective type="StartFire, SCore" count="20" />
+
+		- Out of Control Fire
+			- New challenge to reward a player for having a large fire
+	            <objective type="BigFire, SCore" count="20" />
+
+		- Extinguish Fire
+			- New challenge to reward a player for extinguishing some blocks.
+	            <objective type="ExtinguishFire, SCore" count="20" />
+			- World's more boring challenge for a pyro
+
+		- Break a block or a material on a block, and further define if it's in a certain biome and/or poi / poi_tag.
+			<objective type="BlockDestroyed, SCore" count="20" block="cntRetroFridgeVer1Closed" />
+			<objective type="BlockDestroyed, SCore" count="20" block="cntRetroFridgeVer1Closed" biome="burn_forest"  />
+			<objective type="BlockDestroyed, SCore" count="20" block="cntRetroFridgeVer1Closed" biome="burn_forest" poi="traderJen" />
+     		<objective type="BlockDestroyed, SCore" count="20" material="Mmetal" biome="pine_forest" poi_tags="wilderness" />
+
+		- Updated SphereII Challenges with examples. 
+
+Version: 1.0.81.1118
+
+	[ SCore Events ]
+		- Added two new events:
+		- OnRallyPointActivated
+			- When a Rally Point is activated, this event is called
+		- OnClientKill
+			- When an entity gets killed, this event is called.
+			- This event differs from the vanilla's Kill event, as it includes the DamageResponse.
+				- Vanilla event fires too early to have the Damage Response included in it.
+
+	[ Project ]
+		- Added new SphereII Challenges project.
+		- This includes a full page of Challenges that involve the new SCore events and new Challenge Objectives
+
+	[ Process Options ]
+		- Fixed an issue where the graphic settings were not running
+		- Added a check for the blocks.xml for some settings, before reading the cvar.
+	
+	[ Lock Picking ]
+		- Added a buff check to see if the Jail Breaking buff was active
+			- If active, break time is drastically increased, as well as the max angle to turn.
+		- Feel a bit limited on how to further cheese a skilled based game on candy.
+
+	[ Remote Crafting / Repair ]
+		- Added a tool tip to display if there's an enemy nearby, blocking you from pulling
+		- Fixed an issue where you could not repair even from your backpack, when enemies were near.
+
+	[ Challenges ]
+  	
+		-CompleteQuestStealth, SCore
+			A new challenge objective to monitor your stealth kills during a quest.
+			To pass this challenge, you must do consecutive stealth kills until you've reached the desired count.
+			If the stealth kill chain is broken, the Challenge is reset.
+
+			If the intention is that the full quest be done 100% stealth, set the count to be higher than the expected number of zombies
+			Once the Sleeper volumes are all cleared for the QuestObjectiveClear, then the challenge will complete, regardless if
+			the Count is equaled to the count specified.
+
+			Examples:
+				<!-- Kill two entities in a row with a stealth kill, during a quest. -->
+				<objective type="CompleteQuestStealth, SCore" count="2"/>
+
+				<!-- Kill all entities in a row with a stealth kill, during a quest. -->
+				<objective type="CompleteQuestStealth, SCore" count="1000"/>
+
+		-KillWithItem, SCore
+
+			To pass this challenge, you must killed zombies with the specified item. This extends the KillByTag objective, and thus supports
+			all those attributes as well. Multiple item="" can be listed as a comma-delimited list.
+
+			<!-- Kill two zombies in a row with a gunHandgunT1Pistol -->
+			<objective type="KillWithItem, SCore" count="2" item="gunHandgunT1Pistol" />
+
+			Rather than item name itself, you could also use item_tag
+			<objective type="KillWithItem, SCore" count="2" item_tags="handgunSkill"  />
+
+			ItemName is checked first, then item tags. If either passes, then vanilla code is checked for the other tags and checks.
+			You may also add the option entity tags and target_name_key for localization.
+
+			By default, the entity_tags and target_name_key is zombie and xuiZombies, respectively. These can be over-ridden via xml.
+
+			<objective type="KillWithItem, SCore" count="2" item="gunHandgunT1Pistol" entity_tags="zombie" target_name_key="xuiZombies" />
+
+			Other attributes available are:
+				target_name="zombieMarlene"
+				biome="snow"
+				killer_has_bufftag="buff_tags"
+				killed_has_bufftag="buff_tags"
+				is_twitch_spawn="true/false"
+
+			Note About Traps: 
+			If the item is a trap, such as a landmine, then the owner ID is not set on it. There is no way to track down, or give exp to a player
+			for the kill. I did add a check for this, so that you can use a landmine for a challenge. 
+
+			If a zombie dies from a trap, and the player is within 50 blocks, it will count towards the challenge.
+
+		- StealthStreak Challenge 
+			A new challenge objective to monitor your stealth kills
+			To pass this challenge, you must do consecutive stealth kills until you've reached the desired count.
+
+			If a kill is registered, and is not a sneak kill, then the challenge resets.
+		
+			<!-- Kill two entities in a row with a stealth kill -->
+			<objective type="StealthStreak, SCore" count="2"/>
+
+			This challenge extends from KillWithItem, and supports all those tags as well.
+
 Version: 1.0.75.721
 	[ Farming ]
 		- Fixed a null reference error when world is null / not ready.

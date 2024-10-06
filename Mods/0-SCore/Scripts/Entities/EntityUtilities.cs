@@ -9,6 +9,9 @@ public static class EntityUtilities
     private static readonly bool blDisplayLog = false;
     private static readonly string AdvFeatureClass = "AdvancedNPCFeatures";
 
+    public delegate bool OnHireNPC(int hiredId, int ownerId);
+    public static event OnHireNPC OnHire;
+
     private static List<FastTags<TagGroup.Global>> _HumanTags = null;
     private static List<FastTags<TagGroup.Global>> _UseFactionsTags = null;
 
@@ -118,6 +121,26 @@ public static class EntityUtilities
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// Returns true if this entity should use faction targeting, according to feature settings,
+    /// entity properties, or entity tags.
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <returns></returns>
+    public static bool UseFactionTargeting(EntityAlive entity)
+    {
+        return
+            // allow an override for the action stuff. If its set here, then use faction targeting.
+            CheckProperty(entity.entityId, "AllEntitiesUseFactionTargeting") ||
+
+            // New feature flag, specific to this feature.
+            Configuration.CheckFeatureStatus(AdvFeatureClass, "AllEntitiesUseFactionTargeting") ||
+
+            // Even if *all* entities don't use faction targeting rules, this entity should if it has
+            // one of the UseFactions tags.
+            UseFactions(entity);
     }
 
     public static void AddBuffToRadius(string strBuff, Vector3 position, int Radius)
@@ -712,6 +735,7 @@ public static class EntityUtilities
         {
             if (uiforPlayer.xui.PlayerInventory.GetItemCount(GetHireCurrency(EntityID)) >= GetHireCost(EntityID))
             {
+                OnHire?.Invoke(EntityID, _player.entityId);
                 // Create the stack of currency
                 var stack = new ItemStack(GetHireCurrency(EntityID), GetHireCost(EntityID));
                 DisplayLog(" Removing Item: " + stack);
@@ -1980,6 +2004,41 @@ public static class EntityUtilities
         GameManager.Instance.World.RemoveEntity(entity.entityId, EnumRemoveEntityReason.Despawned);
     }
 
+    public static void UpdateBlockRadiusEffects(EntityAlive entityAlive) {
+        var blockPosition = entityAlive.GetBlockPosition();
+        var num = World.toChunkXZ(blockPosition.x);
+        var num2 = World.toChunkXZ(blockPosition.z);
+        for (var i = -1; i < 2; i++)
+        {
+            for (var j = -1; j < 2; j++)
+            {
+                var chunk = (Chunk)entityAlive.world.GetChunkSync(num + j, num2 + i);
+                if (chunk == null) continue;
+
+                var tileEntities = chunk.GetTileEntities();
+                for (var k = 0; k < tileEntities.list.Count; k++)
+                {
+                    var tileEntity = tileEntities.list[k];
+
+                    if (!tileEntity.IsActive(entityAlive.world)) continue;
+
+                    var block = entityAlive.world.GetBlock(tileEntity.ToWorldPos());
+                    var block2 = Block.list[block.type];
+                    if (block2.RadiusEffects == null) continue;
+
+
+                    var distanceSq = entityAlive.GetDistanceSq(tileEntity.ToWorldPos().ToVector3());
+                    for (var l = 0; l < block2.RadiusEffects.Length; l++)
+                    {
+                        var blockRadiusEffect = block2.RadiusEffects[l];
+                        if (distanceSq <= blockRadiusEffect.radius * blockRadiusEffect.radius &&
+                            !entityAlive.Buffs.HasBuff(blockRadiusEffect.variable))
+                            entityAlive.Buffs.AddBuff(blockRadiusEffect.variable);
+                    }
+                }
+            }
+        }
+    }
     public static void UpdateHandItem(int entityId, string item)
     {
         var entity = GameManager.Instance.World.GetEntity(entityId) as EntityAliveSDX;

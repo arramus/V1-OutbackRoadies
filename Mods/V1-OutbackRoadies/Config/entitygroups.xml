@@ -45,6 +45,7 @@
 		zombieOakHeadHunter3, .15
 		zombieOakHeadHunter4, .15
 		zombieOakHeadHunter5, .15
+		zombieOakSirenHead, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
@@ -68,6 +69,7 @@
 		zombieOakBossHeadHunter3, .25
 		zombieOakBossHeadHunter4, .25
 		zombieOakBossHeadHunter5, .25
+		zombieOakSirenHead, .25
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
@@ -91,6 +93,7 @@
 		zombieOakBossHeadHunter3, .5
 		zombieOakBossHeadHunter4, .5
 		zombieOakBossHeadHunter5, .5
+		zombieOakSirenHead, .5
 	</csv>
 	
 	<append xpath="/entitygroups">
@@ -229,6 +232,33 @@
 		zombieOakBossHeadHunter4
 		zombieOakBossHeadHunter5
 	</entitygroup>
+
+	<!-- NPC HELPERS -->
+	<!-- BIOMES -->	
+	<!-- *** DAY -->	
+	<entitygroup name="SummonFriendZDay">
+		npcTomClarkDPistol, 1
+		npcDemolitionDaveM60, 1
+		npcMommaAK47, 1
+		npcBusinessManTRifle, 1
+		npcMarleneSMG, 1
+		npcBikerMagnumDPistol, 1
+		npcBurntSRifle, 1
+		npcMoeAShotgun, 1
+		none, 92
+	</entitygroup>	
+	<!-- *** NIGHT -->	
+	<entitygroup name="SummonFriendZNight">
+		npcTomClarkDPistol, 1
+		npcDemolitionDaveM60, 1
+		npcMommaAK47, 1
+		npcBusinessManTRifle, 1
+		npcMarleneSMG, 1
+		npcBikerMagnumDPistol, 1
+		npcBurntSRifle, 1
+		npcMoeAShotgun, 1
+		none, 92
+	</entitygroup>	
 	
 	</append>
 
@@ -497,6 +527,7 @@
 		zombieOakBossHeadHunter3, .1
 		zombieOakBossHeadHunter4, .1
 		zombieOakBossHeadHunter5, .1
+		zombieOakSirenHead, .05
 	</csv>
 
 	<!-- SPIDER ONLY HORDE NIGHT -->

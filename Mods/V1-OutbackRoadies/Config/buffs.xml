@@ -75,7 +75,7 @@
 
 		<buff name="animalBloodMoonSpider01QueenFredDeco" hidden="true">
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Zombies/Prefabs/ZCrawlerFeral.prefab" local_offset="0.65,0,-0.1" local_rotation="0,90,90" parent_transform="Bone35"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Zombies/Prefabs/ZCrawlerFeral.prefab" local_offset="1.1,0,-0.75" local_rotation="0,90,80" parent_transform="Bone35"/>	
 			</effect_group>
 		</buff>
 		
@@ -94,6 +94,72 @@
 			<effect_group>				
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Furniture/woodBurningStovePrefab" local_offset="0,0.15,0" local_rotation="0,0,0" parent_transform="Spine"/> <!-- Local Offset Up-Down/Front-Back/Left-Right -->				
 				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0.2" local_rotation="0,0,0" parent_transform="Spine"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Tom Clark Desert Eagle -->
+
+		<buff name="npcTomClarkDPistolDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Desert Eagle/desertEaglePrefab.prefab" local_offset="0.17,0.03,-0.04" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Desert Eagle/desertEaglePrefab.prefab" local_offset="-0.17,-0.03,0.04" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down --> <!-- Local Rotation Exorcist Spin/Nodding/Thinking -->	
+			</effect_group>
+		</buff>
+		
+		<!-- Demolition Dave - M60 -->
+		
+		<buff name="npcDemolitionDaveM60Deco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab" local_offset="0.18,0.03,-0.07" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/MachineGun/m60MachinegunPrefab.prefab" local_offset="-0.18,-0.03,0.07" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down --> <!-- Local Rotation Exorcist Spin/Nodding/Thinking -->	
+			</effect_group>
+		</buff>
+		
+		<!-- Momma - AK47 -->
+		
+		<buff name="npcMommaAK47Deco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/AK47/ak47Prefab.prefab" local_offset="0.35,0.06,-0.12" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<!-- Business Man - TAR -->
+		
+		<buff name="npcBusinessManTRifleDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab" local_offset="0.3,0.04,-0.1" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<!-- Arlene - SMG -->
+		
+		<buff name="npcMarleneSMGDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/SMG/smgPrefab.prefab" local_offset="-0.3,-0.05,0.0975" local_rotation="7,-80,-90" parent_transform="LeftHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<!-- Biker - Magnum DPistol -->
+		
+		<buff name="npcBikerMagnumDPistolDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Magnums/magnumPrefab.prefab" local_offset="0.12,0.03,-0.04" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<!-- Burnt - Sniper -->
+		
+		<buff name="npcBurntSRifleDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab" local_offset="0.16,0.03,-0.06" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
+			</effect_group>
+		</buff>
+		
+		<!-- Moe - Auto Shotgun -->
+		
+		<buff name="npcMoeAShotgunDeco" hidden="true">
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab" local_offset="0.12,0.03,-0.07" local_rotation="187,-80,90" parent_transform="RightHand"/> <!-- Local Offset Front-Back/Left-Right/Up-Down -->
 			</effect_group>
 		</buff>
 		

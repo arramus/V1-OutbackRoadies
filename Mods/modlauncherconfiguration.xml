@@ -1,6 +1,6 @@
 <Servers>
-  <ServerGroup Name="Outback Roadies (V1.0)">
-    <Server Name="Outback Roadies (V1.0)" Logo="https://i.imgur.com/wg3RBYv.jpeg">
+  <ServerGroup Name="Outback Roadies (V1)">
+    <Server Name="Outback Roadies (V1)" Logo="https://i.imgur.com/wg3RBYv.jpeg">
       <Description>Outback Roadies is a post-poco mod with an Australian theme.
 	  
 Features Include:
@@ -20,7 +20,7 @@ Features Include:
         <Discord>https://discord.gg/3aWeEGrjJK</Discord>
         <Donate></Donate>
         <DownloadMode>Clone</DownloadMode>
-      <Downloads><Download>https://github.com/arramus/V1.0-OutbackRoadies</Download></Downloads>      
+      <Downloads><Download>https://github.com/arramus/V1-OutbackRoadies</Download></Downloads>      
     </Server>
   </ServerGroup>
 </Servers>

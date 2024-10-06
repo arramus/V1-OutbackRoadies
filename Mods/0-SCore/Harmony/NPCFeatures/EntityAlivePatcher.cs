@@ -15,33 +15,7 @@ namespace Harmony.NPCFeatures
         private static readonly string Feature = "EnhancedFeatures";
 
 
-        //[HarmonyPatch(typeof(global::EntityAlive))]
-        //[HarmonyPatch("Attack")]
-        //public class EntityAliveAttack
-        //{
-        //    private static bool Prefix(global::EntityAlive __instance)
-        //    {
-        //        // Check if this feature is enabled.
-        //        if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
-        //            return true;
-
-        //        // Check if there's a door in our way, then open it.
-        //        if (__instance.GetAttackTarget() == null)
-        //        {
-        //            // If it's an animal, don't let them attack blocks
-        //            var animal = __instance as EntityAliveFarmingAnimalSDX;
-        //            if (animal)
-        //                if (__instance.GetAttackTarget() == null)
-        //                    return false;
-        //        }
-
-        //        if (__instance.GetAttackTarget() != null)
-        //            __instance.RotateTo(__instance.GetAttackTarget(), 30f, 30f);
-
-        //        return true;
-        //    }
-        //}
-
+     
 
         // Disables the friendly fire of allies
         [HarmonyPatch(typeof(global::EntityAlive))]
@@ -50,21 +24,10 @@ namespace Harmony.NPCFeatures
         {
             private static bool Prefix(global::EntityAlive __instance, ref int __result, DamageSource _damageSource)
             {
+                
+                if (!EntityUtilities.UseFactionTargeting(__instance))
+                    return true;
 
-                // allow an override for the action stuff. If its set here, then use faction targeting.
-                if (!EntityUtilities.CheckProperty(__instance.entityId, "AllEntitiesUseFactionTargeting"))
-                {
-                    // New feature flag, specific to this feature.
-                    if (!Configuration.CheckFeatureStatus(AdvFeatureClass, "AllEntitiesUseFactionTargeting"))
-                    {
-                        // Even if *all* entities don't use faction damage rules, this entity should
-                        // if it has one of the UseFactions tags. Only stop now if it doesn't.
-                        if (!EntityUtilities.UseFactions(__instance))
-                        {
-                            return true;
-                        }
-                    }
-                }
                 if (_damageSource.damageType == EnumDamageTypes.Suicide)
                     return true;
 
@@ -129,6 +92,31 @@ namespace Harmony.NPCFeatures
                     return false;
                 }
                 return true;
+            }
+        }
+
+        /// <summary>
+        /// Harmony patch to disable the firing of "onSelf[Primary/Secondary]Action[Ray/Graze]Hit"
+        /// events if the holding entity can't damage the target entity.
+        /// </summary>
+        [HarmonyPatch(typeof(ItemActionDynamic))]
+        [HarmonyPatch(nameof(ItemActionDynamic.hitTarget))]
+        public class ItemActionDynamicHitTarget
+        {
+            private static bool Prefix(
+                ItemActionDynamic __instance,
+                ItemActionData _actionData,
+                WorldRayHitInfo hitInfo) {
+
+                // Only checking if we are hitting an entity, otherwise, let the damage through.
+                var target = ItemActionAttack.GetEntityFromHit(hitInfo);
+                if (target is not global::EntityAlive entityAlive) return true;
+                
+                // if it's already dead, then no faction targeting. Let the players carve their friends.
+                if (entityAlive.IsDead()) return true;
+                if (!EntityUtilities.UseFactionTargeting(_actionData.invData.holdingEntity)) return true;
+                return EntityTargetingUtilities.CanDamage(_actionData.invData.holdingEntity, ItemActionAttack.GetEntityFromHit(hitInfo));
+
             }
         }
 

@@ -42,8 +42,30 @@
     <Deterministic>false</Deterministic>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Features\Caves\Harmony\PathPatcher.cs" />
+    <Compile Include="Features\Caves\Scripts\SCoreCavesSplat3.cs" />
+    <Compile Include="Features\Caves\Scripts\SCoreCavesTexture.cs" />
+    <Compile Include="Features\Caves\Scripts\SCoreCavesUtils.cs" />
+    <Compile Include="Features\Challenges\ChallengeTypeSCoreEnums.cs" />
     <Compile Include="Features\Challenges\Harmony\ChallengeReadObjective.cs" />
+    <Compile Include="Features\Challenges\Harmony\DebugChallenges.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveBigFire.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveBlockDestroyed.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveBlockDestroyedByFire.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveBlockUpgrade.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveCompleteQuestStealth.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveCraftWithIngredient.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveDecapitation.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveEnterPOI.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveExtinguishFire.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveHarvest.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveHireNPC.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveKillWithItem.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveSCoreBase.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveStartFire.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveStealthKillStreak.cs" />
+    <Compile Include="Features\Challenges\Scripts\IChallengeObjective.cs" />
+    <Compile Include="Features\Challenges\Scripts\SCoreChallengeUtils.cs" />
     <Compile Include="Features\Drones\Harmony\EntityDronePatches.cs" />
     <Compile Include="Features\EntityPooling\Harmony\EntityFactoryPatch.cs" />
     <Compile Include="Features\EntityPooling\Scripts\EntityFactoryPool.cs" />
@@ -105,6 +127,7 @@
     <Compile Include="Features\ParticleAttractor\Scripts\Particles\particleAttractorLinear.cs" />
     <Compile Include="Features\ParticlesOnBlocks\Harmony\Blocks.cs" />
     <Compile Include="Features\PlayerMetrics\KillTracking\Scripts\SCoreKillTracker.cs" />
+    <Compile Include="Features\PlayerMetrics\SCoreMetrics.cs" />
     <Compile Include="Features\RemoteCrafting\Harmony\DropBoxToContainers.cs" />
     <Compile Include="Features\RemoteCrafting\Harmony\IngredientsFromContainers.cs" />
     <Compile Include="Features\RemoteCrafting\Harmony\ItemActionRepairPatches.cs" />
@@ -139,6 +162,7 @@
     <Compile Include="Harmony\EntityAlive\AddScriptToTransform.cs" />
     <Compile Include="Harmony\EntityAlive\EntityAliveJiggleAdjustment.cs" />
     <Compile Include="Harmony\EntityAlive\EntityAlivePatches.cs" />
+    <Compile Include="Harmony\EntityAlive\EntityAliveUpdateBlockStatusEffect.cs" />
     <Compile Include="Harmony\EntityAlive\EntityTraderRektMute.cs" />
     <Compile Include="Harmony\EntityAlive\ReplicateSpeed.cs" />
     <Compile Include="Harmony\EntityDrone\EntityDronePatches.cs" />
@@ -262,6 +286,7 @@
     <Compile Include="Scripts\Cache\SphereCache.cs" />
     <Compile Include="Scripts\ConsoleCmd\ConsoleCmdActionFireClear.cs" />
     <Compile Include="Scripts\ConsoleCmd\ConsoleCmdAdjustCVar.cs" />
+    <Compile Include="Scripts\ConsoleCmd\ConsoleCmdAdjustMarkup.cs" />
     <Compile Include="Scripts\ConsoleCmd\ConsoleCmdReloadDialog.cs" />
     <Compile Include="Scripts\ConsoleCmd\ConsoleCmdReloadSCore.cs" />
     <Compile Include="Scripts\ConsoleCmd\ConsoleCmdUnitTestSCore.cs" />
@@ -335,6 +360,8 @@
     <Compile Include="Scripts\Entities\IEntityOrderReceiverSDX.cs" />
     <Compile Include="Scripts\Entities\LegacyEntityClasses.cs" />
     <Compile Include="Scripts\Entities\ModGeneralUtilities.cs" />
+    <Compile Include="Scripts\Events\EventOnClientKill.cs" />
+    <Compile Include="Scripts\Events\OnRallyPointActivated.cs" />
     <Compile Include="Scripts\Events\OnBloodMoonEnd.cs" />
     <Compile Include="Scripts\Events\OnBloodMoonStart.cs" />
     <Compile Include="Scripts\Events\OnBuffAdded.cs" />
@@ -515,6 +542,7 @@
     <Compile Include="Scripts\UtilityAI\UAITaskMoveToTargetSDX.cs" />
     <Compile Include="Scripts\UtilityAI\UAITaskFollowSDX.cs" />
     <Compile Include="Scripts\UtilityAI\UAITaskWanderSDX.cs" />
+    <Compile Include="Scripts\WorldGen\CaveTunnelerV2.cs" />
     <Compile Include="Scripts\WorldGen\HeightMapTunneler.cs" />
     <Compile Include="Scripts\WorldGen\LegacyCaveTunneler.cs" />
     <Compile Include="Scripts\WorldGen\SCoreTunneler.cs" />
@@ -522,7 +550,6 @@
     <Compile Include="Scripts\WorldGen\Utilities\FastNoise.cs" />
     <Compile Include="Scripts\WorldGen\Utilities\MapGenerator.cs" />
     <Compile Include="Scripts\WorldGen\Utilities\PathingWormTunneler.cs" />
-    <Compile Include="Scripts\WorldGen\WinterProjectPrefab.cs" />
     <Compile Include="Scripts\XUiC\Companions\XUiC_SCoreCompanion.cs" />
     <Compile Include="Scripts\XUiC\Companions\XUiC_SCoreCompanionList.cs" />
     <Compile Include="Scripts\XUiC\Companions\XUiC_SCoreInGameMenu.cs" />
