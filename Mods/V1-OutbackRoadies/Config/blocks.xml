@@ -241,10 +241,26 @@
 	<remove xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" />
 	<set xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Harvest']/@count">1</set>
 	
+	<!-- Player Planted Trees -->
+	<setattribute xpath="/blocks/block[@name='treePlantedOak41m']/drop[@event='Destroy'][@name='treePlantedOak1m']" name="tag">cropHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='treePlantedMountainPine41m']/drop[@event='Destroy'][@name='treePlantedMountainPine1m']" name="tag">cropHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='treePlantedWinterPine28m']/drop[@event='Destroy'][@name='treePlantedWinterPine1m']" name="tag">cropHarvest</setattribute>
+
+	<append xpath="/blocks/block[@name='treePlantedOak41m']">
+	<drop event="Destroy" name="treePlantedOak1m" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</append>
+	<append xpath="/blocks/block[@name='treePlantedMountainPine41m']">
+	<drop event="Destroy" name="treePlantedMountainPine1m" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</append>
+	<append xpath="/blocks/block[@name='treePlantedWinterPine28m']">
+	<drop event="Destroy" name="treePlantedWinterPine1m" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</append>
+	
 	<!-- Wild Wheat in Grass -->
 	
 	<append xpath="/blocks/block[@name='treeGrassMaster']">
 		<drop event="Harvest" name="foodWildWheat" count="2,5" prob="0.15" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodWildWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	</append>
 	
 	<!-- Oakraven Coops and Hives Vanilla Updates -->
