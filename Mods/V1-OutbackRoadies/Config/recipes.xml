@@ -294,6 +294,12 @@
 		<ingredient name="foodCanChili" count="1"/>
     </recipe>
 	
+	<recipe name="foodSuperHoneyPopcorn" count="1" craft_time="12" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="foodCropGraceCorn" count="2"/>
+		<ingredient name="foodHoneyComb" count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+	
 	<recipe name="drinkJarBillyTea" count="1" craft_time="18" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
 		<ingredient name="foodBillyTea" count="1"/>		
 		<ingredient name="drinkJarBoiledWater" count="1"/>

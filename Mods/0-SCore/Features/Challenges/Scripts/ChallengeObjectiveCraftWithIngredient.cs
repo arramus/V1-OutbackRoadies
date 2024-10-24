@@ -18,17 +18,25 @@ namespace Challenges {
         private string ingredientString;
 
         public string LocalizationKey = "craftWithIngredient";
-        public override string DescriptionText => Localization.Get(LocalizationKey);
+        private string _descriptionOverride;
 
-        
-        public override void HandleAddHooks()
-        {
+        public override string DescriptionText {
+            get {
+                if (string.IsNullOrEmpty(_descriptionOverride))
+                {
+                    return Localization.Get($"{LocalizationKey}") + ingredientString;
+                }
+
+                return Localization.Get(_descriptionOverride);
+            }
+        }
+
+        public override void HandleAddHooks() {
             QuestEventManager.Current.CraftItem += Current_CraftItem;
         }
 
-        
-        public override void HandleRemoveHooks()
-        {
+
+        public override void HandleRemoveHooks() {
             QuestEventManager.Current.CraftItem -= Current_CraftItem;
         }
 
@@ -38,33 +46,31 @@ namespace Challenges {
             foreach (var ingred in recipe.ingredients)
             {
                 var itemName = ingred.itemValue.ItemClass.GetItemName();
-                if ( !string.Equals(itemName, ingredientString, StringComparison.InvariantCultureIgnoreCase)) continue;
+                if (!string.Equals(itemName, ingredientString, StringComparison.InvariantCultureIgnoreCase)) continue;
                 Current += ingred.count;
                 CheckObjectiveComplete();
             }
-         
         }
 
 
-        public override void ParseElement(XElement e)
-        {
+        public override void ParseElement(XElement e) {
             base.ParseElement(e);
             if (e.HasAttribute("ingredient"))
             {
                 ingredientString = e.GetAttribute("ingredient");
             }
-            
+
             if (e.HasAttribute("description_key"))
-                LocalizationKey =e.GetAttribute("description_key");
-        }
-        
-        public override BaseChallengeObjective Clone()
-        {
-            return new ChallengeObjectiveCraftWithIngredient
-            {
-             ingredientString =  ingredientString
-            };
+                LocalizationKey = e.GetAttribute("description_key");
+            if (e.HasAttribute("description_override"))
+                _descriptionOverride = e.GetAttribute("description_override");
         }
 
+        public override BaseChallengeObjective Clone() {
+            return new ChallengeObjectiveCraftWithIngredient {
+                ingredientString = ingredientString,
+                _descriptionOverride = _descriptionOverride
+            };
+        }
     }
 }

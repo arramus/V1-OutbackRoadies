@@ -14,6 +14,17 @@ namespace Challenges {
         public override ChallengeObjectiveType ObjectiveType =>
             (ChallengeObjectiveType)ChallengeObjectiveTypeSCore.ChallengeObjectiveBlockUpgradeSCore;
      
+        public string LocalizationKey = "challengeObjectiveOnBlockUpgrade";
+        private string _descriptionOverride;
+
+        public override string DescriptionText {
+            get {
+                if (string.IsNullOrEmpty(_descriptionOverride))
+                    Localization.Get(LocalizationKey);
+                return Localization.Get(_descriptionOverride);
+            }
+        }
+        
         public override void HandleAddHooks() {
             QuestEventManager.Current.BlockUpgrade += this.Current_BlockUpgrade;
         }
@@ -29,7 +40,13 @@ namespace Challenges {
             Current++;
             CheckObjectiveComplete();
         }
-       
+
+        public override void ParseElement(XElement e) {
+            base.ParseElement(e);
+            if (e.HasAttribute("description_override"))
+                _descriptionOverride = e.GetAttribute("description_override");
+        }
+
         public override BaseChallengeObjective Clone() {
             return new ChallengeObjectiveBlockUpgradeSCore {
                 biome = this.biome,
@@ -42,7 +59,9 @@ namespace Challenges {
                 blockName = this.blockName,
                 blockTag = this.blockTag,
                 neededResourceID = this.neededResourceID,
-                neededResourceCount = this.neededResourceCount
+                neededResourceCount = this.neededResourceCount,
+                
+                _descriptionOverride = _descriptionOverride
             };
         }
      

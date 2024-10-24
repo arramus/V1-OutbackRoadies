@@ -1,5 +1,6 @@
 using System;
 using HarmonyLib;
+using UnityEngine;
 
 
 public static class EventOnBuffAdded {
@@ -12,8 +13,13 @@ public static class EventOnBuffAdded {
     [HarmonyPatch(new Type[] { typeof(string), typeof(Vector3i), typeof(int), typeof(bool), typeof(bool), typeof(float) })]
     public class BuffManagerAddBuff {
         private static void Prefix(string _name) {
-            var buff = BuffManager.GetBuff(_name);
-            BuffAdded?.Invoke(buff);
+            foreach (var buffName in _name.Split(','))
+            {
+                var buff = BuffManager.GetBuff(buffName);
+                if (buff == null) continue;
+
+                BuffAdded?.Invoke(buff);
+            }
         }
     }
 }

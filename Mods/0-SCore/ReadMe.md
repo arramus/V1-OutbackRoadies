@@ -20,6 +20,96 @@ Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.co
 ### Change Logs
 
 [ Change Log ]
+Version: 1.1.22.1530
+	[ Challenges ]
+		- Added a description_override attribute to completely over-ride the Localization key to the following Challenges:
+		- if description_override= does not exist, a generated Localized entry will be used.
+			- ChallengeObjectiveBlockDestroyed
+			- ChallengeObjectiveBlockUpgrade
+			- ChallengeObjectiveCompleteQuestStealth
+			- ChallengeObjectiveCraftWithIngredients
+			- ChallengeObjectiveCraftWithTags
+			- ChallengeObjectiveCVar
+			- ChallengeObjectiveDecapitation
+			- ChallengeObjectiveEnterPOI
+			- ChallengeObjectiveGatherTags
+			- ChallengeObjectiveKillWithItem
+			- ChallengeObjectiveStealthKillStreak
+
+	[ Events ]
+		- Fixed an issue with OnBuffAdded not parsing multiple buffs
+		- Removed Debug Log
+	
+
+Version: 1.1.21.1123
+	[ Challenges ]
+		- Fixed an issue where Block Upgrade did not do properly localization
+		- Fixed an issue where the WearTags was not working properly on mods
+
+		- Added a description_override attribute to completely over-ride the Localization key to the following Challenges:
+		- if description_override= does not exist, a generated Localized entry will be used.
+			- ChallengeObjectiveHarvest
+			- ChallengeObjectiveWearTags
+			- ChallengeObjectiveCraftWithTags
+			- ChallengeObjectiveCraftWithIngredient
+
+Version: 1.1.20.1108
+
+	[ Challenges ]
+		- Expanded support for WearTags Objective to support installable_tags and modifier_tags.
+             <objective type="WearTags,SCore" item_tags="armorHead"/>
+             <objective type="WearTags,SCore" item_mod="modGunBarrelExtender"/>
+             <objective type="WearTags,SCore" installable_tags="turretRanged"/>
+             <objective type="WearTags,SCore" modifier_tags="modGunBarrelExtender"/>
+
+Version: 1.1.18.1635
+
+	[ Documentation ]
+		- Added some Documentation on Challenges and MinEvents
+
+	[ OnBuffAdded Event ]
+		- Added a if buff is null to the OnBuffAdded event, silently failing if the requested buff does not exist.
+
+	[ ObjectiveBuffSDX Quest Objective ]
+		- Added a if buff is null check, silently failing if the requested buff does not exist.
+
+	[ Min Events ]
+		- Found a few MinEvents that were combined in a single file.
+		- Seperated so that each MinEvent is in its own file.
+		- No changes necessary. This is just a clean up.
+
+	[ Challenges ]
+		- WearTags : Takes an item_tags, rather than an Item name.
+			- Also searches for the tag in Mod / Cosmectic slots.
+
+			Default Localization Key: challengeObjectiveWearTags
+            <objective type="WearTags,SCore" item_tags="armorHead"/>
+
+		- GatherTags : Takes an item_tags instead.
+			Default Localization Key: challengeObjectiveGatherTags
+            <objective type="GatherTags, SCore" item_tags="junk" count="10"/>
+
+		- Craft With Tags
+			Default Localization Key: challengeObjectiveCraftWithTags
+			<objective type="CraftWithTags, SCore" count="2" item_tags="tag01"/>
+
+		- Get CVar
+			Default Localization Key: challengeObjectiveOnCVar
+			<objective type="CVar, SCore" cvar="myCVar" count="20" description_key="onCVar" />
+
+	[ Nexus Release ]
+		- Fixed an issue where the zip files were not in the correct format for Vortex.
+ 
+	[ Block Ground Patch ]
+		- There is a bug with the PathingCubes and quickly moving into their chunk while being loaded.
+		- Throws a Block.GroundAlign null error because there is no ebcd (yet?)
+			NullReferenceException
+				at (wrapper managed-to-native) UnityEngine.Component.get_gameObject(UnityEngine.Component)
+				at Block.GroundAlign (BlockEntityData _data) [0x0001f] in <e8e43063270440388d2e6b7642da1a62>:0
+				at ChunkManager.GroundAlignFrameUpdate () [0x00028] in <e8e43063270440388d2e6b7642da1a62>:0
+				at GameManager.gmUpdate () [0x00393] in <e8e43063270440388d2e6b7642da1a62>:0
+				at GameManager.Update () [0x00000] in <e8e43063270440388d2e6b7642da1a62>:0
+
 Version: 1.1.10.1307
 	[ Food Spoilage ]
 		- Fixed an issue when using PreserveBonus -99, where a full stack would instant spoil.
