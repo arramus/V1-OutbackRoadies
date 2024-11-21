@@ -35,6 +35,13 @@
 		</effect_group>
 	</append>
 	
+	<!-- Oakraven Balloons -->
+
+	<append xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@icon='vehicleTruck4x4Placeable']/unlock_entry/@item">,vehicleBalloon1Placeable,vehicleBalloon2Placeable</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags=",vehicleBalloon1Placeable,vehicleBalloon2Placeable"/>
+	</append>
+	
 	<insertAfter xpath="/progression/perks/perk[@name='perkMasterChef']">
 	<perk name="perkHighOctaneExperience" parent="skillStrengthGeneral" name_key="perkHighOctaneExperienceName" desc_key="perkHighOctaneExperienceDesc" icon="ui_game_symbol_highoctaneexperience">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>

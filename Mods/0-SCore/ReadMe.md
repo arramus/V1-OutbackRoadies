@@ -20,6 +20,83 @@ Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.co
 ### Change Logs
 
 [ Change Log ]
+Version:
+	[ SpawnCube2SDX ]
+		- Added an additional check to see if an entity has already spawned, and blocks further spawns.
+
+	[ Challenges ]
+		- Fixed an issue with Craft With Ingredient, where an item had no recipe, causing a null reference.
+
+	[ EntityAliveSDX ]
+		- Removed a debug log about Weapon not found, but was actually there.
+
+	[ Take And Replace ]
+		- Added a new property that will trigger the drop event Harvest.
+       		<property name="HarvestOnPickUp" value="true" />
+		- If this property is set to true, the following drop event style will be triggered:
+            <drop event="Harvest" name="resourceCrushedSand" count="9" tag="oreWoodHarvest"/>
+            <drop event="Harvest" name="resourceClayLump" count="9" tag="oreWoodHarvest"/>
+		- The block itself will only do the harvest; it will not give you the PickUpValue back.
+		- By default, Harvest On pick up is false.
+
+Version: 1.1.42.847
+	[ ConfigurationBlock ]
+		- Added new section called "AdvancedQuests" to allow more control over quests.
+
+	[ Fire Manager ]
+		- Added a null check for the NetPackage for AddFirePosition
+		- Removed extra checks that may have been block fire from being cleared on quest reset
+
+	[ GotoPOISDX ]
+		- Added new Property block in ConfigurationBlock called AdvancedQuests
+		- New Property value in AdvancedQuests block in ConfigurationBlock for re-using quest locations
+		- If "ReusePOILocations" is set to true, it will not filter quest locations based on if they were already visited.
+
+	[ SpawnCube2SDX ]
+		- Added potential fix for duplicate spawns.
+
+Version: 1.1.36.1627
+	[ Client Kill Event ]
+		- Changed ClientKill() patch to be a Prefix vs Postfix to fix an issue where it'd fire multiple times
+			- ie, chopping up a dead body would count as a kill for each hit.
+
+	[ Fire Manager ]
+		- Fixed an issue where a molotov would not trigger the OnStartFire
+		- This caused a molotov not to trigger the Start A Fire Challenge
+		- Fixed an issue with the NetPackage for calling AddBlock instead of Add(), skipping player assigning
+			- Fixes an issue with the challenge Fire Started on dedicated servers.
+
+	[ Remote Crafting ]
+		- Added an additional property to AdvancedRecipes for Checking if Enemy is nearby
+		- BlockOnNearbyEnemies is now available in both BlockUpgradeRepair and AdvancedRecipes.
+				<property name="BlockOnNearbyEnemies" value="false"/>
+		- Previously, this toggle was defined in BlockUpgradeRepair only, but used to block crafting as well.
+
+	[ Error Handling ]
+		- Default is false, these errors are NOT handled. Change to true to use them, under ErrorHandling.
+
+		- Added a ConfigBlock entry for a null reference in TraderData.ReadInventoryData()
+			- This error would be thrown sometimes when a POI was being reset, and a workstation / vending machine
+			went from working / non-working. 
+			<property name="TraderDataReadInventory" value="false" />
+
+		- Added a ConfigBlock entry for TileEntity.CopyFrom()
+			- This error could occur during POI resets. Base class for CopyFrom throws an exception. This blocks it.
+				<property name="TileEntityCopyFrom" value="false" />
+			- When set to true, it will also log an entry in the log file saying which block its causing on.
+			- It may be a sign the block is not configured correctly.
+                Debug.Log($"ErrorHandling::TileEntityCopyFrom::Prefix:: {_other.blockValue.Block.GetBlockName()}. No Defined CopyFrom()");
+
+
+Version: 1.1.28.1028
+	[ Farming ]
+		- Added "MuteSound" to the BlockWaterSourceSDX to turn off sprinkler sound.
+			<property name="MuteSound" value="true" />
+		- Default is false, the sound is not muted.
+
+		- Added GetWaterRange(), RequireWater(), and WillWilt() public methods as part of the BlockPlantGrowingSDX
+			- No functionality change, just makes it easier for others to read values through code.
+
 Version: 1.1.22.1530
 	[ Challenges ]
 		- Added a description_override attribute to completely over-ride the Localization key to the following Challenges:

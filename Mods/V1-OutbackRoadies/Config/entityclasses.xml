@@ -3508,7 +3508,7 @@
 <entity_class name="vehiclePocoCar">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/ApocCar1.unity3d?ApocCar.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3534,7 +3534,7 @@
 <entity_class name="vehiclePocoBuggy">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/PreppoBuggy1.unity3d?PreppoBuggy.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3560,7 +3560,7 @@
 <entity_class name="vehiclePocoBattleCar">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/apocbattlecar1.unity3d?apocbattlecar.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3586,7 +3586,7 @@
 <entity_class name="vehiclePocoBus">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/ApocBus1.unity3d?ApocBus.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3612,7 +3612,7 @@
 <entity_class name="vehiclePocoTruck">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/appoctruck1.unity3d?appoctruck.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3638,7 +3638,7 @@
 <entity_class name="vehiclePocoNux">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/apocnux1.unity3d?apocnux.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3664,7 +3664,7 @@
 <entity_class name="vehiclePocoRaceCar">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/apocracecar1.unity3d?apocracecar.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3690,7 +3690,7 @@
 <entity_class name="vehiclePocoBattleBuggy">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/apocbattlebuggy1.unity3d?apocbattlebuggy.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3716,7 +3716,7 @@
 <entity_class name="vehiclePocoBattleCrane">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVJeep"/>
-	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
 	<property name="Parent" value="Cars"/>
 	<property name="Prefab" value="#@modfolder:/Resources/apocbattlecrane1.unity3d?apocbattlecrane.prefab"/>
 	<property name="ModelType" value="Standard"/>
@@ -3734,7 +3734,10 @@
 	<property name="MapIcon" value="ui_game_symbol_apocbattlecrane"/>
 	<property name="NavObject" value="apocbattlecrane" />
 </entity_class>
+</append>
+<!--END OF APPOC BATTLEBUGGY-->
 
+<append xpath="/entity_classes">
 <entity_class name="vehicleSpiderRider"> <!-- arramus -->
 	<property name="Tags" value="vehicle,vehiclespiderrider,usesGas,bikerSetBonus"/>
 	<property name="Class" value="EntityMinibike"/>
@@ -3756,7 +3759,48 @@
 	<property name="NavObject" value="minibike" />
 </entity_class>
 
+<entity_class name="vehicleBalloon1"> <!-- Oakraven -->
+	<property name="Tags" value="vehicle,vehicleballoon,usesGas,bikerSetBonus"/>
+	<property name="Class" value="EntityVBlimp"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/V1Balloons.unity3d?oakballoon"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleMotorcycle"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="100"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_oakballoon"/>
+	<property name="NavObject" value="OakBalloon" />
+</entity_class>
+
+<entity_class name="vehicleBalloon2"> <!-- Oakraven -->
+	<property name="Tags" value="vehicle,vehicleballoon,usesGas,bikerSetBonus"/>
+	<property name="Class" value="EntityVBlimp"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/V1Balloons.unity3d?oakballoon2"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleMotorcycle"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="100"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_oakballoon"/>
+	<property name="NavObject" value="OakBalloon" />
+</entity_class>
+
 </append>
-<!--END OF APPOC BATTLECRANE-->
 
 </configs>

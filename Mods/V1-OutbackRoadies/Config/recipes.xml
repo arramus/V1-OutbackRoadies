@@ -747,7 +747,23 @@
 	<ingredient name="resourceBone" count="50"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="resourceMechanicalParts" count="25"/>
-</recipe>	
+</recipe>
+
+<recipe name="vehicleBalloon1Placeable" count="1" craft_time="120" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+		<ingredient name="resourceScrapPolymers" count="250"/>
+		<ingredient name="resourceDuctTape" count="50"/>		
+		<ingredient name="resourceCloth" count="1500"/>
+		<ingredient name="resourceHeadlight" count="2"/>
+		<ingredient name="smallEngine" count="1"/>
+</recipe>
+
+<recipe name="vehicleBalloon2Placeable" count="1" craft_time="120" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+		<ingredient name="resourceScrapPolymers" count="250"/>
+		<ingredient name="resourceDuctTape" count="50"/>		
+		<ingredient name="resourceCloth" count="1500"/>
+		<ingredient name="resourceHeadlight" count="2"/>
+		<ingredient name="smallEngine" count="1"/>
+</recipe>
 
 </append>
 

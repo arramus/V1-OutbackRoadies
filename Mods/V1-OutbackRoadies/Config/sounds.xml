@@ -262,6 +262,31 @@
 	<LowestPitch name="0.95"/>
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+	
+	<!-- Balloons -->
+	
+	<SoundDataNode name="oakidl"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="#@modfolder:Resources/V1Balloons.unity3d?oakidl" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+	<SoundDataNode name="oakraven"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="#@modfolder:Resources/V1Balloons.unity3d?oakraven" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+	<SoundDataNode name="oakstop"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/V1Balloons.unity3d?oakstop"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+
+	<SoundDataNode name="oakstart"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/V1Balloons.unity3d?oakstart"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	
+	<SoundDataNode name="Train_horn"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+    <AudioClip ClipName="#@modfolder:Resources/V1Balloons.unity3d?TrainWhistle"/>
+    <LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
   
 	</append>	
 </configs>

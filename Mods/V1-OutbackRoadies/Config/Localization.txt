@@ -360,6 +360,10 @@ vehiclePocoBattleCrane,vehicles,vehicle,,,Poco Battle Crane
 vehiclePocoBattleCranePlaceable,vehicles,item,,,Poco Battle Crane
 vehicleSpiderRider,entityclasses,Entity,,,Spider Rider Minibike,,,,,,,,,,,,,
 vehicleSpiderRiderPlaceable,vehicles,vehicle,,,Spider Rider Minibike,,,,,,,,,,,,,
+vehicleBalloon1,entityclasses,Entity,,,Balloon (Modern),,,,,,,,,,,,,
+vehicleBalloon1Placeable,vehicles,vehicle,,,Balloon (Modern),,,,,,,,,,,,,
+vehicleBalloon2,entityclasses,Entity,,,Balloon (Classic),,,,,,,,,,,,,
+vehicleBalloon2Placeable,vehicles,vehicle,,,Balloon (Classic),,,,,,,,,,,,,
 
 quest_rabbits,items,Quest - Challenge,,,"Eliminate Rabbits",,,,,,,,,,,,,
 quest_rabbitsDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept the challenge to find and eliminate 25 rabbits. Earn XP, Dukes, and 1 Skill Point upon completion.\n\nAdditional Quest Notes can be found in safes and quest loot. Scraps to 50 paper.",,,,,,,,,,,,,

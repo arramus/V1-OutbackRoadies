@@ -3250,6 +3250,48 @@
 	</effect_group>
 </item>
 
+<item name="vehicleBalloon1Placeable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>	
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="CustomIcon" value="vehicleBalloon1Placeable"/>
+	<property name="Meshfile" value="#@modfolder:Resources/V1Balloons.unity3d?oakballoon"/>
+	<property name="EconomicValue" value="30000"/>
+	<property name="TraderStageTemplate" value="vehicleTier4"/><!-- Paired with vehicleTruck4x4Placeable -->
+	<property name="UnlockedBy" value="craftingVehicles"/>
+	<property name="SoundPickup" value="Train_horn"/>
+	<property name="SoundPlace" value="Train_horn"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleBalloon1"/>
+		<property name="VehicleSize" value="2.5, 2.1, 5"/>
+	</property>
+	<effect_group name="vehicleBalloon" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="vehicleBalloon2Placeable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>	
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="CustomIcon" value="vehicleBalloon2Placeable"/>	
+	<property name="Meshfile" value="#@modfolder:Resources/V1Balloons.unity3d?oakballoon2"/>
+	<property name="EconomicValue" value="30000"/>
+	<property name="TraderStageTemplate" value="vehicleTier4"/><!-- Paired with vehicleTruck4x4Placeable -->
+	<property name="UnlockedBy" value="craftingVehicles"/>
+	<property name="SoundPickup" value="Train_horn"/>
+	<property name="SoundPlace" value="Train_horn"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleBalloon2"/>
+		<property name="VehicleSize" value="2.5, 2.1, 5"/>
+	</property>
+	<effect_group name="vehicleBalloon" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
 	<!-- Quest Notes -->
 	<!-- Rabbits -->	
 		<item name="quest_rabbits">
