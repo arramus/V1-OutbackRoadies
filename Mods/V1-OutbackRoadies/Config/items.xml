@@ -31,6 +31,7 @@
 	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group/display_value[@name='dBlockRepairAmount']/@value">500</set><!-- 100 Default -->
 	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@class='Action1']/property[@name='Upgrade_hit_offset']/@value">-2</set><!-- 2 Hit Upgrades -->
 	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group/passive_effect[@name='BlockDamage'][@operation='base_set']/@value">24</set><!-- 22 Default -->
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group/passive_effect[@name='HarvestCount'][@operation='base_set']/@value">1</set><!-- .7 Default -->
 	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group/display_value[@name='dBlockRepairAmount']/@value">500</set><!-- 100 Default -->
 	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group/passive_effect[@name='BlockDamage'][@operation='base_set']/@value">25</set><!-- 22 Default -->
 	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@class='Action1']/property[@name='Repair_amount']/@value">850</set><!-- 400 Default -->
