@@ -20,7 +20,63 @@ Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.co
 ### Change Logs
 
 [ Change Log ]
-Version:
+Version: 1.2.4.1601
+	[ Block Triggered SDX ]
+		- Fixed an issue with the ActivateOnLook check
+
+Version: 1.2.2.2032
+	- Updated Cave Spawning to fix against 1.2
+	- Updated other broken code from the 1.2... minor adjustments
+
+	[ Lock Pick ]
+		- Added a null check on entityalive before checking if they have a cvar.
+
+	[ Challenges ]
+		- Fixed a grammar issue in a comment
+
+Version: 1.1.62.918
+	[ Repair Counter ]
+		- Added a new Harmony patch to monitor how often an item can be repaired, before blocking the repair.
+		- This only works on Items, repaired through ItemActionEntryRepair.
+		- Two formats are supported:
+			- Comma delimited value. This will allow you to adjust max repairs based on quality
+			- For non-quality items, or to simplify, a single value can be used for all teirs.
+	 		
+  				<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe']">
+					<!-- The first value is quality 1. The last value is quality 6 -->
+  					<property name="RepairLimit" value="1,2,3,4,5,6" />
+  				</append>
+
+				<append xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']">
+					<property name="RepairLimit" value="5" />
+				</append>
+		- Localization Key is: repair_limit_reached
+
+	[ Block Spawn Cube 2SDX ]
+		- Adjusted the code again to try to spawn just a single entity.
+
+Version: 1.1.54.933
+	[ Fire Manager ]
+		- Fixed the laws of physics or whatever laws there are that govern how fire spreads.
+		- Fire now spreads.
+
+Version: 1.1.53.1237
+
+	[ Fire Manager ]
+		- Functionality should be the same, but performance should be increased quite a bit.
+		- Added Smoke Time to be on its own timer
+		- Changed the main check loop to only process 1 block per frame
+		- Changed blocks that are destroyed or extinguished so they are collected as in a list.
+			- At the end of the Check Update, a single netpackage is sent with all the changes.
+			- Previously, a net package was sent for each block in the loop.
+		- Rather than playing sounds at the location of fire, another check is done every second to see if any player is near fire,
+			- If a player is near fire, it'll play the defined FireSound in the player's head.
+			- This was the biggest source of improvement.
+
+	[ SpawnCube2SDX ]
+		- Modified the OnBlockAdded to only add a Tick event if there's more than 1 entity to spawn.
+
+Version: 1.1.49.1701
 	[ SpawnCube2SDX ]
 		- Added an additional check to see if an entity has already spawned, and blocks further spawns.
 
