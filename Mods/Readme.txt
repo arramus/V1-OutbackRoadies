@@ -17,7 +17,7 @@ For Mod Launcher installation, simply follow the usual method of installing thro
 The 10K Australia Outback Roadies World by FluffyPanda is a big 10K one, and zipped to reduce mod size.
 It is a stand alone mod. Unzip and place in the Mods folder along with other mods.
 When setting up a new game, you will find 'Australia 10K Outback Roadies' in the list.
-It follows the V1.0 trader progression flow with the 'correct' trader in the 'correct' biome so it doesn't break stuff.
+It follows the V1 trader progression flow with the 'correct' trader in the 'correct' biome so it doesn't break stuff.
 If you plan to update Outback Roadies, place the Australia 10K Outback Roadies folder inside your Data/Worlds folder so you don't need to repeat the unzip process.
 
 =================================
@@ -25,11 +25,9 @@ If you plan to update Outback Roadies, place the Australia 10K Outback Roadies f
 =================================
 To provide a few additional options, the Outback Roadies Optional Mods folder provides a few small modlets to enhance and customise game play.
 Current additions, and their function are as follows:
-- V1-OutbackRoadies-DuskTillDawnBloodMoon folder is to be placed in the main Mods folder to activate it. Allows Horde Night to last all night, with greater numbers (up to 256) where set at earlier GS.
 - V1-OutbackRoadies-FireOnOption folder is to be placed in the main Mods folder to activate it. It will allow wooden and other burnable world assets to burn.
 - V1-OutbackRoadies-KHV1-96BBM folder is to be placed in the main Mods folder to activate it. It will increase the backpack to 96 slots, and is courtesy of Khaine (from DF).
 - V1-OutbackRoadies-KHV1-CustomMenuMusic is to be placed in the main Mods folder to activate it. It will play Waltzing Matilda in the game menu.
-- V1-OutbackRoadies-TreeSeedsLOTL is to be placed in the main Mods folder to activate it. It will allow player trees at final stage to yield more seeds for Living off the Land Skill.
 Take what you need out of the Optional Mods folder and place it in main Mods folder.
 It will be removed if you update the game in Mod Launcher and will need to be done again, unless added as a Mod Launcher stand alone mod.
 
@@ -54,5 +52,4 @@ Oakraven - Quality of Life additions from Oakraven Collection assets.
 KhaineGB - Quality of Life additions with multiple integrated modlets.
 Darkstardragon - Comprehensive one on one support.
 bdubyah - Template code advice and support.
-Guppy's Unofficial 7DtD Modding Community - Support for all aspects of modding.
 arramus - Taking guardianship of integration and hooking it all up.

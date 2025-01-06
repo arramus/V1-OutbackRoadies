@@ -3,7 +3,7 @@
 	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage/spawn/@num">7777</set> <!-- Jackpot -->
 	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage/spawn/@maxAlive">256</set> <!-- Default as high GS and bringing more for lower GS party potential -->
 
-	<!-- V1.0 Values increase default by about +15 per wave for zombies and +1 for animals with 4 custom groups for Preppo Mixed and Flyers -->
+	<!-- V1 Values increase default by about +15 per wave for zombies and +1 for animals with 4 custom groups for Preppo Mixed and Flyers -->
 
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='01']/spawn[@group='wanderingHordeStageGS1' 	and @num='05']/@num">20</set>
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='02']/spawn[@group='wanderingHordeStageGS2' 	and @num='10']/@num">25</set>
