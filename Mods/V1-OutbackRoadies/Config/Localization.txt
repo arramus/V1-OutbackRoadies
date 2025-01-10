@@ -204,6 +204,8 @@ foodEggSandwich,items,Food,,,Egg Sandwich,,Ei-Sandwich,,,,,,,,,,,
 foodEggSandwichDesc,items,Food,,,"The Queen of Hearts, she made some tarts, from chicken eggs, and zombie farts. She makes decent sandwiches too.",,,,,,,,,,,,,
 foodChickenStew,items,Food,,,Chicken Stew,,,,,,,,,,,,,
 foodChickenStewDesc,items,Food,,,"Chicken stew provides great sustenance and can put coop reared chickens to good use.",,,,,,,,,,,,,
+foodRoastChicken,items,Food,,,Roast Chicken,,,,,,,,,,,,,
+foodRoastChickenDesc,items,Food,,,"Roast Chicken provides great sustenance and can put coop reared chickens to good use.",,,,,,,,,,,,,
 foodChickSticks,items,Food,,,Chick Sticks,,,,,,,,,,,,,
 foodChickSticksDesc,items,Food,,,"Chick Sticks allow any excess chicks to be put to good use. You can find chicks in some nests and trees. Cures 1% infection.",,,,,,,,,,,,,
 

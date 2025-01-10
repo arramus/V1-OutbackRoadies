@@ -254,13 +254,13 @@
 	
 	<lootcontainer id="772" name="EggsReady" count="1" size="6,2" destroy_on_close="true" sound_open="UseActions/Chicken6Sounds" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
 		<item name="foodEgg" count="3,5" prob="1"/>
+		<item name="GrownChicken" count="1,2" prob="1"/>
 		<item name="resourceFeather" count="4,10" prob="1"/>
-		<item name="GrownChicken" count="1,2" prob="0.5"/>
 	</lootcontainer>
 	
-	<lootcontainer name="cntFishTrap" count="3,6" size="7,2" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
-		<item name="foodBarramundi" count="1" prob="0.4"/>
-		<item name="resourceYabbies" count="5,10" prob="0.4"/>
+	<lootcontainer name="cntFishTrap" count="4,6" size="7,2" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+		<item name="foodBarramundi" count="1" prob="0.65"/>
+		<item name="resourceYabbies" count="15,30" prob="0.65"/>
 		<item name="resourceYuccaFibers" count="10,30" prob="0.3"/>
 		<item name="foodWildWheat" count="10,20" prob="0.3"/>
 		<item name="resourceCloth" count="2,6" prob="0.3"/>
@@ -282,7 +282,7 @@
 	
 	<append xpath="/lootcontainers">
 		<lootcontainer id="771" name="Honey" count="1" size="7,2" destroy_on_close="true" sound_open="UseActions/BeeHiveOpen" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
-		<item name="foodHoneyComb" count="1,4" prob="1" />
+		<item name="foodHoneyComb" count="2,5" prob="1" />
 	</lootcontainer>	
 	</append>
 	

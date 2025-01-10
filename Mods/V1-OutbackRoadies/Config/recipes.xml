@@ -337,6 +337,12 @@
 	<ingredient name="foodCropPumpkin" count="1"/>
 	</recipe>
 	
+	<recipe name="foodRoastChicken" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="GrownChicken" count="1"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+	
 	<recipe name="foodCanChicken" count="1" craft_time="60" craft_area="campfire" craft_tool="toolCookingPot">
 	<ingredient name="GrownChicken" count="1"/>
 	<ingredient name="drinkJarBoiledWater" count="1"/>
