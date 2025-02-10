@@ -20,6 +20,98 @@ Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.co
 ### Change Logs
 
 [ Change Log ]
+Version: 1.2.61.2007
+	[ Fire Manager ]
+		- Fixed a potential threading issue with fire particles.
+
+Version: 1.2.59.838
+	[ Fire Manager ]
+		- Fixed a net package setup that was causing bad performance
+		- Adjusted how the netpackages are sent to the clients and recieved by the clients
+		- Reduced the information distributed via net packages
+
+Version: 1.2.57.733
+	[ On Block Added ]
+		- Fixed a null reference in onBlockAdded patch when loading prefab editor.
+
+Version:1.2.56.900
+	[ NPCs ]
+		- Fixed a few issues with null references when adding NPCs to storage.
+		
+
+Version: 1.2.54.1354
+	[ NPCs ]
+		- Fixed an issue where NPCs could be quick stacked into Drop box and other storage units
+
+	[ Challenges ]
+		- Fixed an issue where Stealth Kills would trigger twice, resulting in credit of 2 for 1 kill.
+
+Version: 1.2.53.1812
+	[ Challenges ]
+		- Added in a missing block tag check on the BlockUpgrade challenge
+
+Version: 1.2.52.1518
+
+	[ Challenges ]
+		- Fixed various issues with counting killed entities towards challenges
+		- Refactored the SCore base class a bit to handle the bugs
+		- Stealth kills should be working as expected now.
+		- Decaptation challenges should be working better.
+		- KillWithItem challenges should be working better.
+		- Fixed issues where Fire-related challenges was not running for clients connecting to servers.
+
+	[ Goto POI SDX ]
+		- Fixed an issue where the POI's name was not being localized.
+
+	[ Requirements ]
+		- Fixed an issue with the IsBloodMoon requirement check
+
+	[ Auto Redeem Challenges ]
+		- Fixed a potential null reference.
+			- Probably just a timing issue, but better safe then sorry.
+
+	[ UAI ]
+		- Applied fixes to the UAI Farming Task
+			- Changed how the Entity determines its looking at the target plot
+			- Changed the distance check kto determine if its close enough to the target plot.
+
+	[ Fire Manager ]
+		- Changed FireManager from a polling method to a Monobehaviour, attached to the GameManager's transform.
+			- This should reduce it spinning on Updates every frame.
+		- Fixed a few issues with netpackages, and distributions. Maybe.
+		- Refactored a few calls to make them easier to call from other scripts.
+		- Added in a new property, called "FirePersists". 
+			- If this is set to true, fire will be saved.
+			- Default is not saved when the game is unloaded / loaded.
+
+		- Added new patch to OnBlockAdded to check for property to start a block on fire.
+		- When this property is on a block, and is set to true, it'll automatically catch fire.
+			<property name="RegisterToFireManager" value="true" />
+
+		- Changed how a block picks its Fire Particle.
+		- A Fire Particle can be defined on a block's material, a block, or in the global block configuration, using this syntax:
+			<property name="FireParticle" value="@modfolder:..." />
+
+		- Fire particle that will be used on any given block will now be determined by in this order of priority: 
+			- A block's material
+			- A block
+			- Default fire particle defined in global block configuration.
+				- If Random Fire Particle is set to true, a random fire particle will be used instead of the global block configuration.
+			
+
+
+Version: 1.2.37.1146
+	[ NPCs ]
+		- Reverted a patch that was causing null ref on player death.
+		- This patch was meant to block people stashing NPCs.
+
+Version: 1.2.36.1142
+	[ NPCs ]
+		- Fixed an issue where a null reference would happen in a harmony patch for the Stash All.
+
+	[ Cave Spawning ]
+		- Fixed an issue where cave spawning was too sensitive.
+
 Version: 1.2.35.852
 	[ NPCs ]
 		- Fixed an issue where NPCs could be added to a storage box using the Stash All button.

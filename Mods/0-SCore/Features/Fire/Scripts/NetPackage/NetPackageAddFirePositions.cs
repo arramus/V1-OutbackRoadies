@@ -54,9 +54,8 @@ public class NetPackageAddFirePositions : NetPackage
         {
             return;
         } 
-        //FireManager.Instance.AddBlock(_position);
         foreach (var position in _positions)
-            FireManager.Instance?.Add(position, _entityThatCausedIt, false);
+            FireManager.Instance?.AddBlock(position, _entityThatCausedIt);
     }
 }
 
