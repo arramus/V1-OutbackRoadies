@@ -1,5 +1,8 @@
 <configs>
 
+	<!-- *** THE_FIREMAN'S_ALMANAC_VOLUME_07_EQUIPMENT -->
+	<set xpath="/progression/perks/book[@name='perkFiremansAlmanacEquipment']/effect_group/passive_effect[@name='VehicleSelfDamage']/@value">-.8</set> <!-- Default is -.25 -->
+
 	<!-- Change Pack Mule Perk to unlock all slots -->
 	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">4,8,12,16,20</set>
 

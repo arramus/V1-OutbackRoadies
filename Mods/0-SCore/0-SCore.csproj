@@ -64,6 +64,7 @@
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveHarvest.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveHireNPC.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveKillWithItem.cs" />
+    <Compile Include="Features\Challenges\Scripts\ChallengeObjectivePlaceBlockByTag.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveSCoreBase.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveStartFire.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveStealthKillStreak.cs" />
@@ -71,6 +72,11 @@
     <Compile Include="Features\Challenges\Scripts\IChallengeObjective.cs" />
     <Compile Include="Features\Challenges\Scripts\SCoreChallengeUtils.cs" />
     <Compile Include="Features\Drones\Harmony\EntityDronePatches.cs" />
+    <Compile Include="Features\DynamicBones\Harmony\SDCSMatchRigs.cs" />
+    <Compile Include="Features\DynamicBones\Scripts\DynamicBone.cs" />
+    <Compile Include="Features\DynamicBones\Scripts\DynamicBoneCollider.cs" />
+    <Compile Include="Features\DynamicBones\Scripts\DynamicBoneColliderBase.cs" />
+    <Compile Include="Features\DynamicBones\Scripts\DynamicBonePlaneCollider.cs" />
     <Compile Include="Features\EntityPooling\Harmony\EntityFactoryPatch.cs" />
     <Compile Include="Features\EntityPooling\Scripts\EntityFactoryPool.cs" />
     <Compile Include="Features\ErrorChecks\Harmony\TileEntityCopyFrom.cs" />
@@ -133,6 +139,8 @@
     <Compile Include="Features\LockPicking\Scripts\LocksetAudio.cs" />
     <Compile Include="Features\LockPicking\Scripts\SphereII_Locks.cs" />
     <Compile Include="Features\LockPicking\XUiC\XUiC_PickLocking.cs" />
+    <Compile Include="Features\MaterialModifier\Harmony\EntityTintMaterial_Patch.cs" />
+    <Compile Include="Features\MaterialModifier\Scripts\MinEvents\MinEventActionReplaceMaterial.cs" />
     <Compile Include="Features\ParticleAttractor\Scripts\MinEvent\MinEventActionSetParticleAttractorFromAttackTarget.cs" />
     <Compile Include="Features\ParticleAttractor\Scripts\MinEvent\MinEventActionSetParticleAttractorFromPlayer.cs" />
     <Compile Include="Features\ParticleAttractor\Scripts\MinEvent\MinEventActionSetParticleAttractorFromSource.cs" />
@@ -151,6 +159,10 @@
     <Compile Include="Features\Signs\Scripts\Blocks\BlockSCoreSign.cs" />
     <Compile Include="Features\Signs\Scripts\Blocks\SCoreVideo.cs" />
     <Compile Include="Features\Signs\Scripts\TileEntity\TileEntitySCoreSign.cs" />
+    <Compile Include="Features\StoryEvents\Scripts\Story.cs" />
+    <Compile Include="Features\StoryEvents\Scripts\StoryManager.cs" />
+    <Compile Include="Features\TemplateManager\Interface\ITemplateManager.cs" />
+    <Compile Include="Features\VersionCheck\Scripts\VersionCheck.cs" />
     <Compile Include="Features\WeaponCameraSway\Harmony\vp_FPCamera.cs" />
     <Compile Include="Features\WeaponCameraSway\Harmony\vp_FPWeapon.cs" />
     <Compile Include="Features\WeaponCameraSway\Scripts\ConsoleCmdWeaponSway.cs" />
@@ -205,6 +217,7 @@
     <Compile Include="Harmony\MiniTurret\shouldIgnoreTarget.cs" />
     <Compile Include="Harmony\ModEvents.cs" />
     <Compile Include="Harmony\NetPackage\QuestGotoPoint.cs" />
+    <Compile Include="Harmony\NPCFeatures\AllowStashButtonsForNPCs.cs" />
     <Compile Include="Harmony\NPCFeatures\DynamicPrefabGetTraderArea.cs" />
     <Compile Include="Harmony\NPCFeatures\EntityAliveGroundDetection.cs" />
     <Compile Include="Harmony\NPCFeatures\EntityAlivePatcher.cs" />
@@ -402,6 +415,7 @@
     <Compile Include="Scripts\Managers\SCoreQuestEventManager.cs" />
     <Compile Include="Scripts\MinEvents\MinEventActionAddBuffByFactionSDX.cs" />
     <Compile Include="Scripts\MinEvents\MinEventActionAddBuffToPrimaryPlayer.cs" />
+    <Compile Include="Scripts\MinEvents\MinEventActionAddScriptToArmour.cs" />
     <Compile Include="Scripts\MinEvents\MinEventActionAddScriptToTransform.cs" />
     <Compile Include="Scripts\MinEvents\MinEventActionAdjustTransformValues.cs" />
     <Compile Include="Scripts\MinEvents\MinEventActionAnimatorFireTriggerSDX.cs" />
@@ -621,6 +635,8 @@
     <Content Include="Documentation\Utils\ChatGPT.txt" />
     <Content Include="Features\Challenges\ReadMe.md" />
     <Content Include="Features\LockPicking\Scripts\README.txt.txt" />
+    <Content Include="Features\VersionCheck\Readme.md" />
+    <Content Include="Features\VersionCheck\versioncheck.example" />
     <Content Include="ModInfo.xml" />
     <Content Include="Prefabs\caveOpening02.tts" />
     <Content Include="Prefabs\caveOpening02.xml" />

@@ -20,6 +20,74 @@ Direct Download to the 0-SCore.zip available on gitlab mirror: https://github.co
 ### Change Logs
 
 [ Change Log ]
+Version: 1.3.24.1230
+	[ NPCs ]
+		- Added support for the Auto-Stach buttons to work with NPCs.
+
+	[ AdvancedItemsFeatures ]
+		- Added a new property to the AdvancedItemsFeature in the blocks.xml
+	        <property name="DisableScrapFallback" value="false"/>
+		- This feature is only enabled AdvancedItemRepair is set to true.
+		- If this feature is enabled, but RepairItems / ScrapItems is not defined, then the item will scrap using vanilla.
+		- Current behaviour allows an item to be scrapped using a reduced recipe based on its ingredients, without defining RepairItems / ScrapItems.
+
+		- Added ScrapItems support for blocks.
+
+	[ Version Checker ]
+		- Received donated Code from Yakov that allows modders to add a versioncheck.xml file to their overhauls
+		- This versioncheck.xml file can be anywhere in the Mods folder
+		- This versioncheck.xml file contains the expected game version, along with optional messages to display.
+		- If this versioncheck.xml file is found in the Mods folder,
+			- Reads the current game version, and compares it to the expected game version.
+			- If the version matches, the main menu loads normally.
+			- If the version mismatches, a message box is shown to the players, saying the version does not match.
+			- The message box has a Quit and Continue button, allowing the user to keep going if they really want too.
+		- Example file can be found under Features/VersionCheck/versioncheck.example
+		- Added localization support.
+
+
+Version: 1.3.7.1037
+	[ Challenges ]
+		- Added multi-option to the loot_list= for the Gather Challenge. This is a comma-delimited list.
+	
+	[ Craft From Containers ]
+		- Added new Config option in Blocks.xml to check if a container is within Landclaim bounds, rather than distance.
+		    <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='LandClaimContainersOnly']/@value">true</set>
+		- Default is false, do not restrict to landclaim, but rely on distance.
+
+		- Added new Config option in Blocks.xml to check if the player is within landclaim bounds.
+		    <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='LandClaimPlayerOnly']/@value">true</set>
+		- Default is false, do not restrict player from being within a landclaim bounds.
+
+	[ Dynamic Bone ]
+		- Added test code for a new dynamic bone system.
+
+Version: 1.3.2.1535
+	- No Code changes. Rebuilt against Game Version 1.3.
+
+Version: 1.2.68.1007
+	[ Material Modifier ]
+		- With approval from Zilox, consumed the Material Modifier mod into 0-SCore to take over maintenance going forward.
+			<triggered_effect trigger="onSelfFirstSpawn" action="ReplaceMaterial, SCore" 
+				target_material_name="HD_Arlene_Radiated" replace_material="#@modfolder:Resources/ww_zeds_1.unity3d?HD_Arlene_Rad"/>
+	
+	[ Challenges ]
+		- Added an item_tags to the CraftWithIngredient Challenge to check the tag for an ingredient
+			<objective type="CraftWithIngredient, SCore" count="2" item_tags="tag"/>
+			- This can work with ingredient= as well, and mix and match.
+			- Tag is checked first, then ingredient name.
+			- If tag is found, then it counts towards the challenge, but does not again check the ingredient name.
+
+		- Added a PlaceBlockByTag objective that checks for block tag when a block is placed.
+			<objective type="BlockPlaceByTag, SCore" count="2" block_tags="myTag"/>
+
+		- Added a loot_list attribute to GatherTags. It varies that the loot container is opened, with the loot_list name, before counting.
+			- This will not be 100% accurate, as it counts the items you have, and not necessarily how many you are grabbing from the loot container itself
+	            <objective type="GatherTags, SCore" loot_list="garbage"  item_tags="junk" count="10"/>
+
+
+
+
 Version: 1.2.61.2007
 	[ Fire Manager ]
 		- Fixed a potential threading issue with fire particles.
