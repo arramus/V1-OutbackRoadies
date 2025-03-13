@@ -5,16 +5,66 @@
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='Distance']/@value">12</set> <!-- Default is 10 -->
 	
     <append xpath="/blocks">
-        <block name="cntSwagDropBox">
+        <block name="cntWoodSwagDropBox">
             <property name="Extends" value="cntWoodWritableCrate"/>
             <property name="CustomIcon" value="cntWoodWritableCrate"/>
             <property name="Class" value="DropBoxContainer, SCore"/>
             <property name="CustomIconTint" value="FFBF00"/>
             <property name="TintColor" value="FFBF00"/>
             <property name="LootList" value="playerWoodWritableStorage"/>
-            <property name="DescriptionKey" value="cntSwagDropBoxDesc"/>
+            <property name="DescriptionKey" value="cntWoodSwagDropBoxDesc"/>
             <property name="DropBox" value="true" />
+			<property name="DowngradeBlock" value="cntWoodSwagDropBoxInsecure"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="cntIronSwagDropBox"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
         </block>
+		
+		<block name="cntWoodSwagDropBoxInsecure">
+            <property name="Extends" value="cntWoodWritableCrateInsecure"/>
+		</block>
+		
+        <block name="cntIronSwagDropBox">
+            <property name="Extends" value="cntIronWritableCrate"/>
+            <property name="CustomIcon" value="cntIronWritableCrate"/>
+            <property name="Class" value="DropBoxContainer, SCore"/>
+            <property name="CustomIconTint" value="FFBF00"/>
+            <property name="TintColor" value="FFBF00"/>
+            <property name="LootList" value="playerIronWritableStorage"/>
+            <property name="DescriptionKey" value="cntIronSwagDropBoxDesc"/>
+            <property name="DropBox" value="true" />
+			<property name="DowngradeBlock" value="cntIronSwagDropBoxInsecure"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="cntSteelSwagDropBox"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+        </block>
+		
+		<block name="cntIronSwagDropBoxInsecure">
+            <property name="Extends" value="cntIronWritableCrateInsecure"/>
+		</block>
+
+        <block name="cntSteelSwagDropBox">
+            <property name="Extends" value="cntSteelWritableCrate"/>
+            <property name="CustomIcon" value="cntSteelWritableCrate"/>
+            <property name="Class" value="DropBoxContainer, SCore"/>
+            <property name="CustomIconTint" value="FFBF00"/>
+            <property name="TintColor" value="FFBF00"/>
+            <property name="LootList" value="playerSteelWritableStorage"/>
+            <property name="DescriptionKey" value="cntSteelSwagDropBoxDesc"/>
+            <property name="DropBox" value="true" />
+			<property name="DowngradeBlock" value="cntSteelSwagDropBoxInsecure"/>
+        </block>
+
+		<block name="cntSteelSwagDropBoxInsecure">
+            <property name="Extends" value="cntSteelWritableCrateInsecure"/>
+		</block>
+		
     </append>
 
 	<!-- Vanilla Updates -->
