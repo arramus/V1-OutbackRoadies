@@ -10,7 +10,7 @@
 	<append xpath="/xui/ruleset">
 	
 	<!-- Player Roadies Stove -->		
-		<window_group name="workstation_playerWoodBurningRoadiesStove" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+		<window_group name="workstation_playerWoodBurningRoadiesStove" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
@@ -21,7 +21,7 @@
 		</window_group>
 		
 	<!-- Oakraven Ammo Press -->			
-		<window_group name="workstation_ammopress" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+		<window_group name="workstation_ammopress" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>

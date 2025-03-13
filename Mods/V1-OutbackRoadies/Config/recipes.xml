@@ -2,6 +2,15 @@
 
 <append xpath="/recipes">
 
+	<!-- 0-Score Drop Box -->	
+
+    <recipe name="cntSwagDropBox" count="1">
+      <ingredient name="resourceWood" count="10"/>
+      <ingredient name="resourceNail" count="5"/>
+      <ingredient name="resourceMechanicalParts" count="10"/>
+      <ingredient name="resourceElectricParts" count="10"/>
+    </recipe>
+
 	<!-- Vanilla support items and decorations -->
 	
 	<recipe name="resourceAcid" count="1" craft_area="chemistryStation" tags="chemStationCrafting">

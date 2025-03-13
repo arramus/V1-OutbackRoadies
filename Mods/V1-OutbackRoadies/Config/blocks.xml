@@ -3,6 +3,19 @@
 	<!--0-Score Tweaks-->
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='ReadFromContainers']/@value">true</set>
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='Distance']/@value">12</set> <!-- Default is 10 -->
+	
+    <append xpath="/blocks">
+        <block name="cntSwagDropBox">
+            <property name="Extends" value="cntWoodWritableCrate"/>
+            <property name="CustomIcon" value="cntWoodWritableCrate"/>
+            <property name="Class" value="DropBoxContainer, SCore"/>
+            <property name="CustomIconTint" value="FFBF00"/>
+            <property name="TintColor" value="FFBF00"/>
+            <property name="LootList" value="playerWoodWritableStorage"/>
+            <property name="DescriptionKey" value="cntSwagDropBoxDesc"/>
+            <property name="DropBox" value="true" />
+        </block>
+    </append>
 
 	<!-- Vanilla Updates -->
 	<!-- Removing movement collision from Drift wood as it can stop a custom vehicle instantly -->
