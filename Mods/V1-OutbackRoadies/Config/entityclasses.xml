@@ -1426,8 +1426,8 @@
 </effect_group>
 </entity_class>
 
-<!--MAGPIE-->	
-<entity_class name="animalBat" extends="animalTemplateHostileFlying">
+<!--BAT-->	
+<entity_class name="animalBat" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityVulture"/>
 	<property name="Mesh" value="#@modfolder:Resources/AussieBat.unity3d?SmallBat" />
