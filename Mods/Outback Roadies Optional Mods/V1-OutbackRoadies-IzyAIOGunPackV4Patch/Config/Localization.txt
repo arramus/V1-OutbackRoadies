@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+ammo556mmBulletBallBundle,items,Ammo,,,Box of 5.56x45mm Ammo (100),,,,,,,,,,,,,
+ammo556mmHIpowerBundle,items,Ammo,,,Box of HP 5.56x45mm Ammo (100),,,,,,,,,,,,,
+ammo556mmArmorPiercingBundle,items,Ammo,,,Box of AP 5.56x45mm Ammo (100),,,,,,,,,,,,,

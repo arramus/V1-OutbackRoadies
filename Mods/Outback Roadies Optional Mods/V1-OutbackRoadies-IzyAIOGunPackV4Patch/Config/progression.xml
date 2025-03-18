@@ -1,0 +1,12 @@
+<configs>
+
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Demopack')">
+		
+	<!-- Adding Rocket Fire variant icon for Rocket Launcher -->
+	<append xpath="//crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']/unlock_entry/@item">,ammoRocketFire</append>
+		
+		</if>
+	</conditional>
+	
+</configs>	

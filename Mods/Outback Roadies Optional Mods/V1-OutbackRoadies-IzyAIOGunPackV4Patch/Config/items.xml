@@ -1,0 +1,37 @@
+<configs>
+
+	<!-- Roadies Ammo Press Hookups for UI Tabs for Izy's -->
+
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_45ACP')">		
+	<append xpath="/items/item[@name='ammo45ACPBulletBall']/property[@name='Group']/@value">,RegularAmmo</append>
+	<append xpath="/items/item[@name='ammo45ACPHighpower']/property[@name='Group']/@value">,HPAmmo</append>
+	<append xpath="/items/item[@name='ammo45ACPArmorpiecing']/property[@name='Group']/@value">,APAmmo</append>
+	<append xpath="/items/item[@name='ammo45ACPEnhanced']/property[@name='Group']/@value">,APAmmo</append>		
+		</if>
+	</conditional>
+	
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">
+	<append xpath="/items/item[@name='ammo556mmBulletBall']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+	</append>
+	<append xpath="/items/item[@name='ammo556mmBulletBallBundle']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+	</append>
+	<append xpath="/items/item[@name='ammo556mmHIpower']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+	</append>
+	<append xpath="/items/item[@name='ammo556mmHIpowerBundle']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+	</append>
+	<append xpath="/items/item[@name='ammo556mmArmorPiercing']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+	</append>
+	<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']">		
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+	</append>	
+		</if>
+	</conditional>
+	
+</configs>

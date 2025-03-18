@@ -1,0 +1,104 @@
+<Preppocalypse>
+
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_45ACP')">	
+
+	<append xpath="/recipes">
+	
+		<!--	***************************	-->
+				<!--	AMMO 45    -->
+		<!--	***************************	-->
+	
+		<recipe name="ammo45ACPBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceScrapIron" count="1"/>
+			<ingredient name="resourceGunPowder" count="1"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<recipe name="ammo45ACPHighpower" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceScrapIron" count="2"/>
+			<ingredient name="resourceGunPowder" count="2"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<recipe name="ammo45ACPArmorpiecing" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceScrapIron" count="2"/>
+			<ingredient name="resourceGunPowder" count="2"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<recipe name="ammo45ACPEnhanced" count="1" craft_area="ammopress" tags="workbenchCrafting,learnable,perkGunslinger">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceScrapIron" count="3"/>
+			<ingredient name="resourceGunPowder" count="8"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+
+	</append>
+	
+		</if>
+	</conditional>
+	
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">	
+	
+	<append xpath="/recipes">
+	
+		<!--	***************************	-->
+				<!--	AMMO 556    -->
+		<!--	***************************	-->
+	
+		<recipe name="ammo556mmBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceGunPowder" count="2"/>
+			<ingredient name="resourceScrapIron" count="1"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<recipe name="ammo556mmHIpower" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceGunPowder" count="4"/>
+			<ingredient name="resourceScrapIron" count="1"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<recipe name="ammo556mmArmorPiercing" count="1" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceGunPowder" count="3"/>
+			<ingredient name="resourceScrapIron" count="5"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		
+		<!--	***************************	-->
+			<!--	AMMO 556 Bundle   -->
+		<!--	***************************	-->
+		<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="120" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="80"/>
+			<ingredient name="resourceGunPowder" count="180"/>
+			<ingredient name="resourceScrapIron" count="80"/>
+			<ingredient name="resourceBulletCasing" count="80"/>
+		</recipe>
+		
+		<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="180" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="80"/>
+			<ingredient name="resourceGunPowder" count="380"/>
+			<ingredient name="resourceScrapIron" count="80"/>
+			<ingredient name="resourceBulletCasing" count="80"/>
+		</recipe>
+		
+		<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="180" craft_area="ammopress" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="80"/>
+			<ingredient name="resourceGunPowder" count="260"/>
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceBulletCasing" count="80"/>
+		</recipe>
+		
+	</append>
+	
+		</if>
+	</conditional>
+
+</Preppocalypse>
