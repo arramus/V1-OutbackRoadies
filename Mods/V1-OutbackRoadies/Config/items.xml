@@ -182,6 +182,8 @@
 	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='Stacknumber']/@value">15000</set><!-- x15 of default -->
 	<set xpath="/items/item[@name='resourceBulletTip'] /property[@name='Stacknumber']/@value">15000</set><!-- x15 of default -->
 	<set xpath="/items/item[@name='resourceRepairKit']/property[@name='Stacknumber']/@value">250</set><!-- x10 of default -->
+	<set xpath="/items/item[@name='resourceArmorCraftingKit']/property[@name='Stacknumber']/@value">250</set><!-- x10 of default -->
+	<set xpath="/items/item[@name='resourceLegendaryParts']/property[@name='Stacknumber']/@value">250</set><!-- x10 of default -->
 	<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">250</set><!-- x5 of default -->
 	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">50</set><!-- x10 of default -->	
 	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">100</set><!-- x10 of default -->	
@@ -1295,6 +1297,64 @@
 		<display_value name="dCureInfection" value=".01"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+	</effect_group>
+</item>
+
+<item name="foodGrilledYuccaFruit">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="250"/> <!-- STK food -->
+	<property name="EconomicValue" value="24"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodGrilledMeatSchematic, -->
+	<property name="SoundPickup" value="yuccafruit_grab"/>
+	<property name="SoundPlace" value="yuccafruit_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="15">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodYuccaFruitPie">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="EconomicValue" value="124"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodBlueberryPieSchematic, -->
+	<property name="SoundPickup" value="cornbread_grab"/>
+	<property name="SoundPlace" value="cornbread_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+	<effect_group tiered="false" name="Food Tier 2">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="48"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="23"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="23">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
 </item>
 
