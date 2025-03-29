@@ -51,6 +51,22 @@
     </append>
 
 	<!-- Vanilla Updates -->
+	<!-- Adding Cactus Paddles, and Fruit to Yucca -->
+	<append xpath="/blocks/block[@name='treeCactus01']">
+		<drop event="Harvest" name="foodCropSaguaroFruit" count="1,2" tag="wildCropsHarvest"/>
+	</append>
+	<append xpath="/blocks/block[@name='treeCactus04']">
+		<drop event="Harvest" name="foodCropCactusPaddles" count="1,2" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodCropSaguaroFruit" count="0" tag="wildCropsHarvest"/>
+	</append>
+	<append xpath="/blocks/block[@name='treeCactus05']">
+		<drop event="Harvest" name="foodCropCactusPaddles" count="1,2" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodCropSaguaroFruit" count="0" tag="wildCropsHarvest"/>
+	</append>
+	<append xpath="/blocks/block[@name='treeCactus06']">
+		<drop event="Harvest" name="foodCropCactusPaddles" count="1,2" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodCropSaguaroFruit" count="0" tag="wildCropsHarvest"/>
+	</append>	
 	<!-- Removing movement collision from Drift wood as it can stop a custom vehicle instantly -->
 	<set xpath="/blocks/block[@name='driftwood']/property[@name='Collide']/@value">melee,bullet,arrow,rocket</set>
 	<!-- USA Flag switched to Whiteriver Flag for context of location -->

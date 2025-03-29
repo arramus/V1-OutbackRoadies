@@ -327,6 +327,43 @@
 		</effect_group>
 	</recipe>
 	
+	<recipe name="foodGrilledCactusPaddles" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef">
+		<ingredient name="foodCropCactusPaddles" count="5"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropCactusPaddles"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="foodCactusOmelette" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="foodCropCactusPaddles" count="5"/>
+		<ingredient name="foodEgg" count="2"/>
+		<ingredient name="foodCropPotato" count="2"/>		
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropCactusPaddles"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="foodSaguaroFruitPie" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="foodCropSaguaroFruit" count="5"/>
+		<ingredient name="foodEgg" count="1"/>
+		<ingredient name="foodCornMeal" count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropSaguaroFruit"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="drinkYuccaCactusAloeJuiceCooler" count="1" tags="perkMasterChef">
+		<ingredient name="foodCropYuccaFruit" count="5"/>
+		<ingredient name="foodCropCactusPaddles" count="5"/>
+		<ingredient name="resourceCropAloeLeaf" count="5"/>
+		<ingredient name="foodEgg" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropYuccaFruit,foodCropCactusPaddles,resourceCropAloeLeaf"/>
+		</effect_group>
+	</recipe>
+	
 	<recipe name="drinkJarBillyTea" count="1" craft_time="18" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
 		<ingredient name="foodBillyTea" count="1"/>		
 		<ingredient name="drinkJarBoiledWater" count="1"/>

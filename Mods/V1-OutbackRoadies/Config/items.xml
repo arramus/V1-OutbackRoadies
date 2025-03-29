@@ -1358,6 +1358,192 @@
 	</effect_group>
 </item>
 
+<item name="foodCropCactusPaddles">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="DisplayType" value="foodRaw"/>
+	<property name="HoldType" value="31"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceCrop"/>
+	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SoundPickup" value="yuccafruit_grab"/>
+	<property name="SoundPlace" value="yuccafruit_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/> <!-- ,Medicine -->
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="3">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodGrilledCactusPaddles">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="250"/> <!-- STK food -->
+	<property name="EconomicValue" value="24"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodGrilledMeatSchematic, -->
+	<property name="SoundPickup" value="yuccafruit_grab"/>
+	<property name="SoundPlace" value="yuccafruit_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="15">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodCactusOmelette">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property name="EconomicValue" value="72"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodBaconAndEggsSchematic, -->
+	<property name="SoundPickup" value="baconeggs_grab"/>
+	<property name="SoundPlace" value="baconeggs_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Smell" value="largeSmell"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="18">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodCropSaguaroFruit">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="DisplayType" value="foodRaw"/>
+	<property name="HoldType" value="31"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceCrop"/>
+	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SoundPickup" value="yuccafruit_grab"/>
+	<property name="SoundPlace" value="yuccafruit_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/> <!-- ,Medicine -->
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="3">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodSaguaroFruitPie">
+	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="EconomicValue" value="124"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodBlueberryPieSchematic, -->
+	<property name="SoundPickup" value="cornbread_grab"/>
+	<property name="SoundPlace" value="cornbread_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+	<effect_group tiered="false" name="Food Tier 2">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="48"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="23"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="23">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="drinkYuccaCactusAloeJuiceCooler">
+	<property name="Tags" value="drinks,foodSkill,fitness,farmerFoodBonus"/>
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="drinkYuccaCactusAloeJuiceCooler"/>
+	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="250"/> <!-- STK drink -->
+	<!-- <property name="Weight" value="10"/> -->
+	<property name="EconomicValue" value="156"/>
+	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,drinkYuccaJuiceSmoothieSchematic, -->
+	<property name="SoundPickup" value="jars_grab"/>
+	<property name="SoundPlace" value="jars_place"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<!-- <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<effect_group tiered="false" name="Drink Tier 3">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="55"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="15">
+			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="85"/>
+			<display_value name="dStaminaRegen" value=".15"/>
+			<display_value name="dHyperthermalResist" value="30"/>
+			<display_value name="dDuration" value="900"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="add" value="903"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="set" value="2703">
+			<requirement name="CVarCompare" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="GT" value="2703"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaCactusAloeJuiceCooler"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
 <item name="drinkCanChromeSoda">
 	<property name="Tags" value="drinks,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="3"/>

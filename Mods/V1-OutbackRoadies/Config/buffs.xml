@@ -10,6 +10,36 @@
 	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
 	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_set']/@operation">base_add</set>
 	
+	<!-- Yucca Cactus Aloe Juice Cooler - God Mode Hyperthermal Resistance Buff Clear -->	
+
+	<append xpath="/buffs/buff[@name='god']/effect_group">	
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="set" value="0"/>
+	</append>
+	
+	<!-- Yucca Cactus Aloe Juice Cooler - Hyperthermal Resistance Buff -->
+	
+	<append xpath="/buffs">
+	<buff name="buffYuccaCactusAloeJuiceCooler" name_key="drinkYuccaCactusAloeJuiceCooler" description_key="drinkYuccaCactusAloeJuiceCoolerDesc" icon="ui_game_symbol_beer">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffYuccaCactusAloeJuiceCoolerDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffYuccaCactusAloeJuiceCoolerDisplay" operation="set" value="@$buffYuccaCactusAloeJuiceCoolerDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffYuccaCactusAloeJuiceCoolerDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffYuccaCactusAloeJuiceCooler">
+				<requirement name="CVarCompare" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffYuccaCactusAloeJuiceCoolerDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffYuccaCactusAloeJuiceCoolerDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="30"/>
+		</effect_group>
+	</buff>
+	</append>
+	
 	<!-- Oakraven Fish Traps - Thank you to MeanCloud Fishing, which in turn credits ACP Fishing, for inspiration -->
 
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
