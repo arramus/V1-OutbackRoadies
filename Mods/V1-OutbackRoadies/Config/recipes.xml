@@ -354,6 +354,12 @@
 		</effect_group>
 	</recipe>
 	
+	<recipe name="foodFruitPieTrio" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="foodBlueberryPie" count="1"/>
+		<ingredient name="foodSaguaroFruitPie" count="1"/>
+		<ingredient name="foodYuccaFruitPie" count="1"/>
+	</recipe>
+	
 	<recipe name="drinkYuccaCactusAloeJuiceCooler" count="1" tags="perkMasterChef">
 		<ingredient name="foodCropYuccaFruit" count="5"/>
 		<ingredient name="foodCropCactusPaddles" count="5"/>

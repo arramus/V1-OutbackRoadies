@@ -1,5 +1,10 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
 
+biome_burnt_forest,biomes,biome,,,Burnt Bush,,,,,,,,,,,,,
+biome_desert,biomes,biome,,,Outback,,,,,,,,,,,,,
+biome_pine_forest,biomes,biome,,,Bush,,,,,,,,,,,,,
+biome_pineforest,biomes,biome,,,Bush,,,,,,,,,,,,,
+
 quest_WhiteRiverCitizen0_name,Quest,Quest Info,,,"Outback Roadies Startpoint",,,,,,,,,,,,,
 quest_WhiteRiverCitizen0_subtitle,Quest,Quest Info,,,"Outback Roadies Startpoint",,,,,,,,,,,,,
 quest_WhiteRiverCitizen0_description,Quest,Quest Info,,,"Welcome to Outback Roadies.\n\nIt looks like a zombie got ya, and took your clobber! You may be immune, but you are not immortal. That friendly fox over there took care of you.\n\nGive that friendly fox over there the contents of your dog food can, and it'll stick by your side.\n\nComplete your challenges and stay alert, Road Warrior.",,,,,,,,,,,,,
@@ -154,6 +159,8 @@ foodCropSaguaroFruit,items,Food,,,Saguaro Fruit,,,,,,,,,,,,,
 foodCropSaguaroFruitDesc,items,Food,,,"Saguaro Fruit are sweet and can be used in recipes.",,,,,,,,,,,,,
 foodSaguaroFruitPie,items,Food,,,Saguaro Fruit Pie,,,,,,,,,,,,,
 foodSaguaroFruitPieDesc,items,Food,,,"Saguaro Fruit Pie is a seasonal delight.",,,,,,,,,,,,,
+foodFruitPieTrio,items,Food,,,Fruit Pie Trio,,,,,,,,,,,,,
+foodFruitPieTrioDesc,items,Food,,,"Fruit Pie Trio is a triple combination of homemade overload.",,,,,,,,,,,,,
 drinkYuccaCactusAloeJuiceCooler,items,Food,,,Yucca Cactus Aloe Juice Cooler,,,,,,,,,,,,,
 drinkYuccaCactusAloeJuiceCoolerDesc,items,Food,,,"Yucca Cactus Aloe Juice Cooler helps you resist the heat of the desert.\n\nHeat Resistance +30 for 15 minutes.",,,,,,,,,,,,,
 drinkCanChromeSoda,items,Food,,,Chrome Soda,,,,,,,,,,,,,
