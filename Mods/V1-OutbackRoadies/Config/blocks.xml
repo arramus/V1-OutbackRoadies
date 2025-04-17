@@ -1347,6 +1347,49 @@
 	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 </block>
 
+	<!-- *** SEEDS_PRICKLY_CACTUS -->
+<block name="plantedPricklyCactus1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="treeCactus04"/>
+	<property name="PlantGrowing.Next" value="plantedPricklyCactus2"/>
+	<property name="UnlockedBy" value="craftingSeeds"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/cactus04Prefab"/>
+	<property name="ModelOffset" value="0,0.45,0"/>
+	<property name="PlaceAsRandomRotation" value="true"/>
+	<drop event="Destroy" name="plantedPricklyCactus1" count="1"/>
+	<property name="SortOrder1" value="B964"/>
+	<property name="Tags" value="seedSkill"/>
+</block>
+
+<block name="plantedPricklyCactus2">
+	<property name="Extends" value="plantedPricklyCactus1"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="PlantGrowing.Next" value="plantedPricklyCactus3HarvestPlayer"/>
+	<property name="CustomIcon" value="plantedPricklyCactus1"/>
+	<property name="Model" value="Entities/Plants/cactus05Prefab"/>
+	<property name="ModelOffset" value="0,0.45,0"/>
+	<drop event="Destroy" name="plantedPricklyCactus1" count="1"/>
+	<property name="SortOrder2" value="0001"/>
+</block>
+
+<block name="plantedPricklyCactus3HarvestPlayer">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Material" value="Mcorn"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/cactus06Prefab"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="treeCactus04"/>
+	<property name="DescriptionKey" value="plantedPricklyCactus3HarvestDesc"/>
+	<drop event="Harvest" name="foodCropCactusPaddles" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropCactusPaddles" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropCactusPaddles" count="1" tag="farmerBonusHarvest"/>
+	<property name="DowngradeBlock" value="plantedPricklyCactus1"/>
+	<property name="SortOrder2" value="0004"/>
+</block>
+
 </append>
 
 </configs>

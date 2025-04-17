@@ -65,4 +65,7 @@
 		</perk>
 	</insertAfter>
 	
+	<!-- Cactus Seed -->
+	<append xpath="//crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCotton1']/@item">,plantedPricklyCactus1</append>
+	
 </configs>

@@ -293,6 +293,11 @@ lblCategoryAmmoPressAPAmmo,UI,Tooltip,,,AP Ammo,,,,,,,,,,,,,
 playerWoodBurningRoadiesStove,blocks,Block,,,Wood Burning Roadies Stove,,,,,,,,,,,,,
 playerWoodBurningRoadiesStoveDesc,blocks,Block,,,"This Wood Burning Roadies Stove provides an alternative cooking source to the campfire.",,,,,,,,,,,,,
 
+plantedPricklyCactus1,blocks,Farming,,,Prickly Cactus (Seed),,,,,,,,,,,,,,,
+plantedPricklyCactus2,blocks,Farming,,,Prickly Cactus (Growing),,,,,,,,,,,,,,,
+plantedPricklyCactus3HarvestDesc,blocks,Farming,,,Prickly Cactus Plant,,,,,,,,,,,,,,,
+seedsT1-1,progression,Attribute,,,Tier 1: Cotton & Prickly Cactus,,,,,,,,,,,,,
+
 animalCassowary,entityclasses,Entity,,,Cassowary,,,,,,,,,,,,,
 animalTassydevil,entityclasses,Entity,,,Tasmanian Devil,,,,,,,,,,,,,
 animalPlatypus,entityclasses,Entity,,,Platypus

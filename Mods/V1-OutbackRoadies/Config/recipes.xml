@@ -327,6 +327,10 @@
 		</effect_group>
 	</recipe>
 	
+	<recipe name="plantedPricklyCactus1" count="1" craft_time="1" tags="learnable">
+		<ingredient name="foodCropCactusPaddles" count="5"/>
+	</recipe>
+	
 	<recipe name="foodGrilledCactusPaddles" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef">
 		<ingredient name="foodCropCactusPaddles" count="5"/>
 		<effect_group>
