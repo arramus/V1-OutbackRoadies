@@ -67,5 +67,6 @@
 	
 	<!-- Cactus Seed -->
 	<append xpath="//crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCotton1']/@item">,plantedPricklyCactus1</append>
+	<append xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@tags='plantedCotton1']/@tags">,plantedPricklyCactus1</append>
 	
 </configs>
