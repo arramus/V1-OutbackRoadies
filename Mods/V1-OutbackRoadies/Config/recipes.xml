@@ -364,6 +364,17 @@
 		<ingredient name="foodYuccaFruitPie" count="1"/>
 	</recipe>
 	
+	<recipe name="foodCactusStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="foodCropYuccaFruit" count="5"/>
+		<ingredient name="foodCropCactusPaddles" count="5"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="foodCropMushrooms" count="2"/>
+		<ingredient name="foodCanMiso" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropYuccaFruit,foodCropCactusPaddles"/>
+		</effect_group>
+	</recipe>
+	
 	<recipe name="drinkCactusFruitJuice" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
 		<ingredient name="foodCropSaguaroFruit" count="5"/>
 		<ingredient name="foodCropCactusFruit" count="5"/>
