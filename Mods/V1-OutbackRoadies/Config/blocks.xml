@@ -66,6 +66,7 @@
 	<append xpath="/blocks/block[@name='treeCactus06']">
 		<drop event="Harvest" name="foodCropCactusPaddles" count="1,2" tag="wildCropsHarvest"/>
 		<drop event="Harvest" name="foodCropSaguaroFruit" count="0" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodCropCactusFruit" count="1" tag="wildCropsHarvest"/>
 	</append>	
 	<!-- Removing movement collision from Drift wood as it can stop a custom vehicle instantly -->
 	<set xpath="/blocks/block[@name='driftwood']/property[@name='Collide']/@value">melee,bullet,arrow,rocket</set>
@@ -1384,8 +1385,11 @@
 	<property name="CustomIcon" value="treeCactus04"/>
 	<property name="DescriptionKey" value="plantedPricklyCactus3HarvestDesc"/>
 	<drop event="Harvest" name="foodCropCactusPaddles" count="1" tag="cropHarvest"/>
+	<drop event="Harvest" name="foodCropCactusFruit" count="1" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropCactusPaddles" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropCactusFruit" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="foodCropCactusPaddles" count="1" tag="farmerBonusHarvest"/>
+	<drop event="Harvest" name="foodCropCactusFruit" count="1" tag="farmerBonusHarvest"/>
 	<property name="DowngradeBlock" value="plantedPricklyCactus1"/>
 	<property name="SortOrder2" value="0004"/>
 </block>

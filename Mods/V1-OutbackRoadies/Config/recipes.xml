@@ -364,6 +364,12 @@
 		<ingredient name="foodYuccaFruitPie" count="1"/>
 	</recipe>
 	
+	<recipe name="drinkCactusFruitJuice" count="1" tags="perkMasterChef">
+		<ingredient name="foodCropSaguaroFruit" count="5"/>
+		<ingredient name="foodCropCactusFruit" count="5"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+	</recipe>
+	
 	<recipe name="drinkYuccaCactusAloeJuiceCooler" count="1" tags="perkMasterChef">
 		<ingredient name="foodCropYuccaFruit" count="5"/>
 		<ingredient name="foodCropCactusPaddles" count="5"/>
