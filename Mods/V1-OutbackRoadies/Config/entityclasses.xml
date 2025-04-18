@@ -3271,9 +3271,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiemaleroam"/>
-			<property name="SoundAlertTime" value="25.0"/> <!-- It will play the roam every 25/12.5 seconds-->
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiemalealert"/>
 			<property name="SoundSense" value="zombiemalesense"/>
 			<property name="SoundHurt" value="zombiemalepain"/>
@@ -3301,8 +3301,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="demolitionzroam"/>
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="demolitionzalert"/>
 			<property name="SoundAttack" value="demolitionzattack"/>
 			<property name="SoundHurt" value="demolitionzpain"/>
@@ -3332,8 +3333,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->		
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->		
 			<property name="SoundRandom" value="zombiefemale2roam"/>
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiefemale2alert"/>
 			<property name="SoundAttack" value="zombiefemale2attack"/>
 			<property name="SoundHurt" value="zombiefemale2pain"/>
@@ -3363,8 +3365,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiemale2roam"/>
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiemale2alert"/>
 			<property name="SoundAttack" value="zombiemale2attack"/>
 			<property name="SoundHurt" value="zombiemale2pain"/>
@@ -3393,8 +3396,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiefemaleroam"/>
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiefemalealert"/>
 			<property name="SoundAttack" value="zombiefemaleattack"/>
 			<property name="SoundHurt" value="zombiefemalepain"/>
@@ -3423,9 +3427,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiemaleroam"/>
-			<property name="SoundAlertTime" value="25.0"/> <!-- It will play the roam every 25/12.5 seconds-->
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiemalealert"/>
 			<property name="SoundSense" value="zombiemalesense"/>
 			<property name="SoundHurt" value="zombiemalepain"/>
@@ -3454,9 +3458,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiemaleroam"/>
-			<property name="SoundAlertTime" value="25.0"/> <!-- It will play the roam every 25/12.5 seconds-->
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiemalealert"/>
 			<property name="SoundSense" value="zombiemalesense"/>
 			<property name="SoundHurt" value="zombiemalepain"/>
@@ -3486,8 +3490,9 @@
 			<property name="HireCurrency" value="foodRawMeat" />
 			<property name="HireCost" value="100" />
 			
-			<property name="SoundRandomTime" value="720.0"/> <!-- It will play the default roam every 60/30 seconds -->
+			<property name="SoundRandomTime" value="720"/> <!-- It will play the default roam every 60/30 seconds -->
 			<property name="SoundRandom" value="zombiemale2roam"/>
+			<property name="SoundAlertTime" value="720"/> <!-- It will play the roam every 25/12.5 seconds-->
 			<property name="SoundAlert" value="zombiemale2alert"/>
 			<property name="SoundSense" value="zombiemale2sense"/>
 			<property name="SoundHurt" value="zombiemale2pain"/>

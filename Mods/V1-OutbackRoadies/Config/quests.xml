@@ -179,7 +179,7 @@
 			<property name="add_to_tier_complete" value="false"/>
 				
 		<reward type="Exp" value="1500"/>
-		<action type="SpawnEnemy" id="npcTomClarkDPistol,npcDemolitionDaveM60,npcMommaAK47,npcBusinessManTRifle,npcMarleneSMG,npcBikerMagnumDPistol,npcBurntManSRifle,npcMoeAShotgun" value="1"/>
+		<action type="SpawnEnemy" id="npcTomClarkDPistol,npcDemolitionDaveM60,npcMommaAK47,npcBusinessManTRifle,npcMarleneSMG,npcBikerMagnumDPistol,npcBurntSRifle,npcMoeAShotgun" value="1"/>
 		<reward type="Item" id="foodRawMeat" value="100"/>		
 		</quest>
 
