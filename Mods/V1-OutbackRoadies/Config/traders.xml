@@ -72,16 +72,21 @@
 		<item name="modArmorRunningShoesHPSchematic"/>	
 	</append>
 	
-	<!-- Summon FriendZ Note - Custom Group -->
+	<!-- Summon FriendZ and Animals Note - Custom Group -->
 	
 	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeMods']">	
 		<trader_item_group name="FriendZ">
 			<item name="noteqc_1-SummonFriendZ"/>			
+		</trader_item_group>
+		
+		<trader_item_group name="SummonAnimals">
+			<item name="noteqc_1-SummonAnimals"/>			
 		</trader_item_group>		
 	</insertBefore>
 
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
-		<item group="FriendZ" count="1"/>		
+		<item group="FriendZ" count="1"/>
+		<item group="SummonAnimals" count="1"/>		
 	</append>
 
 </configs>

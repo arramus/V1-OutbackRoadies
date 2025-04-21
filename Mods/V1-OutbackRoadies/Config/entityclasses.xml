@@ -3505,6 +3505,548 @@
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
 	        </effect_group>
 		</entity_class>
+		
+		<!--  NPC and Dumb animals  -->	
+		<entity_class name="npcAnimalSummonzombieDog" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonzombieDog,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Doggo,Diggy,Licky,Daisy" /> 
+			<property name="PhysicsBody" value="zombieDog"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardDogZombieRagdoll"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonzombieDogPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="1.1"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value="zombiedogroam"/>
+			<property name="SoundAlertTime" value="10"/>
+			<property name="SoundAlert" value="zombiedogalert"/>
+			<property name="SoundHurt" value="zombiedogpain"/>
+			<property name="SoundDeath" value="zombiedogdeath"/>
+			<property name="SoundAttack" value="zombiedogattack"/>
+			<property name="SoundSense" value="zombiedogsense"/>
+			<property name="SoundGiveUp" value="zombiedoggiveup"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonBoar" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonBoar,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Billy,Jilly,Truffles,Bacon" /> 
+			<property name="PhysicsBody" value="boar"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Boar/AnimalBoarStandardRagdoll"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonBoarPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="1.1"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value="boarroam"/>
+			<property name="SoundAlert" value="boaralert"/>
+			<property name="SoundHurt" value="boarpain"/>
+			<property name="SoundDeath" value="boardeath"/>
+			<property name="SoundAttack" value="boarattack"/>
+			<property name="SoundSense" value="boarsense"/>
+			<property name="SoundGiveUp" value="boargiveup"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonDireWolf" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonDireWolf,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Luna,Beowulf,Ghost,Shadow" />
+			<property name="PhysicsBody" value="AWolf"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/DireWolf/animalDireWolfPrefab"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonDireWolfPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="0.95"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundAlert" value="wolfdirealert"/>
+			<property name="SoundAttack" value="wolfdireattack"/>
+			<property name="SoundDeath" value="wolfdiredeath"/>
+			<property name="SoundGiveUp" value="wolfdiregiveup"/>
+			<property name="SoundHurt" value="wolfdirepain"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value="wolfdireroam"/>
+			<property name="SoundSense" value="wolfdiresense"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonChicken" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonChicken,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Clucky,Pecker,Drumsticks,Giblets" />
+			<property name="PhysicsBody" value="chicken"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Bird/animalBirdChickenPrefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="Parent" value="Animals"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonChickenPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="1.2"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+            <property name="SoundRandom" value=""/>
+            <property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value="chickenpain"/>
+			<property name="SoundDeath" value="chickendeath"/>
+            <property name="SoundAttack" value=""/>
+            <property name="SoundSense" value=""/>
+            <property name="SoundGiveUp" value=""/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonRabbit" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonRabbit,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Warren,Buck,Bugs,Killer" />
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/animalRabbitPrefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="Parent" value="Animals"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonRabbitPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="2.0"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+            <property name="SoundRandom" value=""/>
+            <property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value="rabbitpain"/>
+			<property name="SoundDeath" value="rabbitdeath"/>
+            <property name="SoundAttack" value=""/>
+            <property name="SoundSense" value=""/>
+            <property name="SoundGiveUp" value=""/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonSnake" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonSnake,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Hissy,Slither,Murder Worm,Slippy" />
+			<property name="PhysicsBody" value="snake"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Snake/snake_Prefab"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonSnakePickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="1.2"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundHurt" value="snakepain"/>
+			<property name="SoundDeath" value="snakedeath"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value="snakeroam"/>
+			<property name="SoundSense" value="snakesense"/>
+			<property name="SoundAlert" value="snakealert"/>
+			<property name="SoundAttack" value="snakeattack"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonCoyote" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonCoyote,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Sandy,Wily,Hustler,Toasty" />
+			<property name="PhysicsBody" value="wolf"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardCoyoteRagdoll"/>			
+			<property name="Mesh" value=""/>
+			<property name="PickUpItem" value="SummonCoyotePickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="1.2"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value="coyoteroam"/>
+			<property name="SoundAlert" value="wolfalert"/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value="wolfdeath"/>
+			<property name="SoundAttack" value="wolfattack"/>
+			<property name="SoundSense" value="wolfsense"/>
+			<property name="SoundGiveUp" value="wolfgiveup"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="npcAnimalSummonJeerkoa" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalSummonJeerkoa,perkAT03,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="Faction" value="companionanimals"/>
+			<property name="Names" value="Floppy,Flappy,Flippy,Flurry" />
+			<property name="PhysicsBody" value="Jeerkoa"/>
+			<property name="IsEntityAnimal" value="true"/> 
+			<property name="IsEnemyEntity" value="false"/>			
+			<property name="Mesh" value="#@modfolder(0-XNPCCore):Resources/XythNPCs.unity3d?Jeerkoa_X"/>
+			<property name="PickUpItem" value="SummonJeerkoaPickUpNPC" />
+			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
+			<property name="ExperienceGain" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SizeScale" value="2.0"/>
+			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
+			<property name="Mass" value="30"/> <!-- Ragdoll mass  -->
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,.15,0"/>
+            </property>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="MoveSpeedRand" value="-.05, .05"/>
+			<property name="SoundRandomTime" value="720"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value=".5"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="1.2"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
+				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="1"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
+			</effect_group>
+		</entity_class>
 	
 	</append>
 	

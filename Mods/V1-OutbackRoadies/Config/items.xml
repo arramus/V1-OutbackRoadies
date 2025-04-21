@@ -11,6 +11,62 @@
 		<property name="CustomIcon" value="foxPickUpNPC" />
 	</append>
 	
+	<append xpath="/items">
+	
+		<item name="noteqc_1-SummonAnimals">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="noteqc_1-SummonAnimalsDesc"/>
+			<property name="CustomIcon" value="SummonRabbitAnimal"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="Group" value="Books,SchematicsOnly,TCReading"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_1-SummonAnimals"/>
+			</property>
+		</item>
+		
+		<item name="SummonzombieDogPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonzombieDogAnimal"/>
+        </item>
+		
+		<item name="SummonBoarPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonBoarAnimal"/>
+        </item>
+		
+		<item name="SummonDireWolfPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonDireWolfAnimal"/>
+        </item>
+		
+		<item name="SummonChickenPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonChickenAnimal"/>
+        </item>
+		
+		<item name="SummonRabbitPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonRabbitAnimal"/>
+        </item>
+		
+		<item name="SummonSnakePickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonSnakeAnimal"/>
+        </item>
+		
+		<item name="SummonCoyotePickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonCoyoteAnimal"/>
+        </item>
+		
+		<item name="SummonJeerkoaPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+		  <property name="CustomIcon" value="SummonJeerkoaAnimal"/>
+        </item>
+		
+	</append>
+	
 	<!-- VANILLA TWEAKS and TOGGLES -->
 	<!-- Zombie Reach Adjust KhaineGB -->
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.325</set>

@@ -429,6 +429,41 @@ npcMoeAShotgun,entityclasses,Entity,,,Auto Moe,,,,,,,,,,,,,
 noteqc_1-SummonFriendZ,items,item,,,Summon - FriendZ,,,,,,,,,,,,,
 noteqc_1-SummonFriendZDesc,items,item,,,"This quest allows a player to summon a random FriendZ and also receive 100 meat to hire the new companion. There are 8 in total - Desert Eagle Tom, M60 Dave, AK47 Momma, T.A. Rifle Business Man, SMG Marlene, Magnum Biker, Sniper Burnt, and Auto Moe.",,,,,,,,,,,,,
 
+noteqc_1-SummonAnimals,items,item,,,Summon - Animals,,,,,,,,,,,,,
+noteqc_1-SummonAnimalsDesc,items,item,,,"This quest allows a player to summon a random Animal Helper and also receive 20 meat to hire the new companion. There are 8 in total - Zombie Dog Helper, Boar Helper, Dire Wolf Helper, Chicken Helper, Rabbit Helper, Snake Helper, Coyote Helper, and Jeerkoa Helper.",,,,,,,,,,,,,
+
+npcAnimalSummonzombieDog,entityclasses,Entity,,,Zombie Dog Helper,,,,,,,,,,,,,
+SummonzombieDogPickUpNPC,items,item,,,Zombie Dog Helper (Resting),,,,,,,,,,,,,
+SummonzombieDogPickUpNPCDesc,items,item,,,"You are carrying your zombie dog helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonBoar,entityclasses,Entity,,,Boar Helper,,,,,,,,,,,,,
+SummonBoarPickUpNPC,items,item,,,Boar Helper (Resting),,,,,,,,,,,,,
+SummonBoarPickUpNPCDesc,items,item,,,"You are carrying your boar helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonDireWolf,entityclasses,Entity,,,Dire Wolf Helper,,,,,,,,,,,,,
+SummonDireWolfPickUpNPC,items,item,,,Dire Wolf Helper (Resting),,,,,,,,,,,,,
+SummonDireWolfPickUpNPCDesc,items,item,,,"You are carrying your dire wolf helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonChicken,entityclasses,Entity,,,Chicken Helper,,,,,,,,,,,,,
+SummonChickenPickUpNPC,items,item,,,Chicken Helper (Resting),,,,,,,,,,,,,
+SummonChickenPickUpNPCDesc,items,item,,,"You are carrying your chicken helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonRabbit,entityclasses,Entity,,,Rabbit Helper,,,,,,,,,,,,,
+SummonRabbitPickUpNPC,items,item,,,Rabbit Helper (Resting),,,,,,,,,,,,,
+SummonRabbitPickUpNPCDesc,items,item,,,"You are carrying your rabbit helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonSnake,entityclasses,Entity,,,Snake Helper,,,,,,,,,,,,,
+SummonSnakePickUpNPC,items,item,,,Snake Helper (Resting),,,,,,,,,,,,,
+SummonSnakePickUpNPCDesc,items,item,,,"You are carrying your snake helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonCoyote,entityclasses,Entity,,,Coyote Helper,,,,,,,,,,,,,
+SummonCoyotePickUpNPC,items,item,,,Coyote Helper (Resting),,,,,,,,,,,,,
+SummonCoyotePickUpNPCDesc,items,item,,,"You are carrying your coyote helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
+npcAnimalSummonJeerkoa,entityclasses,Entity,,,Jeerkoa Helper,,,,,,,,,,,,,
+SummonJeerkoaPickUpNPC,items,item,,,Jeerkoa Helper (Resting),,,,,,,,,,,,,
+SummonJeerkoaPickUpNPCDesc,items,item,,,"You are carrying your jeerkoa helper. Put it in your active toolbelt slot to place it down with [action:local:Secondary].",,,,,,,,,,,,,
+
 TwitchAction_SpawnCassowary,twitch,Actions,,,Cassowary,,,,,,,,,,,
 TwitchAction_SpawnCassowaryCommand,twitch,Actions,,,#spawn_cassowary,,,,,,,,,,,,
 TwitchAction_SpawnPreppoMeleeDesc,twitch,Actions,,,Spawns a Cassowary.,,,,,,,,,,,,,
