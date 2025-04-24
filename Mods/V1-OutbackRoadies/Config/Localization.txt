@@ -289,8 +289,8 @@ meleeWpnClubT3NewCricketBatDesc,items,Melee,,,"The Club House Bat is that spare 
 ammoRocketFire,items,Ammo,,,Rocket Fire (Ammo),,,,,,,,,,,,,
 ammoRocketFireDesc,items,Ammo,,,"A rocket fire used as rocket launcher ammunition can be crafted at a forge and workbench once you've gained the perk.",,,,,,,,,,,,,
 
-AmmoPress,blocks,Workstation,,,Roadies Ammo Press,,,,,,,,,,,,,
-AmmoPressDesc,blocks,Block,,,"The Roadies Ammo Press allows players to craft ammunition in a compact standalone device. Bulk ammo crafts in half the time of the Workbench.",,,,,,,,,,,,,
+ammopress,blocks,Workstation,,,Roadies Ammo Press,,,,,,,,,,,,,
+ammopressDesc,blocks,Block,,,"The Roadies Ammo Press allows players to craft ammunition in a compact standalone device. Bulk ammo crafts in half the time of the Workbench.",,,,,,,,,,,,,
 workstationsT3-2AP,progression,Attribute,,,Tier 2: Roadies Ammo Press,,,,,,,,,,,,,
 lblCategoryAmmoPress,UI,Tooltip,,,Ammo,,Munition,Munición,Munitions,Munizioni,弾薬,탄약,Amunicja,Munição,Боеприпасы,Mühimmat,弹药
 lblCategoryAmmoPressRegularAmmo,UI,Tooltip,,,Regular Ammo,,,,,,,,,,,,,
