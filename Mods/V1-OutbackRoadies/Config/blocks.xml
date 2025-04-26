@@ -1381,6 +1381,7 @@
 	<property name="Material" value="Mcorn"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/cactus06Prefab"/>
+	<property name="ModelOffset" value="0,0.4,0"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="treeCactus04"/>
 	<property name="DescriptionKey" value="plantedPricklyCactus3HarvestDesc"/>
