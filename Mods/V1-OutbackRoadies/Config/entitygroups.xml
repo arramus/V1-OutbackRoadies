@@ -15,6 +15,8 @@
 		zombieOakHeadHunter3, .05
 		zombieOakHeadHunter4, .05
 		zombieOakHeadHunter5, .05
+		zombieBurntRadiatedMini, .025
+		zombieOakSirenHead, .025
 	</csv>
 	
 	<!-- *** BIOME_ZOMBIES_NIGHT_GROUP -->
@@ -30,12 +32,14 @@
 		zombieOakHeadHunter3, .1
 		zombieOakHeadHunter4, .1
 		zombieOakHeadHunter5, .1
+		zombieBurntRadiatedMini, .05
+		zombieOakSirenHead, .05
 	</csv>
 
 <!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
+		zombieBurntRadiatedMini, .75
 		zombieBurntFeral, .5
-		zombieBurntRadiatedMini, .5
 		zombieBurntRadiated, .25
 		zombieOakNurse, .15
 		zombieOakFireNurse, .15
@@ -45,7 +49,7 @@
 		zombieOakHeadHunter3, .15
 		zombieOakHeadHunter4, .15
 		zombieOakHeadHunter5, .15
-		zombieOakSirenHead, .05
+		zombieOakSirenHead, .15
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
@@ -121,6 +125,7 @@
 		zombieOakBossHeadHunter3, .1
 		zombieOakBossHeadHunter4, .1
 		zombieOakBossHeadHunter5, .1
+		zombieOakSirenHead, .05
 	</entitygroup>
 	<entitygroup name="RoadiesHeadHuntersGroupGS50">
 		zombieBurnt
@@ -143,6 +148,7 @@
 		zombieOakBossHeadHunter3, .25
 		zombieOakBossHeadHunter4, .25
 		zombieOakBossHeadHunter5, .25
+		zombieOakSirenHead, .125
 	</entitygroup>
 	<entitygroup name="RoadiesHeadHuntersGroupGS100">
 		zombieBurnt
@@ -165,6 +171,7 @@
 		zombieOakBossHeadHunter3, .5
 		zombieOakBossHeadHunter4, .5
 		zombieOakBossHeadHunter5, .5
+		zombieOakSirenHead, .25
 	</entitygroup>
 	<entitygroup name="RoadiesHeadHuntersGroupGS200">
 		zombieBurnt
@@ -187,6 +194,7 @@
 		zombieOakBossHeadHunter3, .75
 		zombieOakBossHeadHunter4, .75
 		zombieOakBossHeadHunter5, .75
+		zombieOakSirenHead, .375
 	</entitygroup>
 	<entitygroup name="RoadiesHeadHuntersGroupGS400">
 		zombieBurnt
@@ -209,6 +217,7 @@
 		zombieOakBossHeadHunter3, .85
 		zombieOakBossHeadHunter4, .85
 		zombieOakBossHeadHunter5, .85
+		zombieOakSirenHead, .425
 	</entitygroup>
 	<entitygroup name="RoadiesHeadHuntersGroupGS800">
 		zombieBurnt
@@ -231,34 +240,8 @@
 		zombieOakBossHeadHunter3
 		zombieOakBossHeadHunter4
 		zombieOakBossHeadHunter5
+		zombieOakSirenHead, .5
 	</entitygroup>
-
-	<!-- NPC HELPERS -->
-	<!-- BIOMES -->	
-	<!-- *** DAY -->	
-	<entitygroup name="SummonFriendZDay">
-		npcTomClarkDPistol, 1
-		npcDemolitionDaveM60, 1
-		npcMommaAK47, 1
-		npcBusinessManTRifle, 1
-		npcMarleneSMG, 1
-		npcBikerMagnumDPistol, 1
-		npcBurntSRifle, 1
-		npcMoeAShotgun, 1
-		none, 92
-	</entitygroup>	
-	<!-- *** NIGHT -->	
-	<entitygroup name="SummonFriendZNight">
-		npcTomClarkDPistol, 1
-		npcDemolitionDaveM60, 1
-		npcMommaAK47, 1
-		npcBusinessManTRifle, 1
-		npcMarleneSMG, 1
-		npcBikerMagnumDPistol, 1
-		npcBurntSRifle, 1
-		npcMoeAShotgun, 1
-		none, 92
-	</entitygroup>	
 	
 	</append>
 
@@ -527,7 +510,7 @@
 		zombieOakBossHeadHunter3, .1
 		zombieOakBossHeadHunter4, .1
 		zombieOakBossHeadHunter5, .1
-		zombieOakSirenHead, .05
+		zombieOakSirenHead, .1
 	</csv>
 
 	<!-- SPIDER ONLY HORDE NIGHT -->

@@ -3917,6 +3917,20 @@
 				<property name="QuestGiven" value="quest_oaksirenheads"/>
 			</property>
 		</item>
+
+	<!-- Old Cash for Skills -->			
+	<item name="qc_1OldCashSkillPoint">
+		<property name="Extends" value="challengeQuestMaster"/>
+		<property name="DescriptionKey" value="qc_1OldCashSkillPointDesc"/>
+		<property name="CustomIcon" value="oldCash"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property name="SoundPickup" value="oldcash_grab"/>
+		<property name="SoundPlace" value="oldcash_place"/>
+		<property class="Action0">
+		<property name="QuestGiven" value="quest_1OldCashSkillPoint"/>
+		</property>
+	</item>
 		
 	<!-- NPC HELPERS -->
 		

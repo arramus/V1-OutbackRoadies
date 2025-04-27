@@ -863,6 +863,10 @@
 		<ingredient name="smallEngine" count="1"/>
 </recipe>
 
+	<recipe name="qc_1OldCashSkillPoint" count="1" craft_time="5">
+		<ingredient name="oldCash" count="11111"/>
+	</recipe>
+
 </append>
 
 </configs>

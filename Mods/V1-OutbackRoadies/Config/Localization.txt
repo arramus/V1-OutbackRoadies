@@ -418,6 +418,13 @@ quest_chickensDesc,items,Quest - Challenge,,,"Read this Quest Note, and accept t
 quest_oaksirenheads,items,Quest - Challenge,,,"Eliminate Oakraven Siren Heads",,,,,,,,,,,,,
 quest_oaksirenheadsDesc,items,Quest - Challenge,,,"Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles.\n\nAdditional Quest Notes can be found in safes and quest loot. Scraps to 50 paper.",,,,,,,,,,,,,
 
+qc_1OldCashSkillPoint,items,Quest - Challenge,,,"Old Cash Skill Point",,,,,,,,,,,,,
+qc_1OldCashSkillPointDesc,items,Quest - Challenge,,,"Give yourself 1 Old Cash Skill Point, Road Warrior.\n\nCraft with 11,111 Old Cash.",,,,,,,,,,,,,
+quest_1OldCashSkillPoint_offer,Quest,Quest Info,,,"Give yourself 1 Old Cash Skill Point, Road Warrior.",,,,,,,,,,,,,
+quest_1OldCashSkillPoint_name,Quest,Quest Info,,,"Old Cash Skill Point",,,,,,,,,,,,,
+quest_1OldCashSkillPoint_subtitle,Quest,Quest Info,,,"Old Cash Skill Point",,,,,,,,,,,,,
+quest_1OldCashSkillPoint_description,Quest,Quest Info,,,"Give yourself 1 Old Cash Skill Point, Road Warrior.",,,,,,,,,,,,,
+
 npcTomClarkDPistol,entityclasses,Entity,,,Desert Eagle Tom,,,,,,,,,,,,,
 npcDemolitionDaveM60,entityclasses,Entity,,,M60 Dave,,,,,,,,,,,,,
 npcMommaAK47,entityclasses,Entity,,,AK47 Momma,,,,,,,,,,,,,

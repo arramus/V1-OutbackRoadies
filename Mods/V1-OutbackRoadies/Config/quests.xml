@@ -198,6 +198,20 @@
 		<action type="SpawnEnemy" id="npcAnimalSummonzombieDog,npcAnimalSummonBoar,npcAnimalSummonDireWolf,npcAnimalSummonChicken,npcAnimalSummonRabbit,npcAnimalSummonSnake,npcAnimalSummonCoyote,npcAnimalSummonJeerkoa" value="1"/>
 		<reward type="Item" id="foodRawMeat" value="20"/>	
 		</quest>
+		
+	<quest id="quest_1OldCashSkillPoint">
+		<property name="name_key" value="quest_1OldCashSkillPoint_name" />
+		<property name="subtitle_key" value="quest_1OldCashSkillPoint_subtitle" />
+		<property name="description_key" value="quest_1OldCashSkillPoint_description" />
+		<property name="icon" value="ui_game_symbol_skills" />
+		<property name="repeatable" value="true" />
+		<property name="add_to_tier_complete" value="false"/>
+		<property name="shareable" value="false"/>
+		<property name="category_key" value="challenge" />
+		<property name="offer_key" value="quest_1OldCashSkillPoint_offer" />
+		<property name="difficulty" value="easy" />
+		<reward type="SkillPoints" value="1" />
+	</quest>
 
 	</append>
 	
