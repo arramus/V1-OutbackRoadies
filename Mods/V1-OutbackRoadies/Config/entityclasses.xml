@@ -3527,6 +3527,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonzombieDogPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3595,6 +3596,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonBoarPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3662,6 +3664,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonDireWolfPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3732,6 +3735,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonChickenPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3802,6 +3806,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonRabbitPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3869,6 +3874,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonSnakePickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -3935,6 +3941,7 @@
 			<property name="Mesh" value=""/>
 			<property name="PickUpItem" value="SummonCoyotePickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
@@ -4001,6 +4008,7 @@
 			<property name="Mesh" value="#@modfolder(0-XNPCCore):Resources/XythNPCs.unity3d?Jeerkoa_X"/>
 			<property name="PickUpItem" value="SummonJeerkoaPickUpNPC" />
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="CanClimbLadders" value="true"/>
 			<!--property name="RightHandJointName" value="articfox_Head_bone" /-->
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
