@@ -3917,6 +3917,18 @@
 				<property name="QuestGiven" value="quest_oaksirenheads"/>
 			</property>
 		</item>
+		
+	<!-- Magpies -->	
+		<item name="quest_magpies">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="Material" value="Mpaper"/> <property name="Weight" value="67"/>
+			<property name="DescriptionKey" value="quest_magpiesDesc"/>
+			<property name="CustomIcon" value="quest_magpies"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_magpies"/>
+			</property>
+		</item>
 
 	<!-- Old Cash for Skills -->			
 	<item name="qc_1OldCashSkillPoint">

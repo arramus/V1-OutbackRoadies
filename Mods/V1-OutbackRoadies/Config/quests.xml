@@ -28,10 +28,10 @@
 	<!-- CUSTOM QUESTS -->
     <!-- Rabbits -->
 	<quest id="quest_rabbits">
-		<property name="offer_key" value="Rabbits are one of Australia's most destructive pest animals. They also spread the Zombo Virus. Accept this quest to help eliminate 25 rabbits. XP, Dukes, and 1 Skill Point for your troubles."/>
-		<property name="name_key" value="25 Rabbits"/>
-		<property name="subtitle_key" value="25 Rabbits"/>
-		<property name="description_key" value="Rabbits are one of Australia's most destructive pest animals. They also spread the Zombo Virus. Accept this quest to help eliminate 25 rabbits. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="offer_key" value="quest_rabbits_offer"/>
+		<property name="name_key" value="quest_rabbits_name"/>
+		<property name="subtitle_key" value="quest_rabbits_subtitle"/>
+		<property name="description_key" value="quest_rabbits_description"/>
 		<property name="icon" value="ui_game_symbol_rabbit"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -48,10 +48,10 @@
 	
 	<!-- Spiders -->
 	<quest id="quest_spiders">
-		<property name="offer_key" value="Accept this quest to eliminate 100 spiders. XP, Dukes, and 2 Skill Points for your troubles."/>
-		<property name="name_key" value="100 Spiders"/>
-		<property name="subtitle_key" value="100 Spiders"/>
-		<property name="description_key" value="Accept this quest to eliminate 100 spiders. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="offer_key" value="quest_spiders_offer"/>
+		<property name="name_key" value="quest_spiders_name"/>
+		<property name="subtitle_key" value="quest_spiders_subtitle"/>
+		<property name="description_key" value="quest_spiders_description"/>
 		<property name="icon" value="ui_game_symbol_spider"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -68,10 +68,10 @@
 	
 	<!-- Animals -->
 	<quest id="quest_aussieanimals">
-		<property name="offer_key" value="Accept this quest to eliminate 100 hostile aussie animals. This does not include spiders as they have their very own quest. XP, Dukes, and 2 Skill Points for your troubles."/>
-		<property name="name_key" value="100 Aussie Animals"/>
-		<property name="subtitle_key" value="100 Aussie Animals"/>
-		<property name="description_key" value="Accept this quest to eliminate 100 aussie animals. This does not include spiders as they have their very own quest. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="offer_key" value="quest_aussieanimals_offer"/>
+		<property name="name_key" value="quest_aussieanimals_name"/>
+		<property name="subtitle_key" value="quest_aussieanimals_subtitle"/>
+		<property name="description_key" value="quest_aussieanimals_description"/>
 		<property name="icon" value="ui_game_symbol_aussieanimal"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -88,10 +88,10 @@
 	
 	<!-- Mini Radiated Burnt -->
 	<quest id="quest_miniradiatedburnt">
-		<property name="offer_key" value="Accept this quest to eliminate 25 mini radiated burnt zombies. XP, Dukes, and 1 Skill Point for your troubles."/>
-		<property name="name_key" value="25 Mini Rad Burnt Zombies"/>
-		<property name="subtitle_key" value="25 Mini Rad Burnt Zombies"/>
-		<property name="description_key" value="Accept this quest to eliminate 25 mini radiated burnt zombies. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="offer_key" value="quest_miniradiatedburnt_offer"/>
+		<property name="name_key" value="quest_miniradiatedburnt_name"/>
+		<property name="subtitle_key" value="quest_miniradiatedburnt_subtitle"/>
+		<property name="description_key" value="quest_miniradiatedburnt_description"/>
 		<property name="icon" value="ui_game_symbol_miniradiatedburnt"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -108,10 +108,10 @@
 	
 	<!-- Head Hunters -->
 	<quest id="quest_headhunters">
-		<property name="offer_key" value="Accept this quest to eliminate 100 head hunters. They look a bit like War Boys and Nurses,and are out for your blood via your torn off head. XP, Dukes, and 2 Skill Points for your troubles."/>
-		<property name="name_key" value="100 Head Hunter Zombies"/>
-		<property name="subtitle_key" value="100 Head Hunter Zombies"/>
-		<property name="description_key" value="Accept this quest to eliminate 100 head hunters. They look a bit like War Boys and Nurses,and are out for your blood via your torn off head. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="offer_key" value="quest_headhunters_offer"/>
+		<property name="name_key" value="quest_headhunters_name"/>
+		<property name="subtitle_key" value="quest_headhunters_name"/>
+		<property name="description_key" value="quest_headhunters_description"/>
 		<property name="icon" value="ui_game_symbol_headhunter"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -128,10 +128,10 @@
 	
     <!-- Chickens -->
 	<quest id="quest_chickens">
-		<property name="offer_key" value="Spiders eat chickens. More chickens bring more spiders... Accept this quest to help eliminate 25 chickens. XP, Dukes, and 1 Skill Point for your troubles."/>
-		<property name="name_key" value="25 Chickens"/>
-		<property name="subtitle_key" value="25 Chickens"/>
-		<property name="description_key" value="Spiders eat chickens. More chickens bring more spiders... Accept this quest to help eliminate 25 chickens. XP, Dukes, and 1 Skill Point for your troubles."/>
+		<property name="offer_key" value="quest_chickens_offer"/>
+		<property name="name_key" value="quest_chickens_name"/>
+		<property name="subtitle_key" value="quest_chickens_subtitle"/>
+		<property name="description_key" value="quest_chickens_description"/>
 		<property name="icon" value="ui_game_symbol_chicken"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -148,10 +148,10 @@
 	
 	<!-- Oak Siren Heads -->
 	<quest id="quest_oaksirenheads">
-		<property name="offer_key" value="Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles."/>
-		<property name="name_key" value="50 Oakraven Siren Heads"/>
-		<property name="subtitle_key" value="50 Oakraven Siren Heads"/>
-		<property name="description_key" value="Accept this quest to eliminate 50 Oakraven Siren Head entities. They look walking public announcement systems and just want to be heard. XP, Dukes, and 2 Skill Points for your troubles."/>
+		<property name="offer_key" value="quest_oaksirenheads_offer"/>
+		<property name="name_key" value="quest_oaksirenheads_name"/>
+		<property name="subtitle_key" value="quest_oaksirenheads_subtitle"/>
+		<property name="description_key" value="quest_oaksirenheads_description"/>
 		<property name="icon" value="ui_game_symbol_oaksirenhead"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -166,12 +166,32 @@
 		<reward type="SkillPoints" value="2" chainreward="false"/>
 	</quest>
 	
+	<!-- Magpies -->
+	<quest id="quest_magpies">
+		<property name="offer_key" value="quest_magpies_offer"/>
+		<property name="name_key" value="quest_magpies_name"/>
+		<property name="subtitle_key" value="quest_magpies_subtitle"/>
+		<property name="description_key" value="quest_magpies_description"/>
+		<property name="icon" value="ui_game_symbol_magpie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="Quest"/>
+		<property name="add_to_tier_complete" value="false"/>
+		<property name="difficulty" value="hard"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="animalMagpie" value="50"/>
+		
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+	</quest>	
+	
 	<!-- NPC HELPERS -->	
 		<quest id="challenge_1-SummonFriendZ">
-			<property name="offer_key" value="Accept this quest to take responsibility of a random FriendZ. Move to an open area to allow a FriendZ to be summoned. Feed 100 meat to hire. There are 8 in total - Desert Eagle Tom, M60 Dave, AK47 Momma, T.A. Rifle Business Man, SMG Marlene, Magnum Biker, Sniper Burnt, and Auto Moe."/>
-			<property name="name_key" value="Summon - FriendZ"/>
-			<property name="subtitle_key" value="Summon - FriendZ"/>
-			<property name="description_key" value="Move to an open area to allow a random FriendZ to be summoned."/>
+			<property name="offer_key" value="challenge_1-SummonFriendZ_offer"/>
+			<property name="name_key" value="challenge_1-SummonFriendZ_name"/>
+			<property name="subtitle_key" value="challenge_1-SummonFriendZ_subtitle"/>
+			<property name="description_key" value="challenge_1-SummonFriendZ_description"/>
 			<property name="icon" value="ui_game_symbol_zombie"/>
 			<property name="repeatable" value="true"/>
 			<property name="category_key" value="challenge"/>
@@ -184,10 +204,10 @@
 		</quest>
 		
 		<quest id="challenge_1-SummonAnimals">
-			<property name="offer_key" value="Accept this quest to take responsibility of a random Animal Helper. Move to an open area to allow an Animal Helper to be summoned. Feed 20 meat to hire. There are 8 in total - Zombie Dog Helper, Boar Helper, Dire Wolf Helper, Chicken Helper, Rabbit Helper, Snake Helper, Coyote Helper, and Jeerkoa Helper."/>
-			<property name="name_key" value="Summon - Animals"/>
-			<property name="subtitle_key" value="Summon - Animals"/>
-			<property name="description_key" value="Move to an open area to allow a random Animal Helper to be summoned."/>
+			<property name="offer_key" value="challenge_1-SummonAnimals_offer"/>
+			<property name="name_key" value="challenge_1-SummonAnimals_name"/>
+			<property name="subtitle_key" value="challenge_1-SummonAnimals_subtitle"/>
+			<property name="description_key" value="challenge_1-SummonAnimals_description"/>
 			<property name="icon" value="ui_game_symbol_summon_rabbit"/>
 			<property name="repeatable" value="true"/>
 			<property name="category_key" value="challenge"/>

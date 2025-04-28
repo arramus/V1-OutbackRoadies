@@ -122,7 +122,7 @@
 		</buff>
 		<buff name="zombieBurntRadiatedMiniDeco" hidden="true">
 			<effect_group>				
-				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Furniture/woodBurningStovePrefab" local_offset="0,0.15,0" local_rotation="0,0,0" parent_transform="Spine"/> <!-- Local Offset Up-Down/Front-Back/Left-Right -->				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Furniture/woodBurningStovePrefab" local_offset="0,0.15,0" local_rotation="0,0,0" local_scale=".8,.8,.8" parent_transform="Spine"/> <!-- Local Offset Up-Down/Front-Back/Left-Right -->				
 				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0.2" local_rotation="0,0,0" parent_transform="Spine"/>
 			</effect_group>
 		</buff>

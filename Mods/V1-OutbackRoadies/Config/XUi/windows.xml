@@ -77,12 +77,11 @@
 			</rect>
 		</window>		
 	</append>
-
-	<!-- KhaineGB's Inventory Lockable Vehicle Slots Mod - Much thanks -->
 	
-	<append xpath="/windows/window[@name='windowVehicleStorage']/panel[@name='header']/rect[@controller='ContainerStandardControls']">		
+	<!-- No longer functional for V1~ but great while it lasted - KhaineGB's Inventory Lockable Vehicle Slots Mod - Much thanks -->	
+	<!-- append xpath="/windows/window[@name='windowVehicleStorage']/panel[@name='header']/rect[@controller='ContainerStandardControls']">		
 		<combobox depth="3" name="cbxLockedSlots" pos="70,-7" width="100" height="30" tooltip_key="xuiStashLockedSlots" type="ComboBoxInt" value_min="0" value_max="{container_slots}" value_wrap="true" value_increment="1" />
-	</append>
+	</append -->
 	
 <!-- Outback Roadies UI based on Oak Mod UI -->
 
@@ -145,8 +144,8 @@
 					<label name="Slot0" depth="20" size="22,22" text="0" font_size="18" color="[white]" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
 				</grid>
 			</rect>
-				                                        <!--ToolbeltFrames-->
- <rect pos="40,10" width="30" height="30" >
+			<!-- Toolbelt Frames -->
+			<rect pos="40,10" width="30" height="30" >
 			<texture pos="0,0" depth="18" width="40" height="40" pivot="center" texture="@modfolder:Textures/aussie_hat_number.png"/>
 			<texture pos="75,0" depth="18" width="40" height="40" pivot="center" texture="@modfolder:Textures/aussie_hat_number.png"/>
 			<texture pos="150,0" depth="18" width="40" height="40" pivot="center" texture="@modfolder:Textures/aussie_hat_number.png"/>
@@ -198,7 +197,7 @@
 			         <rect pos="715,-40" width="75" height="75" >
 			<texture depth="18" width="78" height="80" pivot="center" texture="@modfolder:Textures/frametoolbelt.png"/>
              </rect>
-				                                     <!--PlayerXP-->
+			<!-- Player XP -->
             <rect pos="900,-57" width="75" height="75" >
 				<sprite depth="1" height="34" width="150" name="border" sprite="menu_empty2px" color="[black]" pivot="center"/>
 				<sprite depth="1" pos="-85,19" width="160" height="35" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
@@ -210,13 +209,13 @@
 			<rect pos="-145,-55" width="75" height="75" >
 			<texture depth="4" width="220" height="44" pivot="center" texture="@modfolder:Textures/border.png"/>
              </rect>
-									                                        <!-- temperature -->
+			<!-- Temperature -->
 			<rect name="temperature" pos="-145,-40" width="80" height="40" controller="MapStats" visible="{statvisible}">		
 				<sprite depth="2" name="tempIcon" width="21" height="21" pos="-8,-4" sprite="ui_game_symbol_temperature" color="[iconColor]" foregroundlayer="true"/>
 				<label depth="2" name="tempLabel" pos="11,-7" width="80" height="18" text="{playercoretemp}" font_size="18" color="[white]" justify="left"/>
 				<sprite depth="1" pos="-76,6" width="150" height="40" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
 			</rect>
-			                                                    <!-- elevation -->
+			<!-- Elevation -->
 			<rect name="elevation" pos="-225,-8" width="100" height="50" controller="MapStats" visible="{statvisible}">
 				<sprite depth="2" name="elevIcon" width="14" height="14" pos="25,-40" sprite="ui_game_symbol_climb" color="[iconColor]" foregroundlayer="true"/>
 				<label depth="2" name="elevLabel" pos="40,-40" width="80" height="18" text="{mapelevation}" font_size="18" color="[white]" justify="left"/>
@@ -228,17 +227,16 @@
 <remove xpath="/windows/window[@name='HUDLeftStatBars']" />
 <append xpath="/windows">
 	<window name="HUDLeftStatBars">
-		<rect name="hud" pos="30,192" rows="2" cols="1" width="168" side="right">
-			<rect width="137" height="37" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}"> <!-- bar was 160 but overlapping -->
-				
+			<!-- Stealth -->
+			<rect name="hud" pos="30,193" rows="2" cols="1" width="168" side="right">
+			<rect width="137" height="37" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}"> <!-- bar was 160 but overlapping -->				
 				<filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="0" />
 				<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_stealth2" size="27,27" pos="32,-18" pivot="center" foregroundlayer="true"/>
-				<label depth="6" name="TextContent" pos="44,-19" font_size="26" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="60" height="35"/> <!-- width number was 125 and this shifts left -->
-
+				<label depth="6" name="TextContent" pos="44,-21" font_size="26" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="60" height="35"/> <!-- width number was 125 and this shifts left -->
 				<texture depth="9" pos="-25,-19" width="192" height="37" pivot="left" texture="@modfolder:Textures/border.png"/>
 			</rect>				
-		</rect>
-                                                             <!-- Health -->
+			</rect>
+            <!-- Health -->
 			<rect pos="100,137" width="76" height="76" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
 				<sprite depth="1" pos="-72,18" width="137" height="35" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
@@ -247,32 +245,32 @@
 				<label depth="3" width="136" pos="-50,12" font_size="24" text="[DECEA3]{statcurrentwithmax}" color="[white]" effect="outline" upper_case="true" justify="center" />
 				<texture depth="4" width="192" height="37" pivot="center" texture="@modfolder:Textures/border.png"/>
 			</rect>
-				                                              <!-- Stamina -->
-			<rect pos="100,99" width="76" height="76" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+			<!-- Stamina -->
+			<rect pos="100,100" width="76" height="76" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
 				<sprite depth="1" pos="-72,19" width="137" height="35" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
 				<sprite name="BarContent" depth="2" pivot="center" size="137,102" type="filled" filldirection="horizontal" fill="0" atlas="ItemIconAtlas" sprite="plaqueStam" />
 				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_stamina" size="22,22" pos="-50,11" foregroundlayer="true"/>
-				<label depth="3" width="136" pos="-50,14" font_size="24" text="[DECEA3]{statcurrentwithmax}" color="[white]" effect="outline" upper_case="true" justify="center" />
+				<label depth="3" width="136" pos="-50,13" font_size="24" text="[DECEA3]{statcurrentwithmax}" color="[white]" effect="outline" upper_case="true" justify="center" />
 				<texture depth="4" width="192" height="37" pivot="center" texture="@modfolder:Textures/border.png"/>
 				<sprite depth="8" visible="{sprintactive}" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="32,32" pos="86,0" pivot="left"/>
 			</rect>	
-			                                                    <!-- Food -->
-			<rect pos="100,62" width="76" height="76" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+			<!-- Food -->
+			<rect pos="100,63" width="76" height="76" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
 				<sprite depth="1" pos="-72,19" width="137" height="35" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
 				<sprite name="BarContent" depth="2" pivot="center" size="137,102" type="filled" filldirection="horizontal" fill="0" atlas="ItemIconAtlas" sprite="plaqueFood" />
-				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_food" size="22,22" pos="-50,11" foregroundlayer="true"/>
-				<label depth="3" width="136" pos="-50,14" font_size="24" text="[DECEA3]{statcurrent}%" color="[white]" effect="outline" upper_case="true" justify="center" />
+				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_food" size="28,28" pos="-54,13" foregroundlayer="true"/>
+				<label depth="3" width="136" pos="-50,12" font_size="24" text="[DECEA3]{statcurrent}%" color="[white]" effect="outline" upper_case="true" justify="center" />
 				<texture depth="4" width="192" height="37" pivot="center" texture="@modfolder:Textures/border.png"/>
 			</rect>			
-			                                                  <!-- Water -->
-			<rect pos="100,25" width="76" height="76" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+			<!-- Water -->
+			<rect pos="100,26" width="76" height="76" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
 				<sprite depth="1" pos="-72,19" width="137" height="35" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
 				<sprite name="BarContent" depth="2" pivot="center" size="137,102" type="filled" filldirection="horizontal" fill="0" atlas="ItemIconAtlas" sprite="plaqueWater" />
 				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="22,22" pos="-50,11" foregroundlayer="true"/>
-				<label depth="3" width="136" pos="-50,14" font_size="24" text="[DECEA3]{statcurrent}%" color="[white]" effect="outline" upper_case="true" justify="center" />
+				<label depth="3" width="136" pos="-50,12" font_size="24" text="[DECEA3]{statcurrent}%" color="[white]" effect="outline" upper_case="true" justify="center" />
 				<texture depth="4" width="192" height="37" pivot="center" texture="@modfolder:Textures/border.png"/>
 			</rect>
 	

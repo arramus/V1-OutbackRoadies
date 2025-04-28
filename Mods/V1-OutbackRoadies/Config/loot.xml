@@ -176,6 +176,7 @@
 		<item name="quest_headhunters"/>
 		<item name="quest_chickens"/>
 		<item name="quest_oaksirenheads"/>
+		<item name="quest_magpies"/>
 		<item name="foodWitchettyGrub" count="1,2"/>
 		<item name="foodWheatFlour" count="1,2"/>
 		<item name="ammoGasCan" count="50,150"/>
@@ -228,6 +229,7 @@
 		<item name="quest_headhunters"/>
 		<item name="quest_chickens"/>
 		<item name="quest_oaksirenheads"/>
+		<item name="quest_magpies"/>
 	</append>
 	
 	<!-- Gun Safe drops three possible passes for books/quests notes to offset potential loot percentage bug for custom content and decline in regular books -->	
