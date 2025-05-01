@@ -3406,7 +3406,7 @@
 			</effect_group>
 		</item>
 		<item name="ammoProjectilezombieStrongFireBall">
-			<property name="Meshfile" value="particleeffects/p_fire_small"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Molotov/molotov_thrownPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">

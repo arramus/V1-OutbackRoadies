@@ -97,8 +97,8 @@
 	
 	<!-- *** Car_Loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='groupCars02']">
-	<item group="vehicleMods" loot_prob_template="Low"/>
-	<item group="vehicleModSchematics" loot_prob_template="Low"/>
+	<item group="vehicleMods" loot_prob_template="medLow"/>
+	<item group="vehicleModSchematics" loot_prob_template="medLow"/>
 	</append>
 	
 	<!-- *** Vehicle_Parts_Scaled but bringing in mid/late range vehicle parts earlier and keeping them later to remove scripted drops as with vehicle mod schematics -->	
