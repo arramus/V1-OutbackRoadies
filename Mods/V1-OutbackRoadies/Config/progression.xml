@@ -69,4 +69,22 @@
 	<append xpath="//crafting_skill[@name='craftingSeeds']/display_entry/unlock_entry[@item='plantedCotton1']/@item">,plantedPricklyCactus1</append>
 	<append xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@tags='plantedCotton1']/@tags">,plantedPricklyCactus1</append>
 	
+	<!-- Adding Vehicle Mods to Vehicle Adventures Crafting Skill -->
+	<append xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@icon='vehicleMinibikePlaceable']/unlock_entry/@item">,modVehicleFuelSaver,modVehicleOffRoadHeadlights</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags=",modVehicleFuelSaver,modVehicleOffRoadHeadlights"/>
+	</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@icon='vehicleMotorcyclePlaceable']/unlock_entry/@item">,modVehicleExpandedSeat,modVehicleReserveFuelTank</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags=",modVehicleExpandedSeat,modVehicleReserveFuelTank"/>
+	</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@icon='vehicleTruck4x4Placeable']/unlock_entry/@item">,modVehicleSuperCharger</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags=",modVehicleSuperCharger"/>
+	</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@icon='vehicleGyrocopterPlaceable']/unlock_entry/@item">,modVehicleArmor,modVehiclePlow</append>
+	<append xpath="//crafting_skill[@name='craftingVehicles']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags=",modVehicleArmor,modVehiclePlow"/>
+	</append>
+	
 </configs>
