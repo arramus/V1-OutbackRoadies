@@ -361,14 +361,6 @@
 	<append xpath="/items/item[@name='ammoBundleJunkTurretAP']">		
 		<property name="Group" value="Ammo/Weapons,Ammo,APAmmo"/>
 	</append>
-	<!-- Append Stacking -->	
-	<append xpath="/items/item[@name='medicalPlasterCast']">
-		<property name="Stacknumber" value="20"/> <!-- STK resource -->	
-	</append><!-- extends medicalSplint at 25 but 20 is sufficient to recognise upgrade feature -->
-	
-	<append xpath="/items/item[@name='drugSteroids']">
-		<property name="Stacknumber" value="25"/> <!-- STK resource -->	
-	</append><!-- extends drugPainkillers but 25 is sufficient -->
 	
 	<!-- Vehicle Tags and Hookups -->
 	<append xpath="/items/item[@name='vehicleBicyclePlaceable']/property[@name='Tags']/@value">,vseat</append><!-- Adding the seat tag -->
@@ -665,7 +657,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="15000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="1"/>
 	<!-- <property name="EconomicBundleSize" value="5"/> -->
 	<property name="CraftingIngredientTime" value="10"/>
@@ -693,7 +685,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="25"/>
 	<!-- <property name="EconomicBundleSize" value="5"/> -->
 	<property name="CraftingIngredientTime" value="10"/>
@@ -1143,7 +1135,7 @@
 	<property name="Meshfile" value="#Other/Items?Crafting/femur.fbx"/>-->
 	<property name="Material" value="MresourceBone"/>
 	<property name="Weight" value="1"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="6"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="SellableToTrader" value="true"/>
@@ -1349,7 +1341,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="80"/>
-	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="Stacknumber" value="250"/> <!-- STK food -->
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -1438,7 +1430,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceCrop"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="Stacknumber" value="3000"/> <!-- STK food -->
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SoundPickup" value="yuccafruit_grab"/>
@@ -1466,7 +1458,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceCrop"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="Stacknumber" value="3000"/> <!-- STK food -->
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SoundPickup" value="yuccafruit_grab"/>
@@ -1523,7 +1515,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="10"/> <!-- STK food -->
+	<property name="Stacknumber" value="250"/> <!-- STK food -->
 	<property name="EconomicValue" value="72"/>
 	<!--property name="UnlockedBy" value="craftingFood"/--><!-- perkMasterChef,foodBaconAndEggsSchematic, -->
 	<property name="SoundPickup" value="baconeggs_grab"/>
@@ -1553,7 +1545,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceCrop"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="Stacknumber" value="3000"/> <!-- STK food -->
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SoundPickup" value="yuccafruit_grab"/>
@@ -2091,7 +2083,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK food -->
+	<property name="Stacknumber" value="6000"/> <!-- STK food -->
 	<property name="EconomicValue" value="54"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -2327,7 +2319,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mcloth"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="3000"/> <!-- STK resource -->
 	<property name="RepairAmount" value="50"/>
 	<property name="FuelValue" value="1"/>
 	<property name="Weight" value="5"/>
@@ -2372,7 +2364,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mmetal"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="6"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="Group" value="Tools/Traps"/>

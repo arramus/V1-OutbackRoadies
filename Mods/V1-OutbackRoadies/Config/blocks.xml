@@ -531,7 +531,8 @@
 		<property name="IsTerrainDecoration" value="true"/>
 		<property name="FallDamage" value=".9"/>
 		<property name="ImposterExclude" value="true"/>
-		<property name="ImposterDontBlock" value="true"/>	
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="EconomicValue" value="60"/>
 		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
 		<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="1"/>

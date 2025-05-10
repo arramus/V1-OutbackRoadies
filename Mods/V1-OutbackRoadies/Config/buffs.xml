@@ -281,7 +281,7 @@
 			<stack_type value="ignore"/>			
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/LootContainers/weapon_bags_largePrefab.prefab" local_offset="0.05,.45,-1.05" local_rotation="0,0,0" parent_transform="GameObject"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/XythSpiders.unity3d?Spider02_X" local_offset="0,1.5,-1.5" local_rotation="-20,0,0" parent_transform="Collider"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/XythSpiders.unity3d?Spider02_X" local_offset="0,1.5,-1.5" local_rotation="-20,0,0" local_scale="2.5,2.5,2.5" parent_transform="Collider"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Collider" transform_path="Spider02_X"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.2" buff="buffInjuryKnockdown01">
 					<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
