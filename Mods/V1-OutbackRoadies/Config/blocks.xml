@@ -3,6 +3,7 @@
 	<!--0-Score Tweaks-->
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='ReadFromContainers']/@value">true</set>
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='Distance']/@value">15</set> <!-- Default is 10 -->
+	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='BlockUpgradeRepair']/property[@name='ReadFromContainers']/@value">true</set>
 	
     <append xpath="/blocks">	
 	<!-- *** PLAYER_LOCKED_WRITABLE_IRON_DROP_BOX_CRATE_0-SCORE -->
