@@ -1109,7 +1109,7 @@
     </effect_group>
 </entity_class>
 
-<!--TASMANIAM DEVIL-->
+<!--TASMANIAN DEVIL-->
 <entity_class name="animalTassydevil" extends="animalTemplateHostileWalking">
     <property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03"/>
 	<property name="UserSpawnType" value="Menu"/>
@@ -1155,6 +1155,59 @@
 
     <effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="250"/>
+    </effect_group>
+</entity_class>
+
+<entity_class name="animalBigTassydevil" extends="animalTemplateHostileWalking">
+    <property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03"/>
+	<property name="UserSpawnType" value="Menu"/>
+    <property name="IsEnemyEntity" value="true"/>
+    <property name="AvatarController" value="AvatarAnimalController"/>
+    <property name="ModelType" value="Standard"/>
+    <property name="HasRagdoll" value="true"/>
+    <property name="PhysicsBody" value="boar"/>
+    <property name="Mass" value="160"/>
+    <property name="Mesh" value="#@modfolder:Resources/Aussiepack.unity3d?TazzyDevilLegion"/>
+    <property name="LookAtAngle" value="0"/>
+    <property name="HasDeathAnim" value="true"/>
+    <property name="RootMotion" value="false"/>
+    <property name="RagdollOnDeathChance" value=".5"/>
+	<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+
+    <property name="SoundRandom" value=""/>
+    <property name="SoundAlert" value=""/>
+    <property name="SoundHurt" value=""/>
+    <property name="SoundDeath" value=""/>
+    <property name="SoundAttack" value=""/>
+    <property name="SoundSense" value=""/>
+    <property name="SoundGiveUp" value=""/>
+
+	<property name="SizeScale" value="4"/>
+    <property name="PainResistPerHit" value=".05"/>
+    <property name="MoveSpeed" value="0.1"/>
+    <property name="MoveSpeedAggro" value="1.6,1.6"/>
+    <property name="MoveSpeedPanic" value="1.65"/>
+	<property name="ExperienceGain" value="1250"/>
+	<property name="LootDropProb" value=".25"/>				
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="CanClimbLadders" value="true"/>	
+
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/>
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="10"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+	<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+        <passive_effect name="HealthMax" operation="base_set" value="1550"/>
     </effect_group>
 </entity_class>
 
@@ -1249,6 +1302,58 @@
 
     <effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="250"/>
+    </effect_group>
+</entity_class>
+
+<entity_class name="animalBigKoala" extends="animalTemplateHostileWalking">
+    <property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03"/>
+	<property name="UserSpawnType" value="Menu"/>
+    <property name="IsEnemyEntity" value="true"/>
+    <property name="AvatarController" value="AvatarAnimalController"/>
+    <property name="ModelType" value="Standard"/>
+    <property name="HasRagdoll" value="false"/>
+    <property name="PhysicsBody" value="boar"/>
+    <property name="Mass" value="160"/>
+    <property name="Mesh" value="#@modfolder:Resources/Aussiepack.unity3d?Koala2Legion"/>
+    <property name="LookAtAngle" value="0"/>
+    <property name="HasDeathAnim" value="true"/>
+    <property name="RootMotion" value="false"/>
+    <property name="RagdollOnDeathChance" value=".5"/>
+	<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+
+    <property name="SoundRandom" value=""/>
+    <property name="SoundAlert" value=""/>
+    <property name="SoundHurt" value=""/>
+    <property name="SoundDeath" value=""/>
+    <property name="SoundAttack" value=""/>
+    <property name="SoundSense" value=""/>
+    <property name="SoundGiveUp" value=""/>
+
+	<property name="SizeScale" value="2.0"/>
+    <property name="PainResistPerHit" value=".05"/>
+    <property name="MoveSpeed" value="0.6"/>
+    <property name="MoveSpeedAggro" value="1.6,1.6"/>
+    <property name="MoveSpeedPanic" value="1.65"/>
+	<property name="ExperienceGain" value="1250"/>
+	<property name="LootDropProb" value=".25"/>				
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="CanClimbLadders" value="true"/>	
+
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/>
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+        <passive_effect name="HealthMax" operation="base_set" value="1550"/>
     </effect_group>
 </entity_class>
 
@@ -4055,6 +4160,20 @@
 				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
 			</effect_group>
 		</entity_class>
+		
+<!-- Fake Entities for Entity Elimination Quest for Localization of 'Quest' as first pick -->
+
+<entity_class name="animalAussieAnimalsQuest" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="None"/>
+</entity_class>
+
+<entity_class name="animalSpidersQuest" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="None"/>
+</entity_class>
+
+<entity_class name="zombieHeadHuntersQuest" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="None"/>
+</entity_class>
 	
 	</append>
 	

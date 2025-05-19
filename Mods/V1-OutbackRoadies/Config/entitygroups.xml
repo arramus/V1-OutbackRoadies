@@ -271,6 +271,8 @@
 		animalSpider01Radiated, 2
 		animalSpider02Radiated, 2
 		animalSpider03Radiated, 2
+		animalBigKoala, 2
+		animalBigTassydevil, 2
 		animalSpider01Queen, .75
 		animalSpider02Queen, .75
 		animalSpider03Queen, .75
@@ -333,6 +335,8 @@
 		animalSpider01Radiated, .5
 		animalSpider02Radiated, .5
 		animalSpider03Radiated, .5
+		animalBigKoala, .5
+		animalBigTassydevil, .5
 		animalSpider01Queen, .25
 		animalSpider02Queen, .25
 		animalSpider03Queen, .25
@@ -344,7 +348,7 @@
 	<!-- *** BIOME_ENEMY_ANIMAL_FOREST_GROUP --> <!-- NIGHT -->
 	
 	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']/text()" delim="\n" op="add" >
-		animalBat, 20
+		animalBat, 15
 		animalTassydevil, 10
 		animalSpider01Mini, 5
 		animalSpider02Mini, 5
@@ -358,6 +362,8 @@
 		animalSpider01Radiated, 1
 		animalSpider02Radiated, 1
 		animalSpider03Radiated, 1
+		animalBigKoala, 1
+		animalBigTassydevil, 1
 		animalSpider01Queen, .75
 		animalSpider02Queen, .75
 		animalSpider03Queen, .75
@@ -369,10 +375,10 @@
 		animalBloodMoonSpider03QueenFred, .5
 	</csv>
 
-	<!-- *** BIOME_ENEMY_ANIMAL_BURNT_FOREST_GROUP --> <!-- NIGHT -->
+	<!-- *** BIOME_ENEMY_ANIMAL_BURNT_FOREST_GROUP --> <!-- ANY -->
 
 	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForestAny']/text()" delim="\n" op="add" >
-		animalBat, 14
+		animalBat, 10
 		animalTassydevil, 10
 		animalSpider01Mini, 6
 		animalSpider02Mini, 6
@@ -386,6 +392,8 @@
 		animalSpider01Radiated, 2
 		animalSpider02Radiated, 2
 		animalSpider03Radiated, 2
+		animalBigKoala, 2
+		animalBigTassydevil, 2
 		animalSpider01Queen, 1
 		animalSpider02Queen, 1
 		animalSpider03Queen, 1
@@ -400,7 +408,7 @@
 	<!-- *** BIOME_ENEMY_ANIMAL_WASTELAND_GROUP --> <!-- ANY -->
 	
 	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/text()" delim="\n" op="add" >
-		animalBat, 14
+		animalBat, 10
 		animalTassydevil, 10
 		animalSpider01Mini, 6
 		animalSpider02Mini, 6
@@ -414,6 +422,8 @@
 		animalSpider01Radiated, 2
 		animalSpider02Radiated, 2
 		animalSpider03Radiated, 2
+		animalBigKoala, 2
+		animalBigTassydevil, 2
 		animalSpider01Queen, 1
 		animalSpider02Queen, 1
 		animalSpider03Queen, 1

@@ -59,7 +59,7 @@
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
-		<objective type="EntityKill" id="animalBloodMoonSpider01QueenFred,animalBloodMoonSpider02QueenFred,animalBloodMoonSpider03QueenFred,animalSpider01,animalSpider02,animalSpider03,animalSpider01Feral,animalSpider02Feral,animalSpider03Feral,animalSpider01Radiated,animalSpider02Radiated,animalSpider03Radiated,animalSpider01Mini,animalSpider02Mini,animalSpider03Mini,animalSpider01Queen,animalSpider02Queen,animalSpider03Queen,animalFlyingSpider01,animalFlyingSpider02,animalFlyingSpider03,animalBloodMoonSpider01,animalBloodMoonSpider02,animalBloodMoonSpider03,animalBloodMoonSpider01Feral,animalBloodMoonSpider02Feral,animalBloodMoonSpider03Feral,animalBloodMoonSpider01Radiated,animalBloodMoonSpider02Radiated,animalBloodMoonSpider03Radiated,animalBloodMoonSpider01Queen,animalBloodMoonSpider02Queen,animalBloodMoonSpider03Queen,animalBloodMoonFlyingSpider01Queen,animalBloodMoonFlyingSpider02Queen,animalBloodMoonFlyingSpider03Queen,animalBloodMoonSpider01Mini,animalBloodMoonSpider02Mini,animalBloodMoonSpider03Mini" value="100"/>
+		<objective type="EntityKill" id="animalSpidersQuest,animalBloodMoonSpider01QueenFred,animalBloodMoonSpider02QueenFred,animalBloodMoonSpider03QueenFred,animalSpider01,animalSpider02,animalSpider03,animalSpider01Feral,animalSpider02Feral,animalSpider03Feral,animalSpider01Radiated,animalSpider02Radiated,animalSpider03Radiated,animalSpider01Mini,animalSpider02Mini,animalSpider03Mini,animalSpider01Queen,animalSpider02Queen,animalSpider03Queen,animalFlyingSpider01,animalFlyingSpider02,animalFlyingSpider03,animalBloodMoonSpider01,animalBloodMoonSpider02,animalBloodMoonSpider03,animalBloodMoonSpider01Feral,animalBloodMoonSpider02Feral,animalBloodMoonSpider03Feral,animalBloodMoonSpider01Radiated,animalBloodMoonSpider02Radiated,animalBloodMoonSpider03Radiated,animalBloodMoonSpider01Queen,animalBloodMoonSpider02Queen,animalBloodMoonSpider03Queen,animalBloodMoonFlyingSpider01Queen,animalBloodMoonFlyingSpider02Queen,animalBloodMoonFlyingSpider03Queen,animalBloodMoonSpider01Mini,animalBloodMoonSpider02Mini,animalBloodMoonSpider03Mini" value="100"/>
 		
 		<reward type="Exp" value="20000"/>
 		<reward type="Item" id="casinoCoin" value="5000"/>
@@ -79,7 +79,7 @@
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
-		<objective type="EntityKill" id="animalBloodMoonKoala,animalBloodMoonKangaroo,animalBloodMoonBossKoala,animalBloodMoonBossKangaroo,animalCassowary,animalTassydevil,animalPlatypus,animalKoala,animalFrillneck,animalKangaroo,animalMagpie,animalEagle,animalBat" value="100"/>
+		<objective type="EntityKill" id="animalAussieAnimalsQuest,animalBloodMoonKoala,animalBloodMoonKangaroo,animalBloodMoonBossKoala,animalBloodMoonBossKangaroo,animalCassowary,animalTassydevil,animalBigTassydevil,animalPlatypus,animalKoala,animalBigKoala,animalFrillneck,animalKangaroo,animalEagle,animalBat" value="100"/>
 		
 		<reward type="Exp" value="20000"/>
 		<reward type="Item" id="casinoCoin" value="5000"/>
@@ -119,7 +119,7 @@
 		<property name="difficulty" value="hard"/>
 		<property name="shareable" value="false"/>
 		
-		<objective type="EntityKill" id="zombieOakNurse,zombieOakFireNurse,zombieOakRadNurse,zombieOakHeadHunter1,zombieOakHeadHunter2,zombieOakHeadHunter3,zombieOakHeadHunter4,zombieOakHeadHunter5,zombieOakBossNurse,zombieOakBossFireNurse,zombieOakBossRadNurse,zombieOakBossHeadHunter1,zombieOakBossHeadHunter2,zombieOakBossHeadHunter3,zombieOakBossHeadHunter4,zombieOakBossHeadHunter5" value="100"/>
+		<objective type="EntityKill" id="zombieHeadHuntersQuest,zombieOakNurse,zombieOakFireNurse,zombieOakRadNurse,zombieOakHeadHunter1,zombieOakHeadHunter2,zombieOakHeadHunter3,zombieOakHeadHunter4,zombieOakHeadHunter5,zombieOakBossNurse,zombieOakBossFireNurse,zombieOakBossRadNurse,zombieOakBossHeadHunter1,zombieOakBossHeadHunter2,zombieOakBossHeadHunter3,zombieOakBossHeadHunter4,zombieOakBossHeadHunter5" value="100"/>
 		
 		<reward type="Exp" value="20000"/>
 		<reward type="Item" id="casinoCoin" value="5000"/>
