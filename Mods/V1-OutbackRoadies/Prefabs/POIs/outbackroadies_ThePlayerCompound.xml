@@ -5,9 +5,8 @@
   <property name="ExcludePOICulling" value="False" />
   <property name="DistantPOIYOffset" value="0" />
   <property name="AllowTopSoilDecorations" value="False" />
-  <property name="DifficultyTier" value="4" />
+  <property name="DifficultyTier" value="0" />
   <property name="ShowQuestClearCount" value="2" />
-  <property name="QuestTags" value="clear, fetch, restore_power, infested" />
   <property name="TraderArea" value="False" />
   <property name="RotationToFaceNorth" value="0" />
   <property name="Zoning" value="none" />
@@ -15,14 +14,6 @@
   <property name="AllowedTownships" value="city,town,rural,wilderness,industrial" />
   <property name="YOffset" value="-9" />
   <property name="PrefabSize" value="124, 29, 114" />
-  <property name="SleeperVolumeSize" value="26, 6, 15#8, 6, 20#33, 17, 13#7, 6, 8#23, 11, 10#5, 17, 12#44, 5, 23" />
-  <property name="SleeperVolumeStart" value="49, 9, 53#75, 9, 40#42, 9, 40#42, 9, 53#50, 9, 30#37, 9, 44#0, 7, 91" />
-  <property name="SleeperVolumeGroupId" value="1,1,2,1,0,2,0" />
-  <property name="SleeperVolumeGroup" value="RoadiesHeadHunters,10,12,RoadiesHeadHunters,6,8,RoadiesHeadHunters,10,12,RoadiesHeadHunters,4,5,RoadiesHeadHunters,8,9,RoadiesHeadHunters,6,7,RoadiesHeadHunters,5,6" />
-  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False" />
-  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False" />
-  <property name="SleeperVolumeFlags" value="0,0,0,0,0,0,0" />
-  <property name="SleeperVolumeTriggeredBy" value=" # # # # # # " />
   <property name="POIMarkerSize" value="6, 1, 6" />
   <property name="POIMarkerStart" value="59, 8, 112" />
   <property name="POIMarkerGroup" value="new" />
@@ -32,54 +23,56 @@
   <property name="POIMarkerPartRotations" value="0" />
   <property name="POIMarkerPartSpawnChance" value="1" />
   <property class="Stats">
-    <property name="TotalVertices" value="1713587" />
-    <property name="TotalTriangles" value="798486" />
+    <property name="TotalVertices" value="2046149" />
+    <property name="TotalTriangles" value="936228" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1622170" />
-      <property name="Triangles" value="694428" />
+      <property name="Vertices" value="1940548" />
+      <property name="Triangles" value="824328" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="48193" />
-      <property name="Triangles" value="32706" />
+      <property name="Vertices" value="57559" />
+      <property name="Triangles" value="38000" />
     </property>
     <property class="ChunkMeshes1">
-      <property name="Vertices" value="0" />
-      <property name="Triangles" value="0" />
+      <property name="Vertices" value="4672" />
+      <property name="Triangles" value="2336" />
     </property>
     <property class="ChunkMeshes2">
       <property name="Vertices" value="0" />
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes3">
-      <property name="Vertices" value="0" />
-      <property name="Triangles" value="0" />
+      <property name="Vertices" value="24" />
+      <property name="Triangles" value="12" />
     </property>
     <property class="ChunkMeshes4">
       <property name="Vertices" value="0" />
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="43224" />
-      <property name="Triangles" value="71352" />
+      <property name="Vertices" value="43346" />
+      <property name="Triangles" value="71552" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">
     <property class="quest_wood_trees">
-      <property name="0" value="113, 9, 103" />
-    </property>
-    <property class="challenge_polymers">
-      <property name="0" value="111, 9, 47" />
-      <property name="1" value="113, 9, 49" />
-      <property name="2" value="113, 9, 50" />
+      <property name="0" value="117, 9, 91" />
+      <property name="1" value="113, 9, 103" />
     </property>
     <property class="challenge_stump">
-      <property name="0" value="116, 9, 50" />
+      <property name="0" value="114, 9, 39" />
+    </property>
+    <property class="challenge_polymers">
+      <property name="0" value="101, 6, 48" />
+      <property name="1" value="102, 6, 49" />
+      <property name="2" value="103, 7, 49" />
+      <property name="3" value="99, 6, 50" />
+      <property name="4" value="102, 6, 50" />
+      <property name="5" value="100, 6, 51" />
+      <property name="6" value="97, 6, 52" />
     </property>
     <property class="quest_stone">
       <property name="0" value="15, 9, 107" />
-    </property>
-    <property class="FetchContainer">
-      <property name="0" value="82, 10, 46" />
     </property>
     <property class="challenge_sinks">
       <property name="0" value="43, 9, 44" />
@@ -88,8 +81,8 @@
       <property name="3" value="44, 10, 44" />
       <property name="4" value="45, 9, 44" />
     </property>
-    <property class="QuestRestorePower">
-      <property name="0" value="87, 9, 49" />
+    <property class="quest_feather">
+      <property name="0" value="78, 14, 62" />
     </property>
     <property class="challenge_steel">
       <property name="0" value="42, 9, 54" />
@@ -99,22 +92,19 @@
       <property name="1" value="79, 9, 50" />
     </property>
     <property class="challenge_cars">
-      <property name="0" value="63, 9, 66" />
+      <property name="0" value="76, 9, 53" />
     </property>
     <property class="POILight">
       <property name="0" value="80, 9, 60" />
     </property>
     <property class="TraderOnOff">
-      <property name="0" value="51, 9, 47" />
+      <property name="0" value="109, 9, 83" />
     </property>
     <property class="challenge_pallet">
       <property name="0" value="75, 9, 42" />
     </property>
     <property class="challenge_leather">
       <property name="0" value="70, 9, 53" />
-    </property>
-    <property class="Rally">
-      <property name="0" value="69, 10, 95" />
     </property>
   </property>
 </prefab>

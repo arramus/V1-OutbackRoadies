@@ -78,6 +78,7 @@ trader_jen,POI,POIName,,x,Trader Servo Jen,,,,,,,,,,,,,
 trader_joel,POI,POIName,,x,Trader Servo Joel,,,,,,,,,,,,,
 trader_rekt,POI,POIName,,x,Trader Servo Rekt,,,,,,,,,,,,,
 outbackroadies_TheCompound,POI,POIName,,x,The Compound,,,,,,,,,,,,,
+outbackroadies_ThePlayerCompound,POI,POIName,,x,Road Warrior Compound,,,,,,,,,,,,,
 
 apparelCoatLeatherDuster,items,Clothes,,,Roadies Duster,,,,,,,,,,,,,
 
